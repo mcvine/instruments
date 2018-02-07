@@ -1,2 +1,1 @@
-# instruments
-mcvine.instruments subpackage
+# mcvine.instruments subpackage
