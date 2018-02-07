@@ -31,7 +31,7 @@ install:
   - source activate testenv
   - conda config --set anaconda_upload no
   - conda install numpy
-  - conda install mcvine
+  - conda install -c mcvine/label/experimental mcvine
   - export SRC=$PWD
   - export EXPORT_ROOT=$CONDA_PREFIX
   - export MCVINE_WORKFLOW_BLD_ROOT=$SRC/build
