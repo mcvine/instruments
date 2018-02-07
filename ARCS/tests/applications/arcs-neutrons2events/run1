@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+arcs_neutrons2events scattered-neutrons-example --nodes=2

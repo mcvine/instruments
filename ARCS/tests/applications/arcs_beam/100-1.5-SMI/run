@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+mcvine instruments arcs beam --E=100 --ncount=1e7

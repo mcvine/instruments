@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+mcvine instruments sequoia neutrons2nxs --neutrons=scattered-neutrons-example
