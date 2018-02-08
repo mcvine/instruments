@@ -55,6 +55,15 @@ set(INSTALL_PY_PATH "${INSTALL_LIB_DIR}/python${PYTHON_VERSION_MAJOR}.${PYTHON_V
 enable_testing()
 
 #
+# python
+file(
+  COPY instruments
+  DESTINATION ${EXPORT_PYTHON}/mcvine/
+  FILES_MATCHING PATTERN "*.py"
+  )
+
+
+#
 add_subdirectory(generic)
 #
 add_subdirectory(SNS)
