@@ -31,6 +31,7 @@ install:
   - source activate testenv
   - conda config --set anaconda_upload no
   - conda install numpy
+  - conda install -c mantid mantid-framework
   - conda install -c mcvine/label/experimental mcvine mantid2mcvine
   - export SRC=$PWD
   - export EXPORT_ROOT=$CONDA_PREFIX
