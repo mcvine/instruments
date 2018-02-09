@@ -13,7 +13,6 @@ detsys_shape = m2m.shapes.hollowCylinder(in_radius=4., out_radius=8., height=4.)
 nbanks = 113
 ntubesperpack = 8
 npixelspertube = 128
-nmonitors = 0
 
 tube_info = m2m.TubeInfo(
         pressure = 10.*m2m.units.pressure.atm,
@@ -29,10 +28,12 @@ im = m2m.InstrumentModel(
     nbanks = nbanks,
     ntubesperpack = ntubesperpack,
     npixelspertube = npixelspertube,
-    nmonitors = nmonitors,
     tofbinsize = tofbinsize,
     mantid_idf_row_typename_postfix = 'row'
 )
 
 im.convert()
-
+d = im.todict()
+import yaml
+with open('%s.yml' % instrument_name, 'w') as ostream:
+    yaml.dump(d, ostream, default_flow_style=False)

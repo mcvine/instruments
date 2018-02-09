@@ -8,7 +8,7 @@ out = msa.DgsReduction(
 msa.SofQW3(
         InputWorkspace='out',
         OutputWorkspace='iqw',
-        QAxisBinning="0,0.1,12",
+        QAxisBinning="0,0.05,7",
         EMode='Direct',
         )
 msa.SaveNexus(

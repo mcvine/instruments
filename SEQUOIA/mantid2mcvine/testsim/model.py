@@ -1,6 +1,9 @@
-import os
+import os, yaml
 import mantid2mcvine as m2m
 
+d = yaml.load(open("../SEQ_virtual.yml"))
+im = m2m.InstrumentModel(**d)
+"""
 instrument_name = 'SEQ_virtual'
 beamline = 777001700012292017   # 777: prefix, 17: SEQ beamline number in mantid Facilities.xml, 12292017: date
 mantid_idf = None
@@ -25,3 +28,4 @@ im = m2m.InstrumentModel(
     tofbinsize = tofbinsize,
     mantid_idf_row_typename_postfix = 'row'
 )
+"""

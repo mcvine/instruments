@@ -11,11 +11,11 @@
     <Phonon_IncoherentElastic_Kernel dw_core='0.00701434948808*angstrom**2'>
     </Phonon_IncoherentElastic_Kernel>
 
-    <ConstantQEKernel momentum-transfer="4/angstrom" energy-transfer="10*meV"/>
+    <ConstantQEKernel momentum-transfer="2/angstrom" energy-transfer="10*meV"/>
 
-    <ConstantQEKernel momentum-transfer="7/angstrom" energy-transfer="20*meV"/>
+    <ConstantQEKernel momentum-transfer="5/angstrom" energy-transfer="40*meV"/>
 
-    <ConstantQEKernel momentum-transfer="10/angstrom" energy-transfer="10*meV"/>
+    <ConstantQEKernel momentum-transfer="5/angstrom" energy-transfer="10*meV"/>
 
   </KernelContainer>
 </homogeneous_scatterer>

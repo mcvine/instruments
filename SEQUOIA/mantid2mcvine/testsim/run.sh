@@ -1,4 +1,7 @@
 rm -rf mysim
+
+set -e
+
 mcvine workflow powder --instrument=SEQUOIA --sample=V --workdir=mysim
 
 # beam
@@ -16,8 +19,9 @@ make NCOUNT=1e7 NODES=20 out/scattered-neutrons
 cd -
 
 # create NXS
-python -c "from model import im; events = im.neutrons2events('mysim/out/scattered-neutrons', nodes=20); im.events2nxs(events, 'sim.nxs')"
+python createnxs.py
 
 # reduce
 python reduce.py
-mcvine mantid extract_iqe iqe.nxs iqe.h5
+mcvine mantid extract_iqe iqe.nxs ieq.h5
+python -c "import histogram.hdf as hh; iqe=hh.load('ieq.h5').transpose(); hh.dump(iqe, 'iqe.h5')"
