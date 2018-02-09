@@ -7,7 +7,7 @@ set (PYPKG_NAME "mcvine.instruments.${PACKAGE_NAME}")
 file(
   COPY ${PACKAGE_NAME} 
   DESTINATION ${EXPORT_PYTHON}/mcvine/instruments/
-  FILES_MATCHING PATTERN "*.py" PATTERN "*.xml" PATTERN "*.nxs"
+  FILES_MATCHING PATTERN "*.py" PATTERN "*.xml" PATTERN "*.nxs" PATTERN "*.yml"
   )
 
 # etc
