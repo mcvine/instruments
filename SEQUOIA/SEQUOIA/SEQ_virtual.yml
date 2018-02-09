@@ -1,0 +1,10 @@
+beamline: 777001700012292017
+instrument_name: SEQ_virtual
+mantid_idf: SEQ_virtual_Definition_12292017.xml
+mcvine_idf: SEQ_virtual_12292017_mcvine.xml
+nbanks: 113
+nmonitors: 2
+npixelspertube: 128
+ntubesperpack: 8
+template_nxs: SEQ_virtual_template_12292017.nxs
+tofbinsize: 0.1
