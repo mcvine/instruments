@@ -70,6 +70,7 @@ def neutrons2nxs(ctx, neutrons, nxs, workdir, nodes, populate_metadata, beam):
         # populate
         from .applications import nxs as nxsmod
         beam_out = os.path.abspath(os.path.join(beam, 'out'))
+        nxs = nxs.encode()
         nxsmod.populate_Ei_data(beam_out, nxs)
     return
 
