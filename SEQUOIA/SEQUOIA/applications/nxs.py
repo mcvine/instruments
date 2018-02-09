@@ -12,8 +12,8 @@ def populate_Ei_data(sim_out, nxs):
     t0, unit = props['emission time'].split(); assert unit=='microsecond'
     from mantid import simpleapi as msa
     ws = msa.Load(nxs)
-    msa.AddSampleLog(ws, LogName='Ei', LogText=str(Ei), LogType='Number')
-    msa.AddSampleLog(ws, LogName='t0', LogText=str(t0), LogType='Number')
+    msa.AddSampleLog(ws, LogName='mcvine-Ei', LogText=str(Ei), LogType='Number')
+    msa.AddSampleLog(ws, LogName='mcvine-t0', LogText=str(t0), LogType='Number')
     msa.SaveNexus(ws, nxs)
     return
 
@@ -39,8 +39,8 @@ def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=Non
         # MaskBTP(ws, Bank="98-102")
         if not use_ei_guess:
             run = ws.getRun()
-            Efixed = run.getLogData('Ei').value
-            T0 = run.getLogData('t0').value
+            Efixed = run.getLogData('mcvine-Ei').value
+            T0 = run.getLogData('mcvine-t0').value
         else:
             Efixed, T0 = ei_guess, 0
 
