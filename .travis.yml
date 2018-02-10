@@ -15,6 +15,7 @@ before_install:
   - chmod +x miniconda.sh
   - ./miniconda.sh -b -p /home/travis/mc
   - export PATH=/home/travis/mc/bin:$PATH
+  - git clone https://github.com/yxqd/dotmantid ~/.mantid
 
 install:
   - export GIT_FULL_HASH=`git rev-parse HEAD`
@@ -32,6 +33,7 @@ install:
   - conda config --set anaconda_upload no
   - conda install numpy
   - conda install -c mantid mantid-framework
+  - python -c "import mantid"
   - conda install -c mcvine/label/experimental mcvine mantid2mcvine
   - export SRC=$PWD
   - export EXPORT_ROOT=$CONDA_PREFIX
