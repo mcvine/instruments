@@ -6,20 +6,15 @@
 import numpy as np
 
 def populate_Ei_data(sim_out, nxs):
-    import h5py
-    f = h5py.File(nxs, 'a')
-    entry = f['entry']
-    from mcvine.instruments.SEQUOIA.nxs.raw import populateEiData
-    populateEiData(entry, sim_out)
-    return
-
-
-def populate_monitor_data(sim_out, nxs):
-    import h5py
-    f = h5py.File(nxs, 'a')
-    entry = f['entry']
-    from mcvine.instruments.SEQUOIA.nxs.raw import populateMonitors
-    populateMonitors(entry, sim_out)
+    import ast, os
+    props = ast.literal_eval(open(os.path.join(sim_out, 'props.json')).read())
+    Ei, unit = props['average energy'].split(); assert unit=='meV'
+    t0, unit = props['emission time'].split(); assert unit=='microsecond'
+    from mantid import simpleapi as msa
+    ws = msa.Load(nxs)
+    msa.AddSampleLog(ws, LogName='mcvine-Ei', LogText=str(Ei), LogType='Number')
+    msa.AddSampleLog(ws, LogName='mcvine-t0', LogText=str(t0), LogType='Number')
+    msa.SaveNexus(ws, nxs)
     return
 
 
@@ -32,26 +27,20 @@ def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=Non
     from mantid.simpleapi import DgsReduction, SofQW3, SaveNexus, LoadInstrument, Load, MoveInstrumentComponent, \
         MaskBTP, ConvertToMD, BinMD, ConvertMDHistoToMatrixWorkspace, GetEiT0atSNS, GetEi
     from mantid import mtd
+    ws = Load(nxsfile)
     
     if tof2E == 'guess':
-        # XXX: this is a simple guess. all raw data files seem to have root "entry"
-        cmd = 'h5ls %s' % nxsfile
-        import subprocess as sp, shlex
-        o = sp.check_output(shlex.split(cmd)).strip().split()[0]
-        tof2E = o == 'entry'
+        axis = ws.getAxis(0).getUnit().caption().lower()
+        # axis name should be "Time-of-flight"
+        tof2E = "time" in axis and "flight" in axis
     
     if tof2E:
-        ws, mons = Load(nxsfile, LoadMonitors=True)
         # mask packs around beam
-        MaskBTP(ws, Bank="98-102")
+        # MaskBTP(ws, Bank="98-102")
         if not use_ei_guess:
-            Eguess=ws.getRun()['EnergyRequest'].getStatistics().mean
-            try:
-                Efixed,_p,_i,T0=GetEi(InputWorkspace=mons,Monitor1Spec=1,Monitor2Spec=2,EnergyEstimate=Eguess,FixEi=False)
-            except:
-                import warnings
-                warnings.warn("Failed to determine Ei from monitors. Use EnergyRequest log %s" % Eguess)
-                Efixed,T0 = Eguess, 0
+            run = ws.getRun()
+            Efixed = run.getLogData('mcvine-Ei').value
+            T0 = run.getLogData('mcvine-t0').value
         else:
             Efixed, T0 = ei_guess, 0
 

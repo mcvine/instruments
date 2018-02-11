@@ -1,0 +1,1257 @@
+<?xml version="1.0"?>
+<!--
+! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+!
+!                                   Jiao Lin
+!                                   Caltech
+!
+! {LicenseText}
+!
+! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+<!DOCTYPE instrument>
+
+
+<Instrument guid="-1" name="SEQ_virtual" id="-1">
+
+    <Sample guid="1" name="sample" id="0">
+    </Sample>
+
+
+    <DetectorSystem guid="2" name="detSystem" id="1">
+        <Shape>
+        <!--
+        HollowCylinder
+
+  Its axis is vertical.
+
+  It is actually a "difference" of two cylinders.
+
+  Attributes:
+    - in_radius: inside radius
+    - out_radius: outer radius
+    - height
+  
+        -->
+        <hollowCylinder in_radius="4.0" out_radius="8.0" height="4.0"/>
+        </Shape>
+
+        <DetectorPack guid="3" name="pack0" id="0">
+            <Shape>
+            <!--
+            Block
+
+  Its thickness is the length of the dimension that is parallel
+  to neutron beam.
+  
+  Its height is its vertical length (parallel to gravity).
+
+  Its width is the 3rd dimension.
+  
+            -->
+            <block width="0.219532*m" height="1.206*m" thickness="0.0265481*m"/>
+            </Shape>
+
+            <Detector name="det0" pressure="1.01325e+06*m**-1*kg*s**-2" holdOff="1e-06*s" deadTime="1e-05*s" guid="4" type="He3 LPSD" id="0">
+                <Shape>
+                <!--
+                Cylinder
+
+  Its axis is vertical.
+
+  Attributes:
+    - radius
+    - height
+  
+                -->
+                <cylinder height="1.2*m" radius="0.0127*m"/>
+                </Shape>
+
+                <Pixel solidAngle="1.0" guid="5" name="pixel0" id="0">
+                    <Shape>
+                    <!--
+                    Cylinder
+
+  Its axis is vertical.
+
+  Attributes:
+    - radius
+    - height
+  
+                    -->
+                    <cylinder height="0.009375*m" radius="0.0127*m"/>
+                    </Shape>
+                </Pixel>
+
+                <Copy guid="6" name="pixel1" reference="5" id="1" />
+                <Copy guid="7" name="pixel2" reference="5" id="2" />
+                <Copy guid="8" name="pixel3" reference="5" id="3" />
+                <Copy guid="9" name="pixel4" reference="5" id="4" />
+                <Copy guid="10" name="pixel5" reference="5" id="5" />
+                <Copy guid="11" name="pixel6" reference="5" id="6" />
+                <Copy guid="12" name="pixel7" reference="5" id="7" />
+                <Copy guid="13" name="pixel8" reference="5" id="8" />
+                <Copy guid="14" name="pixel9" reference="5" id="9" />
+                <Copy guid="15" name="pixel10" reference="5" id="10" />
+                <Copy guid="16" name="pixel11" reference="5" id="11" />
+                <Copy guid="17" name="pixel12" reference="5" id="12" />
+                <Copy guid="18" name="pixel13" reference="5" id="13" />
+                <Copy guid="19" name="pixel14" reference="5" id="14" />
+                <Copy guid="20" name="pixel15" reference="5" id="15" />
+                <Copy guid="21" name="pixel16" reference="5" id="16" />
+                <Copy guid="22" name="pixel17" reference="5" id="17" />
+                <Copy guid="23" name="pixel18" reference="5" id="18" />
+                <Copy guid="24" name="pixel19" reference="5" id="19" />
+                <Copy guid="25" name="pixel20" reference="5" id="20" />
+                <Copy guid="26" name="pixel21" reference="5" id="21" />
+                <Copy guid="27" name="pixel22" reference="5" id="22" />
+                <Copy guid="28" name="pixel23" reference="5" id="23" />
+                <Copy guid="29" name="pixel24" reference="5" id="24" />
+                <Copy guid="30" name="pixel25" reference="5" id="25" />
+                <Copy guid="31" name="pixel26" reference="5" id="26" />
+                <Copy guid="32" name="pixel27" reference="5" id="27" />
+                <Copy guid="33" name="pixel28" reference="5" id="28" />
+                <Copy guid="34" name="pixel29" reference="5" id="29" />
+                <Copy guid="35" name="pixel30" reference="5" id="30" />
+                <Copy guid="36" name="pixel31" reference="5" id="31" />
+                <Copy guid="37" name="pixel32" reference="5" id="32" />
+                <Copy guid="38" name="pixel33" reference="5" id="33" />
+                <Copy guid="39" name="pixel34" reference="5" id="34" />
+                <Copy guid="40" name="pixel35" reference="5" id="35" />
+                <Copy guid="41" name="pixel36" reference="5" id="36" />
+                <Copy guid="42" name="pixel37" reference="5" id="37" />
+                <Copy guid="43" name="pixel38" reference="5" id="38" />
+                <Copy guid="44" name="pixel39" reference="5" id="39" />
+                <Copy guid="45" name="pixel40" reference="5" id="40" />
+                <Copy guid="46" name="pixel41" reference="5" id="41" />
+                <Copy guid="47" name="pixel42" reference="5" id="42" />
+                <Copy guid="48" name="pixel43" reference="5" id="43" />
+                <Copy guid="49" name="pixel44" reference="5" id="44" />
+                <Copy guid="50" name="pixel45" reference="5" id="45" />
+                <Copy guid="51" name="pixel46" reference="5" id="46" />
+                <Copy guid="52" name="pixel47" reference="5" id="47" />
+                <Copy guid="53" name="pixel48" reference="5" id="48" />
+                <Copy guid="54" name="pixel49" reference="5" id="49" />
+                <Copy guid="55" name="pixel50" reference="5" id="50" />
+                <Copy guid="56" name="pixel51" reference="5" id="51" />
+                <Copy guid="57" name="pixel52" reference="5" id="52" />
+                <Copy guid="58" name="pixel53" reference="5" id="53" />
+                <Copy guid="59" name="pixel54" reference="5" id="54" />
+                <Copy guid="60" name="pixel55" reference="5" id="55" />
+                <Copy guid="61" name="pixel56" reference="5" id="56" />
+                <Copy guid="62" name="pixel57" reference="5" id="57" />
+                <Copy guid="63" name="pixel58" reference="5" id="58" />
+                <Copy guid="64" name="pixel59" reference="5" id="59" />
+                <Copy guid="65" name="pixel60" reference="5" id="60" />
+                <Copy guid="66" name="pixel61" reference="5" id="61" />
+                <Copy guid="67" name="pixel62" reference="5" id="62" />
+                <Copy guid="68" name="pixel63" reference="5" id="63" />
+                <Copy guid="69" name="pixel64" reference="5" id="64" />
+                <Copy guid="70" name="pixel65" reference="5" id="65" />
+                <Copy guid="71" name="pixel66" reference="5" id="66" />
+                <Copy guid="72" name="pixel67" reference="5" id="67" />
+                <Copy guid="73" name="pixel68" reference="5" id="68" />
+                <Copy guid="74" name="pixel69" reference="5" id="69" />
+                <Copy guid="75" name="pixel70" reference="5" id="70" />
+                <Copy guid="76" name="pixel71" reference="5" id="71" />
+                <Copy guid="77" name="pixel72" reference="5" id="72" />
+                <Copy guid="78" name="pixel73" reference="5" id="73" />
+                <Copy guid="79" name="pixel74" reference="5" id="74" />
+                <Copy guid="80" name="pixel75" reference="5" id="75" />
+                <Copy guid="81" name="pixel76" reference="5" id="76" />
+                <Copy guid="82" name="pixel77" reference="5" id="77" />
+                <Copy guid="83" name="pixel78" reference="5" id="78" />
+                <Copy guid="84" name="pixel79" reference="5" id="79" />
+                <Copy guid="85" name="pixel80" reference="5" id="80" />
+                <Copy guid="86" name="pixel81" reference="5" id="81" />
+                <Copy guid="87" name="pixel82" reference="5" id="82" />
+                <Copy guid="88" name="pixel83" reference="5" id="83" />
+                <Copy guid="89" name="pixel84" reference="5" id="84" />
+                <Copy guid="90" name="pixel85" reference="5" id="85" />
+                <Copy guid="91" name="pixel86" reference="5" id="86" />
+                <Copy guid="92" name="pixel87" reference="5" id="87" />
+                <Copy guid="93" name="pixel88" reference="5" id="88" />
+                <Copy guid="94" name="pixel89" reference="5" id="89" />
+                <Copy guid="95" name="pixel90" reference="5" id="90" />
+                <Copy guid="96" name="pixel91" reference="5" id="91" />
+                <Copy guid="97" name="pixel92" reference="5" id="92" />
+                <Copy guid="98" name="pixel93" reference="5" id="93" />
+                <Copy guid="99" name="pixel94" reference="5" id="94" />
+                <Copy guid="100" name="pixel95" reference="5" id="95" />
+                <Copy guid="101" name="pixel96" reference="5" id="96" />
+                <Copy guid="102" name="pixel97" reference="5" id="97" />
+                <Copy guid="103" name="pixel98" reference="5" id="98" />
+                <Copy guid="104" name="pixel99" reference="5" id="99" />
+                <Copy guid="105" name="pixel100" reference="5" id="100" />
+                <Copy guid="106" name="pixel101" reference="5" id="101" />
+                <Copy guid="107" name="pixel102" reference="5" id="102" />
+                <Copy guid="108" name="pixel103" reference="5" id="103" />
+                <Copy guid="109" name="pixel104" reference="5" id="104" />
+                <Copy guid="110" name="pixel105" reference="5" id="105" />
+                <Copy guid="111" name="pixel106" reference="5" id="106" />
+                <Copy guid="112" name="pixel107" reference="5" id="107" />
+                <Copy guid="113" name="pixel108" reference="5" id="108" />
+                <Copy guid="114" name="pixel109" reference="5" id="109" />
+                <Copy guid="115" name="pixel110" reference="5" id="110" />
+                <Copy guid="116" name="pixel111" reference="5" id="111" />
+                <Copy guid="117" name="pixel112" reference="5" id="112" />
+                <Copy guid="118" name="pixel113" reference="5" id="113" />
+                <Copy guid="119" name="pixel114" reference="5" id="114" />
+                <Copy guid="120" name="pixel115" reference="5" id="115" />
+                <Copy guid="121" name="pixel116" reference="5" id="116" />
+                <Copy guid="122" name="pixel117" reference="5" id="117" />
+                <Copy guid="123" name="pixel118" reference="5" id="118" />
+                <Copy guid="124" name="pixel119" reference="5" id="119" />
+                <Copy guid="125" name="pixel120" reference="5" id="120" />
+                <Copy guid="126" name="pixel121" reference="5" id="121" />
+                <Copy guid="127" name="pixel122" reference="5" id="122" />
+                <Copy guid="128" name="pixel123" reference="5" id="123" />
+                <Copy guid="129" name="pixel124" reference="5" id="124" />
+                <Copy guid="130" name="pixel125" reference="5" id="125" />
+                <Copy guid="131" name="pixel126" reference="5" id="126" />
+                <Copy guid="132" name="pixel127" reference="5" id="127" />
+                <LocalGeometer registry-coordinate-system="McStas">
+                    <Register name="pixel0" position="(0*m, -0.595313*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel1" position="(0*m, -0.585938*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel2" position="(0*m, -0.576562*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel3" position="(0*m, -0.567188*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel4" position="(0*m, -0.557813*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel5" position="(0*m, -0.548438*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel6" position="(0*m, -0.539062*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel7" position="(0*m, -0.529687*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel8" position="(0*m, -0.520313*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel9" position="(0*m, -0.510938*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel10" position="(0*m, -0.501563*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel11" position="(0*m, -0.492188*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel12" position="(0*m, -0.482813*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel13" position="(0*m, -0.473438*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel14" position="(0*m, -0.464063*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel15" position="(0*m, -0.454688*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel16" position="(0*m, -0.445312*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel17" position="(0*m, -0.435938*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel18" position="(0*m, -0.426563*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel19" position="(0*m, -0.417188*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel20" position="(0*m, -0.407813*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel21" position="(0*m, -0.398438*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel22" position="(0*m, -0.389063*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel23" position="(0*m, -0.379688*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel24" position="(0*m, -0.370313*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel25" position="(0*m, -0.360938*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel26" position="(0*m, -0.351562*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel27" position="(0*m, -0.342188*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel28" position="(0*m, -0.332813*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel29" position="(0*m, -0.323438*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel30" position="(0*m, -0.314063*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel31" position="(0*m, -0.304688*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel32" position="(0*m, -0.295313*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel33" position="(0*m, -0.285938*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel34" position="(0*m, -0.276563*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel35" position="(0*m, -0.267188*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel36" position="(0*m, -0.257813*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel37" position="(0*m, -0.248438*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel38" position="(0*m, -0.239063*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel39" position="(0*m, -0.229688*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel40" position="(0*m, -0.220313*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel41" position="(0*m, -0.210938*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel42" position="(0*m, -0.201563*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel43" position="(0*m, -0.192188*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel44" position="(0*m, -0.182813*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel45" position="(0*m, -0.173438*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel46" position="(0*m, -0.164063*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel47" position="(0*m, -0.154688*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel48" position="(0*m, -0.145313*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel49" position="(0*m, -0.135938*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel50" position="(0*m, -0.126563*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel51" position="(0*m, -0.117188*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel52" position="(0*m, -0.107813*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel53" position="(0*m, -0.0984375*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel54" position="(0*m, -0.0890625*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel55" position="(0*m, -0.0796875*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel56" position="(0*m, -0.0703125*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel57" position="(0*m, -0.0609375*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel58" position="(0*m, -0.0515625*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel59" position="(0*m, -0.0421875*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel60" position="(0*m, -0.0328125*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel61" position="(0*m, -0.0234375*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel62" position="(0*m, -0.0140625*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel63" position="(0*m, -0.0046875*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel64" position="(0*m, 0.0046875*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel65" position="(0*m, 0.0140625*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel66" position="(0*m, 0.0234375*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel67" position="(0*m, 0.0328125*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel68" position="(0*m, 0.0421875*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel69" position="(0*m, 0.0515625*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel70" position="(0*m, 0.0609375*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel71" position="(0*m, 0.0703125*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel72" position="(0*m, 0.0796875*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel73" position="(0*m, 0.0890625*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel74" position="(0*m, 0.0984375*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel75" position="(0*m, 0.107812*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel76" position="(0*m, 0.117188*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel77" position="(0*m, 0.126562*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel78" position="(0*m, 0.135937*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel79" position="(0*m, 0.145312*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel80" position="(0*m, 0.154687*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel81" position="(0*m, 0.164062*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel82" position="(0*m, 0.173437*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel83" position="(0*m, 0.182812*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel84" position="(0*m, 0.192187*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel85" position="(0*m, 0.201562*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel86" position="(0*m, 0.210938*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel87" position="(0*m, 0.220312*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel88" position="(0*m, 0.229687*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel89" position="(0*m, 0.239062*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel90" position="(0*m, 0.248437*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel91" position="(0*m, 0.257812*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel92" position="(0*m, 0.267187*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel93" position="(0*m, 0.276562*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel94" position="(0*m, 0.285937*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel95" position="(0*m, 0.295312*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel96" position="(0*m, 0.304687*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel97" position="(0*m, 0.314062*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel98" position="(0*m, 0.323437*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel99" position="(0*m, 0.332812*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel100" position="(0*m, 0.342187*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel101" position="(0*m, 0.351562*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel102" position="(0*m, 0.360937*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel103" position="(0*m, 0.370312*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel104" position="(0*m, 0.379687*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel105" position="(0*m, 0.389062*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel106" position="(0*m, 0.398437*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel107" position="(0*m, 0.407813*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel108" position="(0*m, 0.417187*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel109" position="(0*m, 0.426562*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel110" position="(0*m, 0.435937*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel111" position="(0*m, 0.445312*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel112" position="(0*m, 0.454688*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel113" position="(0*m, 0.464062*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel114" position="(0*m, 0.473437*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel115" position="(0*m, 0.482812*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel116" position="(0*m, 0.492187*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel117" position="(0*m, 0.501563*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel118" position="(0*m, 0.510937*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel119" position="(0*m, 0.520312*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel120" position="(0*m, 0.529687*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel121" position="(0*m, 0.539062*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel122" position="(0*m, 0.548438*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel123" position="(0*m, 0.557812*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel124" position="(0*m, 0.567187*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel125" position="(0*m, 0.576562*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel126" position="(0*m, 0.585937*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel127" position="(0*m, 0.595313*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                </LocalGeometer>
+            </Detector>
+
+            <Copy guid="133" name="det1" reference="4" id="1" />
+            <Copy guid="134" name="det2" reference="4" id="2" />
+            <Copy guid="135" name="det3" reference="4" id="3" />
+            <Copy guid="136" name="det4" reference="4" id="4" />
+            <Copy guid="137" name="det5" reference="4" id="5" />
+            <Copy guid="138" name="det6" reference="4" id="6" />
+            <Copy guid="139" name="det7" reference="4" id="7" />
+            <LocalGeometer registry-coordinate-system="McStas">
+                <Register name="det0" position="(-0.096012*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det1" position="(-0.06858*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det2" position="(-0.041148*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det3" position="(-0.013716*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det4" position="(0.013716*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det5" position="(0.041148*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det6" position="(0.06858*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det7" position="(0.096012*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+            </LocalGeometer>
+        </DetectorPack>
+
+        <Copy guid="140" name="pack1" reference="3" id="1" />
+        <Copy guid="141" name="pack2" reference="3" id="2" />
+        <Copy guid="142" name="pack3" reference="3" id="3" />
+        <Copy guid="143" name="pack4" reference="3" id="4" />
+        <Copy guid="144" name="pack5" reference="3" id="5" />
+        <Copy guid="145" name="pack6" reference="3" id="6" />
+        <Copy guid="146" name="pack7" reference="3" id="7" />
+        <Copy guid="147" name="pack8" reference="3" id="8" />
+        <Copy guid="148" name="pack9" reference="3" id="9" />
+        <Copy guid="149" name="pack10" reference="3" id="10" />
+        <Copy guid="150" name="pack11" reference="3" id="11" />
+        <Copy guid="151" name="pack12" reference="3" id="12" />
+        <Copy guid="152" name="pack13" reference="3" id="13" />
+        <Copy guid="153" name="pack14" reference="3" id="14" />
+        <Copy guid="154" name="pack15" reference="3" id="15" />
+        <Copy guid="155" name="pack16" reference="3" id="16" />
+        <Copy guid="156" name="pack17" reference="3" id="17" />
+        <Copy guid="157" name="pack18" reference="3" id="18" />
+        <Copy guid="158" name="pack19" reference="3" id="19" />
+        <Copy guid="159" name="pack20" reference="3" id="20" />
+        <Copy guid="160" name="pack21" reference="3" id="21" />
+        <Copy guid="161" name="pack22" reference="3" id="22" />
+        <Copy guid="162" name="pack23" reference="3" id="23" />
+        <Copy guid="163" name="pack24" reference="3" id="24" />
+        <Copy guid="164" name="pack25" reference="3" id="25" />
+        <Copy guid="165" name="pack26" reference="3" id="26" />
+        <Copy guid="166" name="pack27" reference="3" id="27" />
+        <Copy guid="167" name="pack28" reference="3" id="28" />
+        <Copy guid="168" name="pack29" reference="3" id="29" />
+        <Copy guid="169" name="pack30" reference="3" id="30" />
+        <Copy guid="170" name="pack31" reference="3" id="31" />
+        <Copy guid="171" name="pack32" reference="3" id="32" />
+        <Copy guid="172" name="pack33" reference="3" id="33" />
+        <Copy guid="173" name="pack34" reference="3" id="34" />
+        <Copy guid="174" name="pack35" reference="3" id="35" />
+        <Copy guid="175" name="pack36" reference="3" id="36" />
+        <Copy guid="176" name="pack37" reference="3" id="37" />
+        <Copy guid="177" name="pack38" reference="3" id="38" />
+        <Copy guid="178" name="pack39" reference="3" id="39" />
+        <Copy guid="179" name="pack40" reference="3" id="40" />
+        <Copy guid="180" name="pack41" reference="3" id="41" />
+        <Copy guid="181" name="pack42" reference="3" id="42" />
+        <Copy guid="182" name="pack43" reference="3" id="43" />
+        <Copy guid="183" name="pack44" reference="3" id="44" />
+        <Copy guid="184" name="pack45" reference="3" id="45" />
+        <Copy guid="185" name="pack46" reference="3" id="46" />
+        <Copy guid="186" name="pack47" reference="3" id="47" />
+        <Copy guid="187" name="pack48" reference="3" id="48" />
+        <Copy guid="188" name="pack49" reference="3" id="49" />
+        <Copy guid="189" name="pack50" reference="3" id="50" />
+        <Copy guid="190" name="pack51" reference="3" id="51" />
+        <Copy guid="191" name="pack52" reference="3" id="52" />
+        <Copy guid="192" name="pack53" reference="3" id="53" />
+        <Copy guid="193" name="pack54" reference="3" id="54" />
+        <Copy guid="194" name="pack55" reference="3" id="55" />
+        <Copy guid="195" name="pack56" reference="3" id="56" />
+        <Copy guid="196" name="pack57" reference="3" id="57" />
+        <Copy guid="197" name="pack58" reference="3" id="58" />
+        <Copy guid="198" name="pack59" reference="3" id="59" />
+        <Copy guid="199" name="pack60" reference="3" id="60" />
+
+        <DetectorPack guid="200" name="pack61" id="61">
+            <Shape>
+            <!--
+            Block
+
+  Its thickness is the length of the dimension that is parallel
+  to neutron beam.
+  
+  Its height is its vertical length (parallel to gravity).
+
+  Its width is the 3rd dimension.
+  
+            -->
+            <block width="0.219532*m" height="0.260375*m" thickness="0.0265481*m"/>
+            </Shape>
+
+            <Detector name="det0" pressure="1.01325e+06*m**-1*kg*s**-2" holdOff="1e-06*s" deadTime="1e-05*s" guid="201" type="He3 LPSD" id="0">
+                <Shape>
+                <!--
+                Cylinder
+
+  Its axis is vertical.
+
+  Attributes:
+    - radius
+    - height
+  
+                -->
+                <cylinder height="0.25908*m" radius="0.0127*m"/>
+                </Shape>
+
+                <Pixel solidAngle="1.0" guid="202" name="pixel0" id="0">
+                    <Shape>
+                    <!--
+                    Cylinder
+
+  Its axis is vertical.
+
+  Attributes:
+    - radius
+    - height
+  
+                    -->
+                    <cylinder height="0.00202406*m" radius="0.0127*m"/>
+                    </Shape>
+                </Pixel>
+
+                <Copy guid="203" name="pixel1" reference="202" id="1" />
+                <Copy guid="204" name="pixel2" reference="202" id="2" />
+                <Copy guid="205" name="pixel3" reference="202" id="3" />
+                <Copy guid="206" name="pixel4" reference="202" id="4" />
+                <Copy guid="207" name="pixel5" reference="202" id="5" />
+                <Copy guid="208" name="pixel6" reference="202" id="6" />
+                <Copy guid="209" name="pixel7" reference="202" id="7" />
+                <Copy guid="210" name="pixel8" reference="202" id="8" />
+                <Copy guid="211" name="pixel9" reference="202" id="9" />
+                <Copy guid="212" name="pixel10" reference="202" id="10" />
+                <Copy guid="213" name="pixel11" reference="202" id="11" />
+                <Copy guid="214" name="pixel12" reference="202" id="12" />
+                <Copy guid="215" name="pixel13" reference="202" id="13" />
+                <Copy guid="216" name="pixel14" reference="202" id="14" />
+                <Copy guid="217" name="pixel15" reference="202" id="15" />
+                <Copy guid="218" name="pixel16" reference="202" id="16" />
+                <Copy guid="219" name="pixel17" reference="202" id="17" />
+                <Copy guid="220" name="pixel18" reference="202" id="18" />
+                <Copy guid="221" name="pixel19" reference="202" id="19" />
+                <Copy guid="222" name="pixel20" reference="202" id="20" />
+                <Copy guid="223" name="pixel21" reference="202" id="21" />
+                <Copy guid="224" name="pixel22" reference="202" id="22" />
+                <Copy guid="225" name="pixel23" reference="202" id="23" />
+                <Copy guid="226" name="pixel24" reference="202" id="24" />
+                <Copy guid="227" name="pixel25" reference="202" id="25" />
+                <Copy guid="228" name="pixel26" reference="202" id="26" />
+                <Copy guid="229" name="pixel27" reference="202" id="27" />
+                <Copy guid="230" name="pixel28" reference="202" id="28" />
+                <Copy guid="231" name="pixel29" reference="202" id="29" />
+                <Copy guid="232" name="pixel30" reference="202" id="30" />
+                <Copy guid="233" name="pixel31" reference="202" id="31" />
+                <Copy guid="234" name="pixel32" reference="202" id="32" />
+                <Copy guid="235" name="pixel33" reference="202" id="33" />
+                <Copy guid="236" name="pixel34" reference="202" id="34" />
+                <Copy guid="237" name="pixel35" reference="202" id="35" />
+                <Copy guid="238" name="pixel36" reference="202" id="36" />
+                <Copy guid="239" name="pixel37" reference="202" id="37" />
+                <Copy guid="240" name="pixel38" reference="202" id="38" />
+                <Copy guid="241" name="pixel39" reference="202" id="39" />
+                <Copy guid="242" name="pixel40" reference="202" id="40" />
+                <Copy guid="243" name="pixel41" reference="202" id="41" />
+                <Copy guid="244" name="pixel42" reference="202" id="42" />
+                <Copy guid="245" name="pixel43" reference="202" id="43" />
+                <Copy guid="246" name="pixel44" reference="202" id="44" />
+                <Copy guid="247" name="pixel45" reference="202" id="45" />
+                <Copy guid="248" name="pixel46" reference="202" id="46" />
+                <Copy guid="249" name="pixel47" reference="202" id="47" />
+                <Copy guid="250" name="pixel48" reference="202" id="48" />
+                <Copy guid="251" name="pixel49" reference="202" id="49" />
+                <Copy guid="252" name="pixel50" reference="202" id="50" />
+                <Copy guid="253" name="pixel51" reference="202" id="51" />
+                <Copy guid="254" name="pixel52" reference="202" id="52" />
+                <Copy guid="255" name="pixel53" reference="202" id="53" />
+                <Copy guid="256" name="pixel54" reference="202" id="54" />
+                <Copy guid="257" name="pixel55" reference="202" id="55" />
+                <Copy guid="258" name="pixel56" reference="202" id="56" />
+                <Copy guid="259" name="pixel57" reference="202" id="57" />
+                <Copy guid="260" name="pixel58" reference="202" id="58" />
+                <Copy guid="261" name="pixel59" reference="202" id="59" />
+                <Copy guid="262" name="pixel60" reference="202" id="60" />
+                <Copy guid="263" name="pixel61" reference="202" id="61" />
+                <Copy guid="264" name="pixel62" reference="202" id="62" />
+                <Copy guid="265" name="pixel63" reference="202" id="63" />
+                <Copy guid="266" name="pixel64" reference="202" id="64" />
+                <Copy guid="267" name="pixel65" reference="202" id="65" />
+                <Copy guid="268" name="pixel66" reference="202" id="66" />
+                <Copy guid="269" name="pixel67" reference="202" id="67" />
+                <Copy guid="270" name="pixel68" reference="202" id="68" />
+                <Copy guid="271" name="pixel69" reference="202" id="69" />
+                <Copy guid="272" name="pixel70" reference="202" id="70" />
+                <Copy guid="273" name="pixel71" reference="202" id="71" />
+                <Copy guid="274" name="pixel72" reference="202" id="72" />
+                <Copy guid="275" name="pixel73" reference="202" id="73" />
+                <Copy guid="276" name="pixel74" reference="202" id="74" />
+                <Copy guid="277" name="pixel75" reference="202" id="75" />
+                <Copy guid="278" name="pixel76" reference="202" id="76" />
+                <Copy guid="279" name="pixel77" reference="202" id="77" />
+                <Copy guid="280" name="pixel78" reference="202" id="78" />
+                <Copy guid="281" name="pixel79" reference="202" id="79" />
+                <Copy guid="282" name="pixel80" reference="202" id="80" />
+                <Copy guid="283" name="pixel81" reference="202" id="81" />
+                <Copy guid="284" name="pixel82" reference="202" id="82" />
+                <Copy guid="285" name="pixel83" reference="202" id="83" />
+                <Copy guid="286" name="pixel84" reference="202" id="84" />
+                <Copy guid="287" name="pixel85" reference="202" id="85" />
+                <Copy guid="288" name="pixel86" reference="202" id="86" />
+                <Copy guid="289" name="pixel87" reference="202" id="87" />
+                <Copy guid="290" name="pixel88" reference="202" id="88" />
+                <Copy guid="291" name="pixel89" reference="202" id="89" />
+                <Copy guid="292" name="pixel90" reference="202" id="90" />
+                <Copy guid="293" name="pixel91" reference="202" id="91" />
+                <Copy guid="294" name="pixel92" reference="202" id="92" />
+                <Copy guid="295" name="pixel93" reference="202" id="93" />
+                <Copy guid="296" name="pixel94" reference="202" id="94" />
+                <Copy guid="297" name="pixel95" reference="202" id="95" />
+                <Copy guid="298" name="pixel96" reference="202" id="96" />
+                <Copy guid="299" name="pixel97" reference="202" id="97" />
+                <Copy guid="300" name="pixel98" reference="202" id="98" />
+                <Copy guid="301" name="pixel99" reference="202" id="99" />
+                <Copy guid="302" name="pixel100" reference="202" id="100" />
+                <Copy guid="303" name="pixel101" reference="202" id="101" />
+                <Copy guid="304" name="pixel102" reference="202" id="102" />
+                <Copy guid="305" name="pixel103" reference="202" id="103" />
+                <Copy guid="306" name="pixel104" reference="202" id="104" />
+                <Copy guid="307" name="pixel105" reference="202" id="105" />
+                <Copy guid="308" name="pixel106" reference="202" id="106" />
+                <Copy guid="309" name="pixel107" reference="202" id="107" />
+                <Copy guid="310" name="pixel108" reference="202" id="108" />
+                <Copy guid="311" name="pixel109" reference="202" id="109" />
+                <Copy guid="312" name="pixel110" reference="202" id="110" />
+                <Copy guid="313" name="pixel111" reference="202" id="111" />
+                <Copy guid="314" name="pixel112" reference="202" id="112" />
+                <Copy guid="315" name="pixel113" reference="202" id="113" />
+                <Copy guid="316" name="pixel114" reference="202" id="114" />
+                <Copy guid="317" name="pixel115" reference="202" id="115" />
+                <Copy guid="318" name="pixel116" reference="202" id="116" />
+                <Copy guid="319" name="pixel117" reference="202" id="117" />
+                <Copy guid="320" name="pixel118" reference="202" id="118" />
+                <Copy guid="321" name="pixel119" reference="202" id="119" />
+                <Copy guid="322" name="pixel120" reference="202" id="120" />
+                <Copy guid="323" name="pixel121" reference="202" id="121" />
+                <Copy guid="324" name="pixel122" reference="202" id="122" />
+                <Copy guid="325" name="pixel123" reference="202" id="123" />
+                <Copy guid="326" name="pixel124" reference="202" id="124" />
+                <Copy guid="327" name="pixel125" reference="202" id="125" />
+                <Copy guid="328" name="pixel126" reference="202" id="126" />
+                <Copy guid="329" name="pixel127" reference="202" id="127" />
+                <LocalGeometer registry-coordinate-system="McStas">
+                    <Register name="pixel0" position="(0*m, -0.128528*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel1" position="(0*m, -0.126504*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel2" position="(0*m, -0.12448*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel3" position="(0*m, -0.122456*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel4" position="(0*m, -0.120432*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel5" position="(0*m, -0.118408*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel6" position="(0*m, -0.116384*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel7" position="(0*m, -0.11436*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel8" position="(0*m, -0.112335*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel9" position="(0*m, -0.110311*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel10" position="(0*m, -0.108287*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel11" position="(0*m, -0.106263*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel12" position="(0*m, -0.104239*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel13" position="(0*m, -0.102215*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel14" position="(0*m, -0.100191*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel15" position="(0*m, -0.098167*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel16" position="(0*m, -0.096143*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel17" position="(0*m, -0.0941189*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel18" position="(0*m, -0.0920948*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel19" position="(0*m, -0.0900708*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel20" position="(0*m, -0.0880467*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel21" position="(0*m, -0.0860227*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel22" position="(0*m, -0.0839986*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel23" position="(0*m, -0.0819745*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel24" position="(0*m, -0.0799505*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel25" position="(0*m, -0.0779264*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel26" position="(0*m, -0.0759023*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel27" position="(0*m, -0.0738783*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel28" position="(0*m, -0.0718542*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel29" position="(0*m, -0.0698302*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel30" position="(0*m, -0.0678061*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel31" position="(0*m, -0.065782*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel32" position="(0*m, -0.063758*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel33" position="(0*m, -0.0617339*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel34" position="(0*m, -0.0597098*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel35" position="(0*m, -0.0576858*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel36" position="(0*m, -0.0556617*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel37" position="(0*m, -0.0536377*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel38" position="(0*m, -0.0516136*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel39" position="(0*m, -0.0495895*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel40" position="(0*m, -0.0475655*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel41" position="(0*m, -0.0455414*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel42" position="(0*m, -0.0435173*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel43" position="(0*m, -0.0414933*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel44" position="(0*m, -0.0394692*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel45" position="(0*m, -0.0374452*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel46" position="(0*m, -0.0354211*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel47" position="(0*m, -0.033397*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel48" position="(0*m, -0.031373*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel49" position="(0*m, -0.0293489*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel50" position="(0*m, -0.0273248*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel51" position="(0*m, -0.0253008*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel52" position="(0*m, -0.0232767*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel53" position="(0*m, -0.0212527*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel54" position="(0*m, -0.0192286*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel55" position="(0*m, -0.0172045*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel56" position="(0*m, -0.0151805*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel57" position="(0*m, -0.0131564*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel58" position="(0*m, -0.0111323*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel59" position="(0*m, -0.00910828*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel60" position="(0*m, -0.00708422*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel61" position="(0*m, -0.00506016*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel62" position="(0*m, -0.00303609*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel63" position="(0*m, -0.00101203*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel64" position="(0*m, 0.00101203*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel65" position="(0*m, 0.00303609*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel66" position="(0*m, 0.00506016*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel67" position="(0*m, 0.00708422*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel68" position="(0*m, 0.00910828*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel69" position="(0*m, 0.0111323*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel70" position="(0*m, 0.0131564*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel71" position="(0*m, 0.0151805*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel72" position="(0*m, 0.0172045*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel73" position="(0*m, 0.0192286*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel74" position="(0*m, 0.0212527*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel75" position="(0*m, 0.0232767*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel76" position="(0*m, 0.0253008*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel77" position="(0*m, 0.0273248*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel78" position="(0*m, 0.0293489*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel79" position="(0*m, 0.031373*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel80" position="(0*m, 0.033397*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel81" position="(0*m, 0.0354211*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel82" position="(0*m, 0.0374452*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel83" position="(0*m, 0.0394692*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel84" position="(0*m, 0.0414933*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel85" position="(0*m, 0.0435173*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel86" position="(0*m, 0.0455414*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel87" position="(0*m, 0.0475655*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel88" position="(0*m, 0.0495895*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel89" position="(0*m, 0.0516136*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel90" position="(0*m, 0.0536377*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel91" position="(0*m, 0.0556617*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel92" position="(0*m, 0.0576858*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel93" position="(0*m, 0.0597098*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel94" position="(0*m, 0.0617339*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel95" position="(0*m, 0.063758*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel96" position="(0*m, 0.065782*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel97" position="(0*m, 0.0678061*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel98" position="(0*m, 0.0698302*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel99" position="(0*m, 0.0718542*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel100" position="(0*m, 0.0738783*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel101" position="(0*m, 0.0759023*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel102" position="(0*m, 0.0779264*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel103" position="(0*m, 0.0799505*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel104" position="(0*m, 0.0819745*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel105" position="(0*m, 0.0839986*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel106" position="(0*m, 0.0860227*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel107" position="(0*m, 0.0880467*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel108" position="(0*m, 0.0900708*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel109" position="(0*m, 0.0920948*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel110" position="(0*m, 0.0941189*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel111" position="(0*m, 0.096143*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel112" position="(0*m, 0.098167*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel113" position="(0*m, 0.100191*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel114" position="(0*m, 0.102215*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel115" position="(0*m, 0.104239*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel116" position="(0*m, 0.106263*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel117" position="(0*m, 0.108287*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel118" position="(0*m, 0.110311*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel119" position="(0*m, 0.112335*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel120" position="(0*m, 0.11436*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel121" position="(0*m, 0.116384*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel122" position="(0*m, 0.118408*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel123" position="(0*m, 0.120432*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel124" position="(0*m, 0.122456*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel125" position="(0*m, 0.12448*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel126" position="(0*m, 0.126504*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel127" position="(0*m, 0.128528*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                </LocalGeometer>
+            </Detector>
+
+            <Copy guid="330" name="det1" reference="201" id="1" />
+            <Copy guid="331" name="det2" reference="201" id="2" />
+            <Copy guid="332" name="det3" reference="201" id="3" />
+            <Copy guid="333" name="det4" reference="201" id="4" />
+            <Copy guid="334" name="det5" reference="201" id="5" />
+            <Copy guid="335" name="det6" reference="201" id="6" />
+            <Copy guid="336" name="det7" reference="201" id="7" />
+            <LocalGeometer registry-coordinate-system="McStas">
+                <Register name="det0" position="(-0.096012*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det1" position="(-0.06858*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det2" position="(-0.041148*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det3" position="(-0.013716*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det4" position="(0.013716*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det5" position="(0.041148*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det6" position="(0.06858*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det7" position="(0.096012*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+            </LocalGeometer>
+        </DetectorPack>
+
+        <Copy guid="337" name="pack62" reference="200" id="62" />
+
+        <DetectorPack guid="338" name="pack63" id="63">
+            <Shape>
+            <!--
+            Block
+
+  Its thickness is the length of the dimension that is parallel
+  to neutron beam.
+  
+  Its height is its vertical length (parallel to gravity).
+
+  Its width is the 3rd dimension.
+  
+            -->
+            <block width="0.219532*m" height="0.33517*m" thickness="0.0265481*m"/>
+            </Shape>
+
+            <Detector name="det0" pressure="1.01325e+06*m**-1*kg*s**-2" holdOff="1e-06*s" deadTime="1e-05*s" guid="339" type="He3 LPSD" id="0">
+                <Shape>
+                <!--
+                Cylinder
+
+  Its axis is vertical.
+
+  Attributes:
+    - radius
+    - height
+  
+                -->
+                <cylinder height="0.333502*m" radius="0.0127*m"/>
+                </Shape>
+
+                <Pixel solidAngle="1.0" guid="340" name="pixel0" id="0">
+                    <Shape>
+                    <!--
+                    Cylinder
+
+  Its axis is vertical.
+
+  Attributes:
+    - radius
+    - height
+  
+                    -->
+                    <cylinder height="0.00260548*m" radius="0.0127*m"/>
+                    </Shape>
+                </Pixel>
+
+                <Copy guid="341" name="pixel1" reference="340" id="1" />
+                <Copy guid="342" name="pixel2" reference="340" id="2" />
+                <Copy guid="343" name="pixel3" reference="340" id="3" />
+                <Copy guid="344" name="pixel4" reference="340" id="4" />
+                <Copy guid="345" name="pixel5" reference="340" id="5" />
+                <Copy guid="346" name="pixel6" reference="340" id="6" />
+                <Copy guid="347" name="pixel7" reference="340" id="7" />
+                <Copy guid="348" name="pixel8" reference="340" id="8" />
+                <Copy guid="349" name="pixel9" reference="340" id="9" />
+                <Copy guid="350" name="pixel10" reference="340" id="10" />
+                <Copy guid="351" name="pixel11" reference="340" id="11" />
+                <Copy guid="352" name="pixel12" reference="340" id="12" />
+                <Copy guid="353" name="pixel13" reference="340" id="13" />
+                <Copy guid="354" name="pixel14" reference="340" id="14" />
+                <Copy guid="355" name="pixel15" reference="340" id="15" />
+                <Copy guid="356" name="pixel16" reference="340" id="16" />
+                <Copy guid="357" name="pixel17" reference="340" id="17" />
+                <Copy guid="358" name="pixel18" reference="340" id="18" />
+                <Copy guid="359" name="pixel19" reference="340" id="19" />
+                <Copy guid="360" name="pixel20" reference="340" id="20" />
+                <Copy guid="361" name="pixel21" reference="340" id="21" />
+                <Copy guid="362" name="pixel22" reference="340" id="22" />
+                <Copy guid="363" name="pixel23" reference="340" id="23" />
+                <Copy guid="364" name="pixel24" reference="340" id="24" />
+                <Copy guid="365" name="pixel25" reference="340" id="25" />
+                <Copy guid="366" name="pixel26" reference="340" id="26" />
+                <Copy guid="367" name="pixel27" reference="340" id="27" />
+                <Copy guid="368" name="pixel28" reference="340" id="28" />
+                <Copy guid="369" name="pixel29" reference="340" id="29" />
+                <Copy guid="370" name="pixel30" reference="340" id="30" />
+                <Copy guid="371" name="pixel31" reference="340" id="31" />
+                <Copy guid="372" name="pixel32" reference="340" id="32" />
+                <Copy guid="373" name="pixel33" reference="340" id="33" />
+                <Copy guid="374" name="pixel34" reference="340" id="34" />
+                <Copy guid="375" name="pixel35" reference="340" id="35" />
+                <Copy guid="376" name="pixel36" reference="340" id="36" />
+                <Copy guid="377" name="pixel37" reference="340" id="37" />
+                <Copy guid="378" name="pixel38" reference="340" id="38" />
+                <Copy guid="379" name="pixel39" reference="340" id="39" />
+                <Copy guid="380" name="pixel40" reference="340" id="40" />
+                <Copy guid="381" name="pixel41" reference="340" id="41" />
+                <Copy guid="382" name="pixel42" reference="340" id="42" />
+                <Copy guid="383" name="pixel43" reference="340" id="43" />
+                <Copy guid="384" name="pixel44" reference="340" id="44" />
+                <Copy guid="385" name="pixel45" reference="340" id="45" />
+                <Copy guid="386" name="pixel46" reference="340" id="46" />
+                <Copy guid="387" name="pixel47" reference="340" id="47" />
+                <Copy guid="388" name="pixel48" reference="340" id="48" />
+                <Copy guid="389" name="pixel49" reference="340" id="49" />
+                <Copy guid="390" name="pixel50" reference="340" id="50" />
+                <Copy guid="391" name="pixel51" reference="340" id="51" />
+                <Copy guid="392" name="pixel52" reference="340" id="52" />
+                <Copy guid="393" name="pixel53" reference="340" id="53" />
+                <Copy guid="394" name="pixel54" reference="340" id="54" />
+                <Copy guid="395" name="pixel55" reference="340" id="55" />
+                <Copy guid="396" name="pixel56" reference="340" id="56" />
+                <Copy guid="397" name="pixel57" reference="340" id="57" />
+                <Copy guid="398" name="pixel58" reference="340" id="58" />
+                <Copy guid="399" name="pixel59" reference="340" id="59" />
+                <Copy guid="400" name="pixel60" reference="340" id="60" />
+                <Copy guid="401" name="pixel61" reference="340" id="61" />
+                <Copy guid="402" name="pixel62" reference="340" id="62" />
+                <Copy guid="403" name="pixel63" reference="340" id="63" />
+                <Copy guid="404" name="pixel64" reference="340" id="64" />
+                <Copy guid="405" name="pixel65" reference="340" id="65" />
+                <Copy guid="406" name="pixel66" reference="340" id="66" />
+                <Copy guid="407" name="pixel67" reference="340" id="67" />
+                <Copy guid="408" name="pixel68" reference="340" id="68" />
+                <Copy guid="409" name="pixel69" reference="340" id="69" />
+                <Copy guid="410" name="pixel70" reference="340" id="70" />
+                <Copy guid="411" name="pixel71" reference="340" id="71" />
+                <Copy guid="412" name="pixel72" reference="340" id="72" />
+                <Copy guid="413" name="pixel73" reference="340" id="73" />
+                <Copy guid="414" name="pixel74" reference="340" id="74" />
+                <Copy guid="415" name="pixel75" reference="340" id="75" />
+                <Copy guid="416" name="pixel76" reference="340" id="76" />
+                <Copy guid="417" name="pixel77" reference="340" id="77" />
+                <Copy guid="418" name="pixel78" reference="340" id="78" />
+                <Copy guid="419" name="pixel79" reference="340" id="79" />
+                <Copy guid="420" name="pixel80" reference="340" id="80" />
+                <Copy guid="421" name="pixel81" reference="340" id="81" />
+                <Copy guid="422" name="pixel82" reference="340" id="82" />
+                <Copy guid="423" name="pixel83" reference="340" id="83" />
+                <Copy guid="424" name="pixel84" reference="340" id="84" />
+                <Copy guid="425" name="pixel85" reference="340" id="85" />
+                <Copy guid="426" name="pixel86" reference="340" id="86" />
+                <Copy guid="427" name="pixel87" reference="340" id="87" />
+                <Copy guid="428" name="pixel88" reference="340" id="88" />
+                <Copy guid="429" name="pixel89" reference="340" id="89" />
+                <Copy guid="430" name="pixel90" reference="340" id="90" />
+                <Copy guid="431" name="pixel91" reference="340" id="91" />
+                <Copy guid="432" name="pixel92" reference="340" id="92" />
+                <Copy guid="433" name="pixel93" reference="340" id="93" />
+                <Copy guid="434" name="pixel94" reference="340" id="94" />
+                <Copy guid="435" name="pixel95" reference="340" id="95" />
+                <Copy guid="436" name="pixel96" reference="340" id="96" />
+                <Copy guid="437" name="pixel97" reference="340" id="97" />
+                <Copy guid="438" name="pixel98" reference="340" id="98" />
+                <Copy guid="439" name="pixel99" reference="340" id="99" />
+                <Copy guid="440" name="pixel100" reference="340" id="100" />
+                <Copy guid="441" name="pixel101" reference="340" id="101" />
+                <Copy guid="442" name="pixel102" reference="340" id="102" />
+                <Copy guid="443" name="pixel103" reference="340" id="103" />
+                <Copy guid="444" name="pixel104" reference="340" id="104" />
+                <Copy guid="445" name="pixel105" reference="340" id="105" />
+                <Copy guid="446" name="pixel106" reference="340" id="106" />
+                <Copy guid="447" name="pixel107" reference="340" id="107" />
+                <Copy guid="448" name="pixel108" reference="340" id="108" />
+                <Copy guid="449" name="pixel109" reference="340" id="109" />
+                <Copy guid="450" name="pixel110" reference="340" id="110" />
+                <Copy guid="451" name="pixel111" reference="340" id="111" />
+                <Copy guid="452" name="pixel112" reference="340" id="112" />
+                <Copy guid="453" name="pixel113" reference="340" id="113" />
+                <Copy guid="454" name="pixel114" reference="340" id="114" />
+                <Copy guid="455" name="pixel115" reference="340" id="115" />
+                <Copy guid="456" name="pixel116" reference="340" id="116" />
+                <Copy guid="457" name="pixel117" reference="340" id="117" />
+                <Copy guid="458" name="pixel118" reference="340" id="118" />
+                <Copy guid="459" name="pixel119" reference="340" id="119" />
+                <Copy guid="460" name="pixel120" reference="340" id="120" />
+                <Copy guid="461" name="pixel121" reference="340" id="121" />
+                <Copy guid="462" name="pixel122" reference="340" id="122" />
+                <Copy guid="463" name="pixel123" reference="340" id="123" />
+                <Copy guid="464" name="pixel124" reference="340" id="124" />
+                <Copy guid="465" name="pixel125" reference="340" id="125" />
+                <Copy guid="466" name="pixel126" reference="340" id="126" />
+                <Copy guid="467" name="pixel127" reference="340" id="127" />
+                <LocalGeometer registry-coordinate-system="McStas">
+                    <Register name="pixel0" position="(0*m, -0.165448*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel1" position="(0*m, -0.162843*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel2" position="(0*m, -0.160237*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel3" position="(0*m, -0.157632*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel4" position="(0*m, -0.155026*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel5" position="(0*m, -0.152421*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel6" position="(0*m, -0.149815*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel7" position="(0*m, -0.14721*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel8" position="(0*m, -0.144604*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel9" position="(0*m, -0.141999*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel10" position="(0*m, -0.139393*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel11" position="(0*m, -0.136788*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel12" position="(0*m, -0.134182*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel13" position="(0*m, -0.131577*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel14" position="(0*m, -0.128971*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel15" position="(0*m, -0.126366*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel16" position="(0*m, -0.123761*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel17" position="(0*m, -0.121155*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel18" position="(0*m, -0.11855*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel19" position="(0*m, -0.115944*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel20" position="(0*m, -0.113339*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel21" position="(0*m, -0.110733*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel22" position="(0*m, -0.108128*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel23" position="(0*m, -0.105522*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel24" position="(0*m, -0.102917*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel25" position="(0*m, -0.100311*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel26" position="(0*m, -0.0977057*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel27" position="(0*m, -0.0951002*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel28" position="(0*m, -0.0924947*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel29" position="(0*m, -0.0898892*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel30" position="(0*m, -0.0872837*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel31" position="(0*m, -0.0846782*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel32" position="(0*m, -0.0820728*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel33" position="(0*m, -0.0794673*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel34" position="(0*m, -0.0768618*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel35" position="(0*m, -0.0742563*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel36" position="(0*m, -0.0716508*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel37" position="(0*m, -0.0690453*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel38" position="(0*m, -0.0664399*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel39" position="(0*m, -0.0638344*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel40" position="(0*m, -0.0612289*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel41" position="(0*m, -0.0586234*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel42" position="(0*m, -0.0560179*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel43" position="(0*m, -0.0534124*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel44" position="(0*m, -0.0508069*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel45" position="(0*m, -0.0482015*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel46" position="(0*m, -0.045596*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel47" position="(0*m, -0.0429905*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel48" position="(0*m, -0.040385*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel49" position="(0*m, -0.0377795*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel50" position="(0*m, -0.035174*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel51" position="(0*m, -0.0325686*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel52" position="(0*m, -0.0299631*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel53" position="(0*m, -0.0273576*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel54" position="(0*m, -0.0247521*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel55" position="(0*m, -0.0221466*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel56" position="(0*m, -0.0195411*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel57" position="(0*m, -0.0169356*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel58" position="(0*m, -0.0143302*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel59" position="(0*m, -0.0117247*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel60" position="(0*m, -0.0091192*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel61" position="(0*m, -0.00651371*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel62" position="(0*m, -0.00390823*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel63" position="(0*m, -0.00130274*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel64" position="(0*m, 0.00130274*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel65" position="(0*m, 0.00390823*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel66" position="(0*m, 0.00651371*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel67" position="(0*m, 0.0091192*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel68" position="(0*m, 0.0117247*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel69" position="(0*m, 0.0143302*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel70" position="(0*m, 0.0169356*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel71" position="(0*m, 0.0195411*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel72" position="(0*m, 0.0221466*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel73" position="(0*m, 0.0247521*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel74" position="(0*m, 0.0273576*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel75" position="(0*m, 0.0299631*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel76" position="(0*m, 0.0325686*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel77" position="(0*m, 0.035174*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel78" position="(0*m, 0.0377795*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel79" position="(0*m, 0.040385*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel80" position="(0*m, 0.0429905*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel81" position="(0*m, 0.045596*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel82" position="(0*m, 0.0482015*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel83" position="(0*m, 0.0508069*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel84" position="(0*m, 0.0534124*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel85" position="(0*m, 0.0560179*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel86" position="(0*m, 0.0586234*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel87" position="(0*m, 0.0612289*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel88" position="(0*m, 0.0638344*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel89" position="(0*m, 0.0664399*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel90" position="(0*m, 0.0690453*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel91" position="(0*m, 0.0716508*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel92" position="(0*m, 0.0742563*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel93" position="(0*m, 0.0768618*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel94" position="(0*m, 0.0794673*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel95" position="(0*m, 0.0820728*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel96" position="(0*m, 0.0846782*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel97" position="(0*m, 0.0872837*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel98" position="(0*m, 0.0898892*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel99" position="(0*m, 0.0924947*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel100" position="(0*m, 0.0951002*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel101" position="(0*m, 0.0977057*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel102" position="(0*m, 0.100311*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel103" position="(0*m, 0.102917*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel104" position="(0*m, 0.105522*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel105" position="(0*m, 0.108128*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel106" position="(0*m, 0.110733*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel107" position="(0*m, 0.113339*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel108" position="(0*m, 0.115944*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel109" position="(0*m, 0.11855*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel110" position="(0*m, 0.121155*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel111" position="(0*m, 0.123761*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel112" position="(0*m, 0.126366*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel113" position="(0*m, 0.128971*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel114" position="(0*m, 0.131577*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel115" position="(0*m, 0.134182*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel116" position="(0*m, 0.136788*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel117" position="(0*m, 0.139393*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel118" position="(0*m, 0.141999*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel119" position="(0*m, 0.144604*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel120" position="(0*m, 0.14721*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel121" position="(0*m, 0.149815*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel122" position="(0*m, 0.152421*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel123" position="(0*m, 0.155026*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel124" position="(0*m, 0.157632*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel125" position="(0*m, 0.160237*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel126" position="(0*m, 0.162843*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                    <Register name="pixel127" position="(0*m, 0.165448*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                </LocalGeometer>
+            </Detector>
+
+            <Copy guid="468" name="det1" reference="339" id="1" />
+            <Copy guid="469" name="det2" reference="339" id="2" />
+            <Copy guid="470" name="det3" reference="339" id="3" />
+            <Copy guid="471" name="det4" reference="339" id="4" />
+            <Copy guid="472" name="det5" reference="339" id="5" />
+            <Copy guid="473" name="det6" reference="339" id="6" />
+            <Copy guid="474" name="det7" reference="339" id="7" />
+            <LocalGeometer registry-coordinate-system="McStas">
+                <Register name="det0" position="(-0.096012*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det1" position="(-0.06858*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det2" position="(-0.041148*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det3" position="(-0.013716*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det4" position="(0.013716*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det5" position="(0.041148*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det6" position="(0.06858*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+                <Register name="det7" position="(0.096012*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+            </LocalGeometer>
+        </DetectorPack>
+
+        <Copy guid="475" name="pack64" reference="338" id="64" />
+        <Copy guid="476" name="pack65" reference="3" id="65" />
+        <Copy guid="477" name="pack66" reference="3" id="66" />
+        <Copy guid="478" name="pack67" reference="3" id="67" />
+        <Copy guid="479" name="pack68" reference="3" id="68" />
+        <Copy guid="480" name="pack69" reference="3" id="69" />
+        <Copy guid="481" name="pack70" reference="3" id="70" />
+        <Copy guid="482" name="pack71" reference="3" id="71" />
+        <Copy guid="483" name="pack72" reference="3" id="72" />
+        <Copy guid="484" name="pack73" reference="3" id="73" />
+        <Copy guid="485" name="pack74" reference="3" id="74" />
+        <Copy guid="486" name="pack75" reference="3" id="75" />
+        <Copy guid="487" name="pack76" reference="3" id="76" />
+        <Copy guid="488" name="pack77" reference="3" id="77" />
+        <Copy guid="489" name="pack78" reference="3" id="78" />
+        <Copy guid="490" name="pack79" reference="3" id="79" />
+        <Copy guid="491" name="pack80" reference="3" id="80" />
+        <Copy guid="492" name="pack81" reference="3" id="81" />
+        <Copy guid="493" name="pack82" reference="3" id="82" />
+        <Copy guid="494" name="pack83" reference="3" id="83" />
+        <Copy guid="495" name="pack84" reference="3" id="84" />
+        <Copy guid="496" name="pack85" reference="3" id="85" />
+        <Copy guid="497" name="pack86" reference="3" id="86" />
+        <Copy guid="498" name="pack87" reference="3" id="87" />
+        <Copy guid="499" name="pack88" reference="3" id="88" />
+        <Copy guid="500" name="pack89" reference="3" id="89" />
+        <Copy guid="501" name="pack90" reference="3" id="90" />
+        <Copy guid="502" name="pack91" reference="3" id="91" />
+        <Copy guid="503" name="pack92" reference="3" id="92" />
+        <Copy guid="504" name="pack93" reference="3" id="93" />
+        <Copy guid="505" name="pack94" reference="3" id="94" />
+        <Copy guid="506" name="pack95" reference="3" id="95" />
+        <Copy guid="507" name="pack96" reference="3" id="96" />
+        <Copy guid="508" name="pack97" reference="3" id="97" />
+        <Copy guid="509" name="pack98" reference="3" id="98" />
+        <Copy guid="510" name="pack99" reference="3" id="99" />
+        <Copy guid="511" name="pack100" reference="3" id="100" />
+        <Copy guid="512" name="pack101" reference="3" id="101" />
+        <Copy guid="513" name="pack102" reference="3" id="102" />
+        <Copy guid="514" name="pack103" reference="3" id="103" />
+        <Copy guid="515" name="pack104" reference="3" id="104" />
+        <Copy guid="516" name="pack105" reference="3" id="105" />
+        <Copy guid="517" name="pack106" reference="3" id="106" />
+        <Copy guid="518" name="pack107" reference="3" id="107" />
+        <Copy guid="519" name="pack108" reference="3" id="108" />
+        <Copy guid="520" name="pack109" reference="3" id="109" />
+        <Copy guid="521" name="pack110" reference="3" id="110" />
+        <Copy guid="522" name="pack111" reference="3" id="111" />
+        <Copy guid="523" name="pack112" reference="3" id="112" />
+        <LocalGeometer registry-coordinate-system="McStas">
+            <Register name="pack0" position="(4.60563*m, -1.30354*m, 2.76378*m)" orientation="(-180.0, -59.032627, -180.0)"/>
+            <Register name="pack1" position="(4.53673*m, -1.30353*m, 2.87548*m)" orientation="(-180.0, -56.732627, -180.0)"/>
+            <Register name="pack2" position="(4.32536*m, -1.2948*m, 3.19569*m)" orientation="(-180.0, -53.524070930000015, -180.0)"/>
+            <Register name="pack3" position="(4.18486*m, -1.2948*m, 3.37549*m)" orientation="(-180.0, -51.141005530000015, -180.0)"/>
+            <Register name="pack4" position="(4.04314*m, -1.2948*m, 3.54222*m)" orientation="(-180.0, -48.767750250000006, -180.0)"/>
+            <Register name="pack5" position="(3.89677*m, -1.2948*m, 3.70582*m)" orientation="(-180.0, -46.388908570000005, -180.0)"/>
+            <Register name="pack6" position="(3.72009*m, -1.2948*m, 3.87876*m)" orientation="(-180.0, -43.78023216, -180.0)"/>
+            <Register name="pack7" position="(3.55328*m, -1.2948*m, 4.03091*m)" orientation="(-180.0, -41.41717318999999, -180.0)"/>
+            <Register name="pack8" position="(3.38585*m, -1.2948*m, 4.1714*m)" orientation="(-180.0, -39.056624239999984, -180.0)"/>
+            <Register name="pack9" position="(3.21298*m, -1.2948*m, 4.30789*m)" orientation="(-180.0, -36.70619921, -180.0)"/>
+            <Register name="pack10" position="(3.02654*m, -1.2948*m, 4.43843*m)" orientation="(-180.0, -34.34619912, -180.0)"/>
+            <Register name="pack11" position="(2.84367*m, -1.2948*m, 4.55892*m)" orientation="(-180.0, -31.986197800000017, -180.0)"/>
+            <Register name="pack12" position="(2.6523*m, -1.2948*m, 4.67062*m)" orientation="(-180.0, -29.626197710000024, -180.0)"/>
+            <Register name="pack13" position="(2.43275*m, -1.2948*m, 4.79084*m)" orientation="(-180.0, -27.26619653000001, -180.0)"/>
+            <Register name="pack14" position="(2.23149*m, -1.2948*m, 4.88708*m)" orientation="(-180.0, -24.45377572000003, -180.0)"/>
+            <Register name="pack15" position="(2.02469*m, -1.2948*m, 4.97431*m)" orientation="(-180.0, -22.082026530000007, -180.0)"/>
+            <Register name="pack16" position="(1.81564*m, -1.2948*m, 5.05394*m)" orientation="(-180.0, -19.716479220000007, -180.0)"/>
+            <Register name="pack17" position="(1.60077*m, -1.2948*m, 5.12786*m)" orientation="(-180.0, -17.340602319999995, -180.0)"/>
+            <Register name="pack18" position="(1.38823*m, -1.2948*m, 5.18797*m)" orientation="(-180.0, -14.980604500000005, -180.0)"/>
+            <Register name="pack19" position="(1.17173*m, -1.2948*m, 5.23638*m)" orientation="(-180.0, -12.620604859999984, -180.0)"/>
+            <Register name="pack20" position="(0.925248*m, -1.2948*m, 5.2902*m)" orientation="(-180.0, -9.920604499999998, -180.0)"/>
+            <Register name="pack21" position="(0.706623*m, -1.2948*m, 5.32381*m)" orientation="(-180.0, -7.560604500000018, -180.0)"/>
+            <Register name="pack22" position="(0.486799*m, -1.2948*m, 5.34839*m)" orientation="(-180.0, -5.200604499999986, -180.0)"/>
+            <Register name="pack23" position="(0.301053*m, -1.2948*m, 5.3599*m)" orientation="(-180.0, -2.8405903500000442, -180.0)"/>
+            <Register name="pack24" position="(0.0450479*m, -1.2948*m, 5.3794*m)" orientation="(-180.0, -0.48060366000002674, -180.0)"/>
+            <Register name="pack25" position="(-0.207963*m, -1.2948*m, 5.36647*m)" orientation="(-180.0, 2.2192065500000253, -180.0)"/>
+            <Register name="pack26" position="(-0.417159*m, -1.2948*m, 5.35564*m)" orientation="(-180.0, 4.579251520000022, -180.0)"/>
+            <Register name="pack27" position="(-0.635562*m, -1.2948*m, 5.33431*m)" orientation="(-180.0, 6.9392322999999925, -180.0)"/>
+            <Register name="pack28" position="(-0.849458*m, -1.2948*m, 5.29493*m)" orientation="(-180.0, 9.299221859999989, -180.0)"/>
+            <Register name="pack29" position="(-1.06678*m, -1.2948*m, 5.25768*m)" orientation="(-180.0, 11.65922559, -180.0)"/>
+            <Register name="pack30" position="(-1.28726*m, -1.2948*m, 5.21296*m)" orientation="(-180.0, 14.019225990000026, -180.0)"/>
+            <Register name="pack31" position="(-1.50051*m, -1.2948*m, 5.15852*m)" orientation="(-180.0, 16.379225810000023, -180.0)"/>
+            <Register name="pack32" position="(-1.7157*m, -1.2948*m, 5.09048*m)" orientation="(-180.0, 18.751303330000027, -180.0)"/>
+            <Register name="pack33" position="(-1.95082*m, -1.2948*m, 5.00993*m)" orientation="(-180.0, 21.322468850000025, -180.0)"/>
+            <Register name="pack34" position="(-2.151*m, -1.2948*m, 4.92755*m)" orientation="(-180.0, 23.682468300000014, -180.0)"/>
+            <Register name="pack35" position="(-2.35168*m, -1.2948*m, 4.83643*m)" orientation="(-180.0, 25.96424299000001, -180.0)"/>
+            <Register name="pack36" position="(-2.54869*m, -1.2948*m, 4.73618*m)" orientation="(-180.0, 28.32424206, -180.0)"/>
+            <Register name="pack37" position="(4.68753*m, -0.0389*m, 2.89949*m)" orientation="(-180.0, -58.26100000000001, -180.0)"/>
+            <Register name="pack38" position="(4.56416*m, -0.0389*m, 3.09005*m)" orientation="(-180.0, -55.90100000000001, -180.0)"/>
+            <Register name="pack39" position="(4.43518*m, -0.0389*m, 3.27775*m)" orientation="(-180.0, -53.54099989, -180.0)"/>
+            <Register name="pack40" position="(4.29603*m, -0.0389*m, 3.4554*m)" orientation="(-180.0, -51.19099918000002, -180.0)"/>
+            <Register name="pack41" position="(4.14815*m, -0.0389*m, 3.63106*m)" orientation="(-180.0, -48.8397005, -180.0)"/>
+            <Register name="pack42" position="(3.9942*m, -0.0389*m, 3.79841*m)" orientation="(-180.0, -46.458099989999994, -180.0)"/>
+            <Register name="pack43" position="(3.81358*m, -0.0389*m, 3.97591*m)" orientation="(-180.0, -43.78540029000001, -180.0)"/>
+            <Register name="pack44" position="(3.64694*m, -0.0389*m, 4.12998*m)" orientation="(-180.0, -41.42889981, -180.0)"/>
+            <Register name="pack45" position="(3.47295*m, -0.0389*m, 4.27673*m)" orientation="(-180.0, -39.05439952000001, -180.0)"/>
+            <Register name="pack46" position="(3.29299*m, -0.0389*m, 4.41664*m)" orientation="(-180.0, -36.68729977999999, -180.0)"/>
+            <Register name="pack47" position="(3.10855*m, -0.0389*m, 4.54755*m)" orientation="(-180.0, -34.33019904000001, -180.0)"/>
+            <Register name="pack48" position="(2.91767*m, -0.0389*m, 4.67274*m)" orientation="(-180.0, -31.953799040000018, -180.0)"/>
+            <Register name="pack49" position="(2.72204*m, -0.0389*m, 4.78943*m)" orientation="(-180.0, -29.572600590000018, -180.0)"/>
+            <Register name="pack50" position="(2.49463*m, -0.0389*m, 4.91214*m)" orientation="(-180.0, -26.88470068000002, -180.0)"/>
+            <Register name="pack51" position="(2.29065*m, -0.0389*m, 5.00953*m)" orientation="(-180.0, -24.494798330000027, -180.0)"/>
+            <Register name="pack52" position="(2.07929*m, -0.0389*m, 5.10175*m)" orientation="(-180.0, -22.118899770000027, -180.0)"/>
+            <Register name="pack53" position="(1.86561*m, -0.0389*m, 5.18273*m)" orientation="(-180.0, -19.75849991999999, -180.0)"/>
+            <Register name="pack54" position="(1.65441*m, -0.0389*m, 5.25437*m)" orientation="(-180.0, -17.41260069000001, -180.0)"/>
+            <Register name="pack55" position="(1.43681*m, -0.0389*m, 5.31818*m)" orientation="(-180.0, -15.069599390000002, -180.0)"/>
+            <Register name="pack56" position="(1.21474*m, -0.0389*m, 5.37309*m)" orientation="(-180.0, -12.719999489999998, -180.0)"/>
+            <Register name="pack57" position="(0.96714*m, -0.0389*m, 5.42305*m)" orientation="(-180.0, -9.98215991000001, -180.0)"/>
+            <Register name="pack58" position="(0.735148*m, -0.0389*m, 5.45998*m)" orientation="(-180.0, -7.655361730000011, -180.0)"/>
+            <Register name="pack59" position="(0.506464*m, -0.0389*m, 5.48793*m)" orientation="(-180.0, -5.325365350000018, -180.0)"/>
+            <Register name="pack60" position="(0.290153*m, -0.0389*m, 5.49609*m)" orientation="(-180.0, -2.9953676900000152, -180.0)"/>
+            <Register name="pack61" position="(0.0617*m, 0.44*m, 5.47092*m)" orientation="(-180.0, -1.8302563600000021, -180.0)"/>
+            <Register name="pack62" position="(-0.184923*m, 0.431673*m, 5.50032*m)" orientation="(-180.0, 0.4996225800000057, -180.0)"/>
+            <Register name="pack63" position="(0.0428114*m, -0.468884*m, 5.5065*m)" orientation="(-180.0, -1.8303699000000098, -180.0)"/>
+            <Register name="pack64" position="(-0.166845*m, -0.468884*m, 5.49953*m)" orientation="(-180.0, 0.4996669800000184, -180.0)"/>
+            <Register name="pack65" position="(-0.432615*m, -0.0389*m, 5.49298*m)" orientation="(-180.0, 4.400179380000011, -180.0)"/>
+            <Register name="pack66" position="(-0.649436*m, -0.0389*m, 5.47316*m)" orientation="(-180.0, 6.859700650000034, -180.0)"/>
+            <Register name="pack67" position="(-0.878762*m, -0.0389*m, 5.43946*m)" orientation="(-180.0, 9.219697270000028, -180.0)"/>
+            <Register name="pack68" position="(-1.10716*m, -0.0389*m, 5.3969*m)" orientation="(-180.0, 11.57969949, -180.0)"/>
+            <Register name="pack69" position="(-1.32939*m, -0.0389*m, 5.34669*m)" orientation="(-180.0, 13.94189986000001, -180.0)"/>
+            <Register name="pack70" position="(-1.54904*m, -0.0389*m, 5.28807*m)" orientation="(-180.0, 16.368000150000007, -180.0)"/>
+            <Register name="pack71" position="(-1.76492*m, -0.0389*m, 5.22141*m)" orientation="(-180.0, 18.75629992000003, -180.0)"/>
+            <Register name="pack72" position="(-1.99638*m, -0.0389*m, 5.14061*m)" orientation="(-180.0, 21.275698809999994, -180.0)"/>
+            <Register name="pack73" position="(-2.20577*m, -0.0389*m, 5.05333*m)" orientation="(-180.0, 23.660399440000006, -180.0)"/>
+            <Register name="pack74" position="(-2.41427*m, -0.0389*m, 4.95712*m)" orientation="(-180.0, 26.00339980000003, -180.0)"/>
+            <Register name="pack75" position="(-2.61705*m, -0.0389*m, 4.85447*m)" orientation="(-180.0, 28.349299409999986, -180.0)"/>
+            <Register name="pack76" position="(4.57111*m, 1.2291*m, 2.82064*m)" orientation="(-180.0, -58.323, -180.0)"/>
+            <Register name="pack77" position="(4.45108*m, 1.2291*m, 3.00647*m)" orientation="(-180.0, -55.96300000000002, -180.0)"/>
+            <Register name="pack78" position="(4.32483*m, 1.2291*m, 3.19126*m)" orientation="(-180.0, -53.60300022000002, -180.0)"/>
+            <Register name="pack79" position="(4.18969*m, 1.2291*m, 3.36448*m)" orientation="(-180.0, -51.253388760000014, -180.0)"/>
+            <Register name="pack80" position="(4.04765*m, 1.2291*m, 3.5347*m)" orientation="(-180.0, -48.88056646000003, -180.0)"/>
+            <Register name="pack81" position="(3.901*m, 1.2291*m, 3.69819*m)" orientation="(-180.0, -46.52047583000001, -180.0)"/>
+            <Register name="pack82" position="(3.72156*m, 1.2291*m, 3.87191*m)" orientation="(-180.0, -43.86555960000001, -180.0)"/>
+            <Register name="pack83" position="(3.55483*m, 1.2291*m, 4.02395*m)" orientation="(-180.0, -41.49618676000001, -180.0)"/>
+            <Register name="pack84" position="(3.39109*m, 1.2291*m, 4.165*m)" orientation="(-180.0, -39.18496427000001, -180.0)"/>
+            <Register name="pack85" position="(3.2136*m, 1.2291*m, 4.30097*m)" orientation="(-180.0, -36.781043870000005, -180.0)"/>
+            <Register name="pack86" position="(3.03251*m, 1.2291*m, 4.43005*m)" orientation="(-180.0, -34.42104409000001, -180.0)"/>
+            <Register name="pack87" position="(2.84945*m, 1.2291*m, 4.55135*m)" orientation="(-180.0, -32.06104493000002, -180.0)"/>
+            <Register name="pack88" position="(2.65948*m, 1.2291*m, 4.66347*m)" orientation="(-180.0, -29.701042600000008, -180.0)"/>
+            <Register name="pack89" position="(2.43766*m, 1.2291*m, 4.78176*m)" orientation="(-180.0, -26.91400235, -180.0)"/>
+            <Register name="pack90" position="(2.23798*m, 1.2291*m, 4.87724*m)" orientation="(-180.0, -24.573997240000008, -180.0)"/>
+            <Register name="pack91" position="(2.04117*m, 1.2291*m, 4.96626*m)" orientation="(-180.0, -22.23900291000002, -180.0)"/>
+            <Register name="pack92" position="(1.82642*m, 1.2291*m, 5.04408*m)" orientation="(-180.0, -19.894999740000006, -180.0)"/>
+            <Register name="pack93" position="(1.6112*m, 1.2291*m, 5.12006*m)" orientation="(-180.0, -17.549998860000002, -180.0)"/>
+            <Register name="pack94" position="(1.40307*m, 1.2291*m, 5.17641*m)" orientation="(-180.0, -15.209997440000011, -180.0)"/>
+            <Register name="pack95" position="(1.18886*m, 1.2291*m, 5.22672*m)" orientation="(-180.0, -12.869994160000015, -180.0)"/>
+            <Register name="pack96" position="(0.955443*m, 1.2291*m, 5.27219*m)" orientation="(-180.0, -10.57020739999998, -180.0)"/>
+            <Register name="pack97" position="(0.733198*m, 1.2291*m, 5.3029*m)" orientation="(-180.0, -8.388488370000003, -180.0)"/>
+            <Register name="pack98" position="(0.506015*m, 1.2291*m, 5.35356*m)" orientation="(-180.0, -6.038459829999994, -180.0)"/>
+            <Register name="pack99" position="(0.286501*m, 1.2291*m, 5.3677*m)" orientation="(-180.0, -3.6884983900000186, -180.0)"/>
+            <Register name="pack100" position="(0.0540442*m, 1.2291*m, 5.36675*m)" orientation="(-180.0, -1.3384026000000044, -180.0)"/>
+            <Register name="pack101" position="(-0.179346*m, 1.2291*m, 5.36972*m)" orientation="(-180.0, 1.0115175200000437, -180.0)"/>
+            <Register name="pack102" position="(-0.434563*m, 1.2291*m, 5.32586*m)" orientation="(-180.0, 4.834986409999993, -180.0)"/>
+            <Register name="pack103" position="(-0.648923*m, 1.2291*m, 5.30909*m)" orientation="(-180.0, 7.184995249999994, -180.0)"/>
+            <Register name="pack104" position="(-0.86929*m, 1.2291*m, 5.28392*m)" orientation="(-180.0, 9.534995599999993, -180.0)"/>
+            <Register name="pack105" position="(-1.08701*m, 1.2291*m, 5.24845*m)" orientation="(-180.0, 11.884995449999979, -180.0)"/>
+            <Register name="pack106" position="(-1.29876*m, 1.2291*m, 5.20469*m)" orientation="(-180.0, 14.234997310000015, -180.0)"/>
+            <Register name="pack107" position="(-1.51205*m, 1.2291*m, 5.15203*m)" orientation="(-180.0, 16.5849973, -180.0)"/>
+            <Register name="pack108" position="(-1.72565*m, 1.2291*m, 5.08198*m)" orientation="(-180.0, 18.907997809999998, -180.0)"/>
+            <Register name="pack109" position="(-1.9536*m, 1.2291*m, 5.00258*m)" orientation="(-180.0, 21.417997220000004, -180.0)"/>
+            <Register name="pack110" position="(-2.16008*m, 1.2291*m, 4.91991*m)" orientation="(-180.0, 23.76599826000002, -180.0)"/>
+            <Register name="pack111" position="(-2.36007*m, 1.2291*m, 4.8276*m)" orientation="(-180.0, 26.118995530000007, -180.0)"/>
+            <Register name="pack112" position="(-2.55559*m, 1.2291*m, 4.72999*m)" orientation="(-180.0, 28.47900032000001, -180.0)"/>
+        </LocalGeometer>
+    </DetectorSystem>
+
+    <LocalGeometer registry-coordinate-system="McStas">
+        <Register name="sample" position="(0*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
+        <Register name="detSystem" position="(0*m, 0*m, 0*m)" orientation="(-0.0, 0.0, -0.0)"/>
+    </LocalGeometer>
+    <InstrumentGeometer registry-coordinate-system="McStas" type="arcs" />
+</Instrument>
+
+
+<!-- version-->
+<!-- $Id$-->
+
+<!-- Generated automatically by Renderer on Thu Feb  8 16:38:00 2018-->
+
+<!-- End of file -->
