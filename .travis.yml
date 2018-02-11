@@ -34,7 +34,7 @@ install:
   - conda install numpy
   - conda install -c mantid mantid-framework
   - python -c "import mantid"
-  - conda install -c mcvine/label/experimental mcvine mantid2mcvine
+  - conda install -c mcvine/label/unstable mcvine mantid2mcvine
   - export SRC=$PWD
   - export EXPORT_ROOT=$CONDA_PREFIX
   - export MCVINE_WORKFLOW_BLD_ROOT=$SRC/build
