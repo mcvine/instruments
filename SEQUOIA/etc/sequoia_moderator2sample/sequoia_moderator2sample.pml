@@ -83,7 +83,13 @@
       <property name="guide32">relative((0.0, 0.0, 18.9569), to="mod"),relative((0, 0, 0), to="mod")</property>
       <property name="guide34">relative((0.0, 0.0, 19.4164), to="mod"),relative((0, 0, 0), to="mod")</property>
       <property name="E_det">relative((0.0, 0.0, 1.99), to="fermi_chopp"),relative((0, 0, 0), to="fermi_chopp")</property>
-      <!-- 20.0254 is the nominal position of sample -->
+      <!--
+	  20.0254 is the nominal position of sample
+	  but in the official mantid instrument definition, it is 20.0114.
+	  Since we have been using 19.9 as the recorder position for a long time, we don't really
+	  need to change it. The difference is small anyway.
+	  See also mcvine.instruments.SEQUOIA/__init__.py
+      -->
       <property name="recorder">relative((0.0, 0.0, 19.9), to="mod"),relative((0, 0, 0), to="mod")</property>
       <property name="t_mon2">relative((0.0, 0.0, 29.0032), to="mod"),relative((0, 0, 0), to="mod")</property>
     </component>

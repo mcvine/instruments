@@ -9,13 +9,21 @@ post processing takes the output from sequoia-m2s app "m2sout"
 and generate better outputs in "out".
 """
 
+# These parameters should match the positions in sequoia-moderator2sample.
+# The default values for them are in .../etc/sequoia_moderator2sample/sequoia_moderator2sample.pml
 # distance from moderator to monitor1, unit meter
-# this should match the monitor 1 position in sequoia-moderator2sample
-# application.
 LM1 = 18.26
 # distance from moderator to monitor2
 LM2 = 29.0032
-# distance to sample
+
+# distance to sample.
+# This should match .../etc/sequoia_analyze_beam/sequoia_analyze_beam.pml
+# It does not match the value in __init__.py but it is OK because
+# we are just using this to calculate flux, average energy, average tof, tof fwhm, and emission time.
+# Only the average TOF might be slightly off, and other values should be pretty accurate.
+# The most important thing is probably that the emission time will be accurate.
+# This has been this way for a long time so we don't want to change it to render
+# the previous simulations not usable.
 LSAMPLE = 20.0254
 
 
