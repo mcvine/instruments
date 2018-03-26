@@ -26,15 +26,14 @@ install:
   - conda update conda
   - conda config --add channels conda-forge
   - conda config --add channels mcvine
+  - conda config --add channels mantid
   - conda install -n root conda-build
   - conda create -n testenv python=$TRAVIS_PYTHON_VERSION
   - conda install -n testenv anaconda-client
   - source activate testenv
   - conda config --set anaconda_upload no
   - conda install numpy
-  - conda install -c mantid mantid-framework
-  - python -c "import mantid"
-  - conda install -c mcvine/label/unstable mcvine mantid2mcvine
+  - conda install -c mcvine/label/unstable mcvine-core mantid2mcvine
   - export SRC=$PWD
   - export EXPORT_ROOT=$CONDA_PREFIX
   - export MCVINE_WORKFLOW_BLD_ROOT=$SRC/build
