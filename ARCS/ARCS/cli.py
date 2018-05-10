@@ -134,8 +134,9 @@ def populate_metadata(ctx, type, beam_outdir, nxs):
               help='Incident beam normalization',
               type=click.Choice(['ByCurrent', 'ToMonitor', 'None']),
               default='ByCurrent')
+@click.option('--use_monitors', default=False, is_flag=True)
 @alias("arcs_nxs_reduce", "%s nxs reduce" % cmd_prefix)
-def reduce(nxs, out, use_ei_guess, ei_guess, t0_guess, qaxis, eaxis, tof2e, ibnorm):
+def reduce(nxs, out, use_ei_guess, ei_guess, t0_guess, qaxis, eaxis, tof2e, ibnorm, use_monitors):
     "run reduction"
     if ei_guess > 0:
         use_ei_guess = True
@@ -164,6 +165,7 @@ def reduce(nxs, out, use_ei_guess, ei_guess, t0_guess, qaxis, eaxis, tof2e, ibno
         outfile = out,
         tof2E = tof2e,
         ibnorm = ibnorm,
+        use_monitors = use_monitors
         )
     from .applications.nxs import reduce
     reduce(**d)
