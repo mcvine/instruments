@@ -26,7 +26,7 @@ class TestCase(unittest.TestCase):
         # cmd = "PlotHist.py --min=0 --max=0.001 --output=iqe.eps %s/iqe.h5" % workdir
         # execute(cmd, os.curdir)
         #
-        execute("make arcs-sim-wEidata.nxs", workdir)
+        execute("make IQE", workdir)
         return
 
 

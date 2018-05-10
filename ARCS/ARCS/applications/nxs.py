@@ -3,13 +3,30 @@
 # Jiao Lin <jiao.lin@gmail.com>
 #
 
+def nxsfilename_with_monitors(nxs):
+    import os
+    fn, ext = os.path.splitext(os.path.basename(nxs))
+    return os.path.join(os.path.dirname(nxs), '%s-with-monitors.nxs' % fn)
+
 
 def populate_Ei_data(sim_out, nxs):
-    import h5py
-    f = h5py.File(nxs, 'a')
-    entry = f['entry']
-    from mcvine.instruments.ARCS.nxs.raw import populateEiData
-    populateEiData(entry, sim_out)
+    import shutil, os
+    nxs_withmons = nxsfilename_with_monitors(nxs)
+    shutil.copyfile(nxs, nxs_withmons)
+    populate_monitor_data(sim_out, nxs_withmons)
+    print " * Created ARCS NeXus file with monitor data: %s" % nxs_withmons
+    #
+    import ast
+    props = ast.literal_eval(open(os.path.join(sim_out, 'props.json')).read())
+    Ei, unit = props['average energy'].split(); assert unit=='meV'
+    t0, unit = props['emission time'].split(); assert unit=='microsecond'
+    from mantid import simpleapi as msa
+    if isinstance(nxs, unicode):
+        nxs = nxs.encode('utf-8')
+    ws = msa.Load(nxs)
+    msa.AddSampleLog(ws, LogName='mcvine-Ei', LogText=str(Ei), LogType='Number')
+    msa.AddSampleLog(ws, LogName='mcvine-t0', LogText=str(t0), LogType='Number')
+    msa.SaveNexus(ws, nxs)
     return
 
 
@@ -17,14 +34,18 @@ def populate_monitor_data(sim_out, nxs):
     import h5py
     f = h5py.File(nxs, 'a')
     entry = f['entry']
-    from mcvine.instruments.ARCS.nxs.raw import populateMonitors
+    from mcvine.instruments.ARCS.nxs.raw import populateMonitors, populateEiData
     populateMonitors(entry, sim_out)
+    populateEiData(entry, sim_out)
+    f.close()
     return
 
 
-def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=None, tof2E=True, ibnorm='ByCurrent', t0_guess=None):
+def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=None, tof2E=True, ibnorm='ByCurrent', t0_guess=None, use_monitors=False):
     from mantid.simpleapi import DgsReduction, LoadInstrument, Load, MoveInstrumentComponent, GetEiT0atSNS, GetEi
     from mantid import mtd
+    if isinstance(nxsfile, unicode):
+        nxsfile = nxsfile.encode('utf-8')
 
     if tof2E == 'guess':
         # XXX: this is a simple guess. all raw data files seem to have root "entry"
@@ -34,7 +55,8 @@ def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=Non
         tof2E = o == 'entry'
 
     if tof2E:
-        if not use_ei_guess:
+        if not use_ei_guess and use_monitors:
+            # use monitors
             ws, mons = Load(nxsfile, LoadMonitors=True)
             Eguess=ws.getRun()['EnergyRequest'].getStatistics().mean
             try:
@@ -45,8 +67,15 @@ def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=Non
                 Efixed,T0 = Eguess, 0
         else:
             ws = Load(nxsfile)
-            Efixed, T0 = ei_guess, t0_guess or 0.
-
+            if not use_ei_guess:
+                # use Ei T0 saved from beam simulation
+                run = ws.getRun()
+                Efixed = run.getLogData('mcvine-Ei').value
+                T0 = run.getLogData('mcvine-t0').value
+            else:
+                # use Ei guess from function parameters
+                Efixed, T0 = ei_guess, t0_guess or 0.
+        # van = SolidAngle(ws) # for solid angle normalization
         DgsReduction(
             SampleInputWorkspace=ws,
             IncidentEnergyGuess=Efixed,
@@ -55,6 +84,8 @@ def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=Non
             OutputWorkspace='reduced',
             EnergyTransferRange=eaxis,
             IncidentBeamNormalisation=ibnorm,
+            # DetectorVanadiumInputWorkspace=van,
+            # UseProcessedDetVan=True
             )
         reduced = mtd['reduced']
     else: 
@@ -82,7 +113,6 @@ def getSqeHistogramFromMantidWS(reduced, outfile, qaxis=None, eaxis=None):
         dEAnalysisMode='Direct',
         MinValues="%s,%s" % (qmin, emin),
         MaxValues="%s,%s" % (qmax, emax),
-        SplitInto="%s,%s" % (nq, ne),
         )
     binned = msa.BinMD(
         InputWorkspace=md,
