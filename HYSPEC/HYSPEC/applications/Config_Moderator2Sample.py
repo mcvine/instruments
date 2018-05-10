@@ -537,12 +537,12 @@ def config(Edes=20., E_min=10., E_max=30., Ortho30=False, toffset_us=-1.0, freq=
   if(iv > 0.1) : R_vert = iv 
   R_horz = 10000.0 ; 
   components = [arm1, source_00, Mon0_toF, Mon0_total, G1A_guide, G1B_guide, G1C_guide, T0_T1A_guide, T1A_chopper, G2_curved_guide, G3_guide, Shutter2_guide, Shutter2_valve_guide, Valve_mon1_guide, Mon1_toF, Mon1_total, Mon1_t1b_guide, T1B_chopper, T1B_T2_guide, T2_Fermi, T2_MON2_guide, Mon2_toF, Mon2_total, G4_guide, arm2, monochromator, Exit_tube, Mon3_ToF, Mon3_total, Aperture1, Soeller20, Aperture2, sample_10x10, sample_1x1, recorder()]
-  from mcvine.instrument.pml import set_instrument_parameters, PmlRenderer
+  from mcvine.pyre_support.pml import set_instrument_parameters, PmlRenderer
   class instrument: pass
   instrument.name='hyspec_moderator2sample'
   instrument.components=components
   set_instrument_parameters(instrument, locals())
-  from mcvine.instrument.pml import PmlRenderer
+  from mcvine.pyre_support.pml import PmlRenderer
   renderer = PmlRenderer()
   text = '\n'.join(renderer.render(instrument))
   pml = 'hyspec_moderator2sample.pml'

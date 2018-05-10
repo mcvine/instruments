@@ -241,12 +241,12 @@ def config(Ei=5, f1=60., f2=60., f3=60., f41=300., f42=300., fluxmode=9.0):
   mon3_tof_start=mon3_tof-150;
   mon3_tof_stop=mon3_tof+150;
   components = [arm1, moderator, Guide1, FChopper, tof1b, Guide4, Chopper2, Guide5, Guide6, Guide7, Guide8, Chopper3, Guide9, Chopper41, Chopper42, tof3a, Guide10, Guide11, save_neutrons, Div_monh()]
-  from mcvine.instrument.pml import set_instrument_parameters, PmlRenderer
+  from mcvine.pyre_support.pml import set_instrument_parameters, PmlRenderer
   class instrument: pass
   instrument.name=u'cncs_moderator2sample'
   instrument.components=components
   set_instrument_parameters(instrument, locals())
-  from mcvine.instrument.pml import PmlRenderer
+  from mcvine.pyre_support.pml import PmlRenderer
   renderer = PmlRenderer()
   text = '\n'.join(renderer.render(instrument))
   pml = 'cncs_moderator2sample.pml'
