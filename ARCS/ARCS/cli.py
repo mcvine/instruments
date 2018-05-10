@@ -83,6 +83,7 @@ def neutrons2nxs(ctx, neutrons, nxs, workdir, nodes, type, populate_metadata, be
     if not neutrons:
         click.echo(ctx.get_help(), color=ctx.color)
         return
+
     from .applications.Neutrons2Nxs import run
     run(neutrons, nxs, type, workdir, nodes)
 

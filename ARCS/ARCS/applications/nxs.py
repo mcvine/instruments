@@ -21,6 +21,8 @@ def populate_Ei_data(sim_out, nxs):
     Ei, unit = props['average energy'].split(); assert unit=='meV'
     t0, unit = props['emission time'].split(); assert unit=='microsecond'
     from mantid import simpleapi as msa
+    if isinstance(nxs, unicode):
+        nxs = nxs.encode('utf-8')
     ws = msa.Load(nxs)
     msa.AddSampleLog(ws, LogName='mcvine-Ei', LogText=str(Ei), LogType='Number')
     msa.AddSampleLog(ws, LogName='mcvine-t0', LogText=str(t0), LogType='Number')
@@ -42,6 +44,8 @@ def populate_monitor_data(sim_out, nxs):
 def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=None, tof2E=True, ibnorm='ByCurrent', t0_guess=None, use_monitors=False):
     from mantid.simpleapi import DgsReduction, LoadInstrument, Load, MoveInstrumentComponent, GetEiT0atSNS, GetEi
     from mantid import mtd
+    if isinstance(nxsfile, unicode):
+        nxsfile = nxsfile.encode('utf-8')
 
     if tof2E == 'guess':
         # XXX: this is a simple guess. all raw data files seem to have root "entry"
@@ -51,7 +55,6 @@ def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=Non
         tof2E = o == 'entry'
 
     if tof2E:
-        import pdb; pdb.set_trace()
         if not use_ei_guess and use_monitors:
             # use monitors
             ws, mons = Load(nxsfile, LoadMonitors=True)
