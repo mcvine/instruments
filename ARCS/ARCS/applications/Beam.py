@@ -52,6 +52,7 @@ class App(base):
         with_moderator_angling.meta['tip'] = "turn on/of moderator angling"
 
         ncount = pyre.inventory.float('ncount', default=1000000)
+        buffer_size = pyre.inventory.int('buffer_size', default=0)
 
         nodes = pyre.inventory.int('nodes', default=0)
 
@@ -108,8 +109,14 @@ class App(base):
         cmd = ['mcvine instruments arcs mod2sample']
         keys = ['ncount']
         cmd += self._buildCmdFromInventory(keys)
-        cmd += ['--buffer_size=%s' % int(self.inventory.ncount/10)]
+        # buffer_size
+        buffer_size = self.inventory.buffer_size
+        if not buffer_size:
+            buffer_size = int(self.inventory.ncount/10)
+        cmd += ['--buffer_size=%s' % buffer_size]
+        # output-dir
         cmd.append( '--output-dir=%s' % self.m2sout)
+        # moderator file
         from mcvine import resources
         moddat = os.path.join(
             resources.instrument('ARCS'), 'moderator',
