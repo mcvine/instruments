@@ -554,8 +554,8 @@ class App(base):
   class Inventory(base.Inventory):
     import pyre.inventory
     Edes = pyre.inventory.float("Edes", default="20.")
-    E_min = pyre.inventory.float("E_min", default="10.")
-    E_max = pyre.inventory.float("E_max", default="30.")
+    E_min = pyre.inventory.float("E_min", default="-1")
+    E_max = pyre.inventory.float("E_max", default="-1")
     Ortho30 = pyre.inventory.bool("Ortho30", default="False")
     toffset_us = pyre.inventory.float("toffset_us", default="-1.0")
     freq = pyre.inventory.float("freq", default="180")
@@ -566,9 +566,13 @@ class App(base):
     pass # Inventory
   def main(self, *args, **kwds):
     d={}
-    d["Edes"] = self.inventory.Edes
-    d["E_min"] = self.inventory.E_min
-    d["E_max"] = self.inventory.E_max
+    Edes = d["Edes"] = self.inventory.Edes
+    E_min = self.inventory.E_min
+    if E_min < 0: E_min = Edes * .8
+    E_max = self.inventory.E_max
+    if E_max < 0: E_max = Edes * 1.2
+    d["E_min"] = E_min
+    d["E_max"] = E_max
     d["Ortho30"] = self.inventory.Ortho30
     d["toffset_us"] = self.inventory.toffset_us
     d["freq"] = self.inventory.freq

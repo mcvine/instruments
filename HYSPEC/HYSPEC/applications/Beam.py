@@ -30,10 +30,10 @@ class App(base):
         E = pyre.inventory.float('E', default=20)
         E.meta['tip'] = 'desired incident beam energy. unit: meV'
         
-        Emin = pyre.inventory.float('Emin', default=10)
+        Emin = pyre.inventory.float('Emin', default=-1)
         Emin.meta['tip'] = 'minimum incident energy. unit: meV'
         
-        Emax = pyre.inventory.float('Emax', default=30)
+        Emax = pyre.inventory.float('Emax', default=-1)
         Emax.meta['tip'] = 'maximum incident energy. unit: meV'
         
         LMS = pyre.inventory.float('LMS', default=1.8)
