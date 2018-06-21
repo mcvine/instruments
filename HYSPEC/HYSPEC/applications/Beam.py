@@ -38,6 +38,9 @@ class App(base):
         
         LMS = pyre.inventory.float('LMS', default=1.8)
         LMS.meta['tip'] = 'monochromator to sample distance. unit: meter'
+
+        Heusler = pyre.inventory.bool('Heusler', default=False)
+        Heusler.meta['tip'] = 'Use Heusler focusing'
         
         ncount = pyre.inventory.float('ncount', default=1000000)
         ncount.meta['tip'] = 'neutron count'
@@ -75,6 +78,7 @@ class App(base):
             E_max = self.inventory.Emax,
             freq = self.inventory.fermi_nu,
             LMS = self.inventory.LMS,
+            Heusler = self.inventory.Heusler
             )
         cmd += self._buildCmdOptions(data)
         cmd = ' '.join(cmd)

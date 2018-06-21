@@ -1,0 +1,1 @@
+rm -rf *.params _m2sout out run-m2s.sh *.dat
