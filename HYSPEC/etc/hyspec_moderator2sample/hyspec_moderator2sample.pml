@@ -87,14 +87,14 @@
     <component name="source_00">
       <property name="yh">0.132</property>
       <property name="dist">2.5</property>
-      <property name="Emin">10.0</property>
+      <property name="Emin">-1.0</property>
       <property name="proton_T">0.7</property>
       <property name="height">0.12</property>
       <property name="tinmin">0</property>
       <property name="sample_E">2</property>
       <property name="S_filename">$MCVINE_RESOURCES/instruments/HYSPEC/mcstas/SNS_TD_0o100p_fit_fit.dat</property>
       <property name="xw">0.04</property>
-      <property name="Emax">30.0</property>
+      <property name="Emax">-1.0</property>
       <property name="sample_t">1</property>
       <property name="tinmax">5000</property>
       <property name="width">0.1</property>
