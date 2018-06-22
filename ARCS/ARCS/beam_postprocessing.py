@@ -115,18 +115,17 @@ def computeFWHM(out):
     return fwhm
 
 
-def runMonitorsAtSample(E, m2sout, out):
+def runMonitorsAtSample(E, m2sout, out, L=LSAMPLE, instrument='arcs'):
     from mcni.utils.conversion import e2v
     v = e2v(E)
     from pyre.units.time import second
-    L = 13.6
     t = L/v
 
     neutronfile = os.path.join(m2sout, 'neutrons')
     from mcni.neutron_storage.idf_usenumpy import count
     n = count(neutronfile)
 
-    cmd = ['mcvine instruments arcs analyze_beam']
+    cmd = ['mcvine instruments %s analyze_beam' % instrument]
     cmd += ['--output-dir=%s' % out]
     cmd += ['--ncount=%s' % n]
     cmd += ['--buffer_size=%s' % min(n, int(1e6))]
@@ -146,7 +145,7 @@ def runMonitorsAtSample(E, m2sout, out):
     return
 
 
-def computeFocusedSpectraForRealMonitors(E, m2sout, out):
+def computeFocusedSpectraForRealMonitors(E, m2sout, out, LM1=LM1, LM2=LM2):
     from mcni.utils.conversion import e2v
     v = e2v(E)
     from pyre.units.time import second
