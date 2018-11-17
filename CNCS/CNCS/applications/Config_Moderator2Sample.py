@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 cmd_help = """
-<cmd> --Ei=5 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0
+<cmd> --Ei=5 --dE=0.1 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0
 """
 
 # CNCS_Dec_2016_py
@@ -166,7 +166,7 @@ class Div_monh(object):
   type='DivPos_monitor'
   orientation=((0.0, 0.0, 0.0), 'relative', 'arm1')
 
-def config(Ei=5, f1=60., f2=60., f3=60., f41=300., f42=300., fluxmode=9.0):
+def config(Ei=5, dE=0., f1=60., f2=60., f3=60., f41=300., f42=300., fluxmode=9.0):
   
   from numpy import sqrt, pi
   twopi = 2*pi
@@ -202,9 +202,10 @@ def config(Ei=5, f1=60., f2=60., f3=60., f41=300., f42=300., fluxmode=9.0):
   d_mod_det=39.762    ;
   
   
-  erange=0.20*Ei;
-  emin=Ei-erange;
-  emax=Ei+erange;
+  if dE==0:
+    dE = 0.2*Ei
+  emin=Ei-dE;
+  emax=Ei+dE;
   
   
   
@@ -258,6 +259,7 @@ class App(base):
   class Inventory(base.Inventory):
     import pyre.inventory
     Ei = pyre.inventory.float("Ei", default="5")
+    dE = pyre.inventory.float("dE", default="0")
     f1 = pyre.inventory.float("f1", default="60.")
     f2 = pyre.inventory.float("f2", default="60.")
     f3 = pyre.inventory.float("f3", default="60.")
@@ -268,6 +270,7 @@ class App(base):
   def main(self, *args, **kwds):
     d={}
     d["Ei"] = self.inventory.Ei
+    d["dE"] = self.inventory.dE
     d["f1"] = self.inventory.f1
     d["f2"] = self.inventory.f2
     d["f3"] = self.inventory.f3
@@ -280,7 +283,7 @@ class App(base):
     import sys, os
     h = os.path.basename(sys.argv[0]) + "  "
     print h,
-    print "--Ei=5 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0"
+    print "--Ei=5 --dE=0.1 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0"
 
 name = 'cncs_config_mod2sample'
 

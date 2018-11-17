@@ -5,7 +5,7 @@ Simulate CNCS beam and analyze the beam.
 
 Example:
 
- $ cncs_beam --E=5 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0 --ncount=1e8 --nodes=10
+ $ cncs_beam --E=5 --dE=0.5 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0 --ncount=1e8 --nodes=10
 
 Notes:
 
@@ -43,6 +43,9 @@ class App(base):
 
         E = pyre.inventory.float('E', default=20)
         E.meta['tip'] = 'desired incident beam energy. unit: meV'
+        
+        dE = pyre.inventory.float('dE', default=0.)
+        dE.meta['tip'] = 'energy range. unit: meV'
         
         f1 = pyre.inventory.float('f1', default=60)
         f1.meta['tip'] = 'Chopper freq 1. unit: Hz'
@@ -94,6 +97,7 @@ class App(base):
         cmd = ['mcvine instruments cncs config_mod2sample']
         data = dict(
             Ei = self.inventory.E,
+            dE = self.inventory.dE,
             f1 = self.inventory.f1,
             f2 = self.inventory.f2,
             f3 = self.inventory.f3,
