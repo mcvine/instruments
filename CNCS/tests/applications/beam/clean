@@ -1,1 +1,1 @@
-rm -rf *out mcvine* *.pml log* run-m2s.sh
+rm -rf _work* *out *.pml log* run-m2s.sh
