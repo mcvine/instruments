@@ -94,11 +94,11 @@ def computeFWHM(out):
     itof = load(os.path.join(out, 'itof.h5'), 'itof')
     max = itof.I.max()
     indmax = np.where(itof.I==max)[0][0]
-    left = itof.I[:indmax]
+    left = itof.I[:indmax+1]
     right = itof.I[indmax:]
     leftindex = np.where(left > max/2)[0][0]
     rightindex = np.where(right > max/2)[0][-1] + indmax
-    fwhm = (rightindex-leftindex) * (itof.tof[1]-itof.tof[0])
+    fwhm = (1+rightindex-leftindex) * (itof.tof[1]-itof.tof[0])
     return fwhm
 
 
