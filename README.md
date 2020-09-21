@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mcvine/instruments.svg?branch=master)](https://travis-ci.org/mcvine/instruments)
+[![Build Status](https://travis-ci.com/mcvine/instruments.svg?branch=master)](https://travis-ci.com/mcvine/instruments)
 
 # mcvine.instruments subpackage
 
