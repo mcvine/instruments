@@ -12,7 +12,7 @@
 #
 
 
-import os
+import os, operator
 os.environ['MCVINE_MPI_LAUNCHER'] = 'serial'
 
 
@@ -36,7 +36,7 @@ class TestCase(unittest.TestCase):
         print argv
         self.assert_('-fermichopper=fermichopper-100-1.5-SMI' in argv)
         self.assert_('-fermichopper.nu=600.0' in argv)
-        self.assert_('-fermichopper.tc=0.00318066285058' in argv)
+        self.assert_(reduce(operator.or_, [a.startswith('-fermichopper.tc=0.00318066285058') for a in argv]))
         for arg in argv:
             self.assert_(not arg.startswith('-fermichopper.blader'))
         return
@@ -49,7 +49,7 @@ class TestCase(unittest.TestCase):
         # print argv
         self.assert_('-fermichopper=fermichopper-100-1.5-SMI' in argv)
         self.assert_('-fermichopper.nu=600.0' in argv)
-        self.assert_('-fermichopper.tc=0.00318066285058' in argv)
+        self.assert_(reduce(operator.or_, [a.startswith('-fermichopper.tc=0.00318066285058') for a in argv]))
         self.assert_('-fermichopper.blader=3.0' in argv)
         return
 
@@ -61,7 +61,7 @@ class TestCase(unittest.TestCase):
         # print argv
         self.assert_('-fermichopper=fermichopper-700-0.5-AST' in argv)
         self.assert_('-fermichopper.nu=600.0' in argv)
-        self.assert_('-fermichopper.tc=0.00318066285058' in argv)
+        self.assert_(reduce(operator.or_, [a.startswith('-fermichopper.tc=0.00318066285058') for a in argv]))
         for arg in argv:
             self.assert_(not arg.startswith('-fermichopper.blader'))
         return
@@ -74,7 +74,7 @@ class TestCase(unittest.TestCase):
         # print argv
         self.assert_('-fermichopper=fermichopper-700-0.5-AST' in argv)
         self.assert_('-fermichopper.nu=600.0' in argv)
-        self.assert_('-fermichopper.tc=0.00318066285058' in argv)
+        self.assert_(reduce(operator.or_, [a.startswith('-fermichopper.tc=0.00318066285058') for a in argv]))
         self.assert_('-fermichopper.blader=3.0' in argv)
         return
 
