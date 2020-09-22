@@ -24,6 +24,8 @@ install:
   - ./builders/travis/build.sh
 
 script:
+  - pwd
+  - cd build
   - CTEST_OUTPUT_ON_FAILURE=1 make test
 
 notifications:
