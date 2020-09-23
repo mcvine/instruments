@@ -2,6 +2,7 @@
 #
 #   Jiao Lin
 #
+import sys
 
 def populate_Ei_data(sim_out, nxs):
     import ast, os
@@ -10,7 +11,7 @@ def populate_Ei_data(sim_out, nxs):
     t0, unit = props['emission time'].split(); assert unit=='microsecond'
     setEnergyRequest(nxs, float(Ei))
     from mantid import simpleapi as msa
-    if isinstance(nxs, unicode):
+    if sys.version_info<(3,0) and isinstance(nxs, unicode):
         nxs = nxs.encode('utf-8')
     ws = msa.Load(nxs)
     msa.AddSampleLog(ws, LogName='mcvine-Ei', LogText=str(Ei), LogType='Number')
@@ -30,7 +31,7 @@ def setEnergyRequest(path, Ei):
     import h5py
     f = h5py.File(path, 'a')
     # XXX assume the workspace is the first node at root XXX
-    ws = f.values()[0]
+    ws = list(f.values())[0]
     logs = ws['logs']
     er = logs['EnergyRequest']
     er['value'][0] = Ei
