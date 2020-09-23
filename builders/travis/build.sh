@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+set -x
 conda config --set always_yes true
 conda update conda
 conda config --add channels conda-forge
