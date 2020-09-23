@@ -2,7 +2,7 @@
 #
 #   Jiao Lin
 #
-import sys
+import sys, tempfile
 
 def populate_Ei_data(sim_out, nxs):
     import ast, os
@@ -16,7 +16,10 @@ def populate_Ei_data(sim_out, nxs):
     ws = msa.Load(nxs)
     msa.AddSampleLog(ws, LogName='mcvine-Ei', LogText=str(Ei), LogType='Number')
     msa.AddSampleLog(ws, LogName='mcvine-t0', LogText=str(t0), LogType='Number')
-    msa.SaveNexus(ws, nxs)
+    (fd, filename) = tempfile.mkstemp(); os.close(fd)
+    msa.SaveNexus(ws, filename)
+    from ...ARCS.applications.nxs import mv
+    mv(filename, nxs)
     return
 
 
