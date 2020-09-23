@@ -585,7 +585,7 @@ class App(base):
   def help(self):
     # import sys, os
     # h = os.path.basename(sys.argv[0]) + "  "
-    print cmd_help
+    print(cmd_help)
     return
 
 name = 'hyspec_config_mod2sample'

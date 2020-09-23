@@ -49,7 +49,7 @@ class PeakGenerator:
 
         # otherwise try to use file   
         if not os.path.exists(filename):
-            raise Exception, "Error: File does not exist"
+            raise Exception("Error: File does not exist")
 
         self._config    = open(filename).read()
         self.parse()

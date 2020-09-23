@@ -155,7 +155,7 @@ def reduce(nxs, out, use_ei_guess, ei_guess, t0_guess, qaxis, eaxis, tof2e, ibno
     
     nxs = nxs.encode("utf8"); out = out.encode("utf8")
     ibnorm = ibnorm.encode("utf8")
-    print "* tof2E=%s" % tof2e
+    print("* tof2E=%s" % tof2e)
     d = dict(
         nxsfile = nxs,
         use_ei_guess = use_ei_guess,

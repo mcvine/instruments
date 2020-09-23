@@ -70,7 +70,7 @@ def sendneutronstodetsys(
         from mcni.pyre_support.MpiApplication \
             import mpi_launcher_choice as launcher
         args['%s.nodes' % launcher] = nodes
-    cmd += ['--%s=%s' % (k,v) for k,v in args.iteritems()]
+    cmd += ['--%s=%s' % (k,v) for k,v in args.items()]
     cmd = ' '.join(cmd)
     run_sh = os.path.join(workdir, 'run.sh')
     open(run_sh, 'w').write(cmd+'\n')

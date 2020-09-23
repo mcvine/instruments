@@ -96,9 +96,9 @@ def runMonitorsAtSample(E, LMS, m2sout, out):
     cmd += ['--monitor.menergy.energymax=%s' % (E*1.1)]
     cmd += ['--monitor.menergy.nenergy=%s' % (1000)]
     cmd = ' '.join(cmd)
-    print 'Running beam monitors...'
+    print('Running beam monitors...')
     _exec(cmd)
-    print 'done.'
+    print('done.')
     time.sleep(1)
     return
 

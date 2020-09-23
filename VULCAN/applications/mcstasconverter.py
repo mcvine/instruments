@@ -89,7 +89,7 @@ import sys
 import os.path
 from time import localtime, strftime
 from mcstas2.utils.parsers.McStasComponentParser import McStasComponentParser
-from compmodules import IMPORT_DICT, PARAMS_DICT, INSTRUMENT, PARAM_FILTER, COMP_FILTER, BUILD_DICT
+from .compmodules import IMPORT_DICT, PARAMS_DICT, INSTRUMENT, PARAM_FILTER, COMP_FILTER, BUILD_DICT
 
 # Regular expressions
 COMMENT         = '(/\*.*?\*/)'         # Non-greedy block comment /*...*/ (.*?)
@@ -258,7 +258,7 @@ class McStasConverter:
 
             params  = comp["parameters"]
             str     += self._firstParam(params, ind, br)
-            keys    = params.keys()
+            keys    = list(params.keys())
             if len(keys) <= 1:      # One parameter exist only
                 str += br
                 continue
@@ -404,7 +404,7 @@ class McStasConverter:
         .toMcvineString() and .toVnfString() to the specified directory
         """
         if not os.path.exists(dirname):
-            print "Error: Directory \"%s\" does not exist!" % dirname
+            print(("Error: Directory \"%s\" does not exist!" % dirname))
             return
 
         if prefix == "":
@@ -425,7 +425,7 @@ class McStasConverter:
         for comp in self.components():
             params  = self._compParams(comp, allparams=allparams)
             # Generate parameters
-            for k, v in params.iteritems():
+            for k, v in params.items():
                 # Take from the rest of the default parameters from components itself!
                 str += "\t--%s.%s=%s \%s" % (comp["name"], k, self._paramValue(v), br)
             # Generate geometer
@@ -439,7 +439,7 @@ class McStasConverter:
     def _paramValue(self, value):
         "Replaces constants in parameters by values"
         instr   = INSTRUMENT["VULCAN"]  # XXX: Specific for Vulcan
-        if value in instr.keys():
+        if value in list(instr.keys()):
             return self._quote(str(instr[value]))
 
         return self._quote(value)
@@ -467,11 +467,11 @@ class McStasConverter:
         # Add default values for parameters that are not set in instrument
         totalparams  = self._mcstasParams(comp["type"])
         for p in totalparams:               
-            if not p["name"] in params.keys():  
+            if not p["name"] in list(params.keys()):  
                 params[p["name"]] = p["value"]
 
         filteredParams = []
-        if comp["type"] in filter.keys():
+        if comp["type"] in list(filter.keys()):
             filteredParams  = filter[comp["type"]]
 
         for pn in params.keys():
@@ -514,7 +514,7 @@ class McStasConverter:
         names   = self._paramNames(params)
         for name in names:
             value   = "component.%s" % name
-            if name in PARAMS_DICT.keys():
+            if name in list(PARAMS_DICT.keys()):
                 value   = PARAMS_DICT[name]
             str     += self._ind(3*ind) + "'%s': %s," % (name, value) + br
 
@@ -614,7 +614,7 @@ class McStasConverter:
         "Takes component type and returns VNF dom module"
         # McStas component -> VNF dom module
         # Example: L_Monitor -> LMonitor
-        if comptype in IMPORT_DICT.keys():
+        if comptype in list(IMPORT_DICT.keys()):
             return IMPORT_DICT[comptype]
 
         return comptype     # Names coinside
@@ -647,9 +647,9 @@ class McStasConverter:
         str     += "    c.short_description = \"%s\"\n" % comp["name"]
         params  = comp["parameters"]
 
-        for k, v in params.iteritems():
+        for k, v in params.items():
             # Replace for example xmin -> x_min, xwidth -> x_width
-            if k in BUILD_DICT.keys():
+            if k in list(BUILD_DICT.keys()):
                 k   = BUILD_DICT[k]
             str     += "    c.%s = %s\n" % (k, v)
             
@@ -1162,7 +1162,7 @@ class McStasConverter:
     def _firstParam(self, params, indent, br="\n"):
         "Returns first line with parameters"
         str     = "parameters:"
-        keys    = params.keys()
+        keys    = list(params.keys())
         if not keys:    # No parameters
             str += br
             return str
@@ -1187,7 +1187,7 @@ def main():
                 conv    = McStasConverter(config=parts[1])
                 
             #print conv.toString()
-            print conv.toInstrString()
+            print((conv.toInstrString()))
             #print conv.toBuilderString()
             #print conv.toMcvineString()
             #print conv.toVnfString()
@@ -1196,7 +1196,7 @@ def main():
             #conv.toDir("../generated", prefix="vulcan")
             return
 
-    print USAGE_MESSAGE
+    print(USAGE_MESSAGE)
     return
 
 

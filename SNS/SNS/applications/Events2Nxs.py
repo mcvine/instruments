@@ -11,7 +11,7 @@ to a detector system.
 """
 
 def run(eventfile, tofbinsize, nxsfile, type, instrument):
-    print (eventfile, nxsfile)
+    print((eventfile, nxsfile))
     from mccomponents.detector.event_utils import readEvents
     events = readEvents(eventfile)
     

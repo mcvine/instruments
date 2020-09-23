@@ -4,9 +4,9 @@ import os
 from mcvine import resources
 
 def execute(cmd):
-    print '* executing %s... ' % cmd
+    print(('* executing %s... ' % cmd))
     if os.system(cmd):
-        raise RuntimeError, "%r failed" % cmd
+        raise RuntimeError("%r failed" % cmd)
 
     
 def run(
@@ -25,7 +25,7 @@ def run(
     # get number of absorbed events
     eventsdat = 'out/events.dat'
     n = getNumberOfEvts(eventsdat, pixelID)
-    print n
+    print(n)
     return n
 
 
@@ -51,7 +51,7 @@ def getNumberOfEvts(filename, pixelID):
     from mccomponents.detector import event_utils 
     evts = event_utils.readEvents(filename)
     _ = lambda evt: evt['pixelID'] == pixelID
-    return len(filter(_, evts))
+    return len(list(filter(_, evts)))
 
 
 mod2sample_distance = 13.6

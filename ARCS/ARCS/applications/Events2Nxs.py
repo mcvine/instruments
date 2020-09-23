@@ -14,7 +14,7 @@ def run(eventfile, nxsfile, tofbinsize=0.1, type="processed", Ei = None):
     type: processed or raw. processed is obsolete but kept for backward compatibility
     Ei: nominal incident energy in meV    
     """
-    print (eventfile, nxsfile)
+    print((eventfile, nxsfile))
     from mccomponents.detector.event_utils import readEvents
     events = readEvents(eventfile)
     

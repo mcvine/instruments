@@ -65,7 +65,7 @@ class App(base):
 
 
     def help(self):
-        print cmd_help
+        print(cmd_help)
     
     
     def runApp(
@@ -131,7 +131,7 @@ class App(base):
         addOptions(opts, sys.argv)
 
         if dry_run:
-            print sys.argv
+            print(sys.argv)
         
         else:
             from mcvine.instruments.ARCS.Instrument import Instrument
@@ -143,7 +143,7 @@ class App(base):
 
 
 def addOptions(opts, argv):
-    for k, v in opts.iteritems():
+    for k, v in opts.items():
         if hasOpt(k, argv): continue
         argv.append('-%s=%s' % (k,v))
         continue

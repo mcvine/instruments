@@ -18,7 +18,7 @@ class Builder(base):
 
         parameters = {
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -50,7 +50,7 @@ class Builder(base):
             'sample_t': component.sample_t,
             'proton_T': component.proton_T,
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -77,7 +77,7 @@ class Builder(base):
             'transmission': component.transmission,
             'divergenceV': component.divergenceV,
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -104,7 +104,7 @@ class Builder(base):
             'width': component.width,
             'height': component.height,
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -133,7 +133,7 @@ class Builder(base):
             'nchan': component.nchan,
             'filename': outputfilename(component),
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -163,7 +163,7 @@ class Builder(base):
             'W': component.W,
             'reflect': component.reflect,
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -197,7 +197,7 @@ class Builder(base):
             'wc': component.wc,
             'compat': component.compat,
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -246,7 +246,7 @@ class Builder(base):
             'nu': component.nu,
             'phase': component.phase,
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -274,7 +274,7 @@ class Builder(base):
             'ny': component.ny,
             'filename': outputfilename(component),
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -311,7 +311,7 @@ class Builder(base):
             'username1': component.username1,
             'username2': component.username2,
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -352,7 +352,7 @@ class Builder(base):
             'V0': component.V0,
             'target_index': component.target_index,
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -383,7 +383,7 @@ class Builder(base):
             'filename': outputfilename(component),
             'format': component.format,
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )
@@ -408,7 +408,7 @@ class Builder(base):
             'xwidth': component.xwidth,
             'yheight': component.yheight,
             }
-        for k,v in parameters.iteritems():
+        for k,v in parameters.items():
             opts['%s.%s' % (component.componentname, k)] = v
 
         self.cmdline_opts.update( opts )

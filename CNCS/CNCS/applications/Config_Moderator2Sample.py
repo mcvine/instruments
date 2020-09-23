@@ -282,8 +282,8 @@ class App(base):
   def help(self):
     import sys, os
     h = os.path.basename(sys.argv[0]) + "  "
-    print h,
-    print "--Ei=5 --dE=0.1 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0"
+    print(h, end=' ')
+    print("--Ei=5 --dE=0.1 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0")
 
 name = 'cncs_config_mod2sample'
 

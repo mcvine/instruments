@@ -54,7 +54,7 @@ class App(base):
     
     
     def help(self):
-        print cmd_help
+        print(cmd_help)
     
 
     def main(self):
@@ -83,7 +83,7 @@ class App(base):
         cmd += self._buildCmdOptions(data)
         cmd = ' '.join(cmd)
         bpp._exec(cmd)
-        print 'done.'
+        print('done.')
         time.sleep(1)
         return
 
@@ -112,7 +112,7 @@ class App(base):
     
     
     def _buildCmdOptions(self, kwds):
-        return ['--%s=%s' % (k,v) for k,v in kwds.iteritems()]
+        return ['--%s=%s' % (k,v) for k,v in kwds.items()]
 
 
 name = 'hyspec_beam'

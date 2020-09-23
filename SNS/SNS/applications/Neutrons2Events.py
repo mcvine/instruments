@@ -107,7 +107,7 @@ def sendneutronstodetsys(
         from mcni.pyre_support.MpiApplication \
             import mpi_launcher_choice as launcher
         args['%s.nodes' % launcher] = nodes
-    cmd += ['--%s=%s' % (k,v) for k,v in args.iteritems()]
+    cmd += ['--%s=%s' % (k,v) for k,v in args.items()]
     cmd = ' '.join(cmd)
     run_sh = os.path.join(workdir, 'run.sh')
     open(run_sh, 'w').write(cmd+'\n')
@@ -130,12 +130,12 @@ app.run()
 # utils
 import os, subprocess as sp, shlex
 def execute(cmd, workdir):
-    print '* executing %s... ' % cmd
+    print(('* executing %s... ' % cmd))
     args = shlex.split(cmd)
     p = sp.Popen(args, cwd=workdir)
     p.communicate()
     if p.wait():
-        raise RuntimeError, "%r failed" % cmd
+        raise RuntimeError("%r failed" % cmd)
     return
 
 

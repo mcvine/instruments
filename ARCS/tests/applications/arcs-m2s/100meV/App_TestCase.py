@@ -22,9 +22,9 @@ def execute(cmd):
     p = sp.Popen(shlex.split(cmd), shell=False, stdout=sp.PIPE, stderr=sp.PIPE, cwd=cwd)
     out, err = p.communicate()
     if p.wait():
-        raise RuntimeError, "%s failed.\nOUT:%s\nERR:%s\n" % (
-            cmd, out, err)
-    print out, err
+        raise RuntimeError("%s failed.\nOUT:%s\nERR:%s\n" % (
+            cmd, out, err))
+    print((out, err))
     return out, err
 
 

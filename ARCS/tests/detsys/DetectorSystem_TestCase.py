@@ -4,9 +4,9 @@ import os
 from mcvine import resources
 
 def execute(cmd):
-    print '* executing %s... ' % cmd
+    print(('* executing %s... ' % cmd))
     if os.system(cmd):
-        raise RuntimeError, "%r failed" % cmd
+        raise RuntimeError("%r failed" % cmd)
 
     
 def run(
@@ -21,7 +21,7 @@ def run(
     # run main sim
     cmd = './sd --source.velocity="%s" --source.energy=%s --detector.instrumentxml=%s --ncount=%s' % (
         tuple(vi), ei, xml, ncount)
-    print ("running", cmd)
+    print(("running", cmd))
     execute(cmd)
     
     # reduce events to S(Q,E)
