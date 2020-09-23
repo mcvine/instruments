@@ -6,7 +6,7 @@
 
 from __future__ import absolute_import
 import os, sys, yaml
-from . import mantid2mcvine as m2m
+import mantid2mcvine as m2m
 here = os.path.dirname(__file__)
 
 def loadInstrumentModel():
