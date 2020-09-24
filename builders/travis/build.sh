@@ -9,9 +9,9 @@ conda config --add channels diffpy
 conda config --add channels mantid
 conda config --add channels mcvine
 
-conda create -n testenv python=$TRAVIS_PYTHON_VERSION
+conda create -n testenv -c mcvine/label/unstable mcvine-core mantid2mcvine=0.1.1 mantid-framework=4.0.0 python=$TRAVIS_PYTHON_VERSION
 source activate testenv
-conda install -c mcvine/label/unstable mcvine-core mantid-framework=4.0.0 mantid2mcvine=0.1.1
+
 export SRC=$PWD
 export PYVER=${TRAVIS_PYTHON_VERSION}
 export PREFIX=${CONDA_PREFIX}
