@@ -17,7 +17,7 @@ class TestCase(unittest.TestCase):
         dir = 'tmp.bpptest'
         if not os.path.exists(dir): os.makedirs(dir)
         hh.dump(Itof, os.path.join(dir, 'itof.h5'))
-        print bpp.computeFWHM(dir)
+        print((bpp.computeFWHM(dir)))
         return
 
 

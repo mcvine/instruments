@@ -76,7 +76,7 @@ def computeFlux(m2sout):
     from mcni.neutron_storage.idf_usenumpy import totalintensity, count
     I = totalintensity(f)
     if I == 0:
-        raise RuntimeError, "There is no neutrons at sample position. Please increase ncount"
+        raise RuntimeError("There is no neutrons at sample position. Please increase ncount")
     # one MC run corresponds to 34kJ/pulse
     # this is the flux if the power is at 34kJ/pulse
     # unit: 1/34kJ pulse
@@ -138,9 +138,9 @@ def runMonitorsAtSample(E, m2sout, out, L=LSAMPLE, instrument='arcs'):
     cmd += ['--monitor.menergy.energymax=%s' % (E*1.1)]
     cmd += ['--monitor.menergy.nenergy=%s' % (1000)]
     cmd = ' '.join(cmd)
-    print 'Running beam monitors...'
+    print('Running beam monitors...')
     _exec(cmd)
-    print 'done.'
+    print('done.')
     time.sleep(1)
     return
 
@@ -178,10 +178,10 @@ def moveNeutronsToOutputDir(m2sout, out):
 
 
 def _exec(cmd):
-    print " -> running %s..." % cmd
+    print((" -> running %s..." % cmd))
     import os
     if os.system(cmd):
-        raise RuntimeError, "%s failed" % cmd
+        raise RuntimeError("%s failed" % cmd)
 
 
 

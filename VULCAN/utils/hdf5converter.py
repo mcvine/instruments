@@ -51,7 +51,7 @@ class HDF5Converter:
         
         if input_dir == "" or output_dir == "":
             if len(sys.argv) != 3:
-                raise Exception, USAGE_MESSAGE
+                raise Exception(USAGE_MESSAGE)
                 return
            
             for arg in sys.argv:
@@ -61,7 +61,7 @@ class HDF5Converter:
                     continue
 
                 if not key in ARGS:
-                    raise Exception, USAGE_MESSAGE
+                    raise Exception(USAGE_MESSAGE)
                     return
 
                 if key in INPUT_DIR:
@@ -74,8 +74,8 @@ class HDF5Converter:
             self._output_dir    = output_dir
 
         if not os.path.exists(self._input_dir) or not os.path.exists(self._output_dir):
-            raise Exception, "Error: Input directory '%s' or output directory '%s' don't exist" % \
-                    (self._input_dir, self._output_dir)
+            raise Exception("Error: Input directory '%s' or output directory '%s' don't exist" % \
+                    (self._input_dir, self._output_dir))
 
         # Populates list of .h5 and .png files
         inpfiles    = os.listdir(self._input_dir)
@@ -96,8 +96,8 @@ class HDF5Converter:
         "Generates .png files from .h5 files"
         for i in range(len(self._h5files)):
             f       = h5py.File(self._h5files[i])
-            gr_name = f.values()[0].name
-            grbin_name  = f.values()[0].values()[2].values()[0].name
+            gr_name = list(f.values())[0].name
+            grbin_name  = list(list(list(f.values())[0].values())[2].values())[0].name
 
             gr      = f[gr_name]     # group. e.g. "/iw"
             gr_bin  = f[grbin_name]  # "/iw/grid/w"
@@ -112,7 +112,7 @@ class HDF5Converter:
             pylab.plot(x,y)
             pylab.savefig(self._pngfiles[i])
             pylab.clf()
-            print "... " + self._pngfiles[i]
+            print(("... " + self._pngfiles[i]))
 
 
 if __name__ == "__main__":

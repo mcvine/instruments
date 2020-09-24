@@ -72,7 +72,7 @@ def main():
     if not stripper:
         return
 
-    print stripper.toString()
+    print((stripper.toString()))
 
 
 if __name__ == "__main__":

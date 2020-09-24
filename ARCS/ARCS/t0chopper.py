@@ -17,7 +17,7 @@ def phase(neutron_energy, moderator2t0, emission_time=None):
     '''compute phase of t0 chopper
     '''
     if emission_time is None:
-        from moderator import estimate_emission_time
+        from .moderator import estimate_emission_time
         emission_time = estimate_emission_time(neutron_energy)
         
     velocity = e2v(neutron_energy)
@@ -25,7 +25,7 @@ def phase(neutron_energy, moderator2t0, emission_time=None):
     return moderator2t0/velocity + emission_time
 
 
-from _utils import e2v
+from ._utils import e2v
 
 
 # version

@@ -3,6 +3,7 @@
 # Jiao Lin <jiao.lin@gmail.com>
 #
 
+import sys
 import click
 from ..cli import instruments
 from mcvine.cli import pyre_app, alias
@@ -146,16 +147,17 @@ def reduce(nxs, out, use_ei_guess, ei_guess, t0_guess, qaxis, eaxis, tof2e, ibno
 
     qmin, qmax, dq = qaxis
     qaxis = (qmin, dq, qmax)
-    
+
     import numpy as np
     if np.all(np.array(eaxis)==0.): eaxis = None
     if eaxis is not None:
         emin, emax, de = eaxis
         eaxis = emin, de, emax
-    
-    nxs = nxs.encode("utf8"); out = out.encode("utf8")
-    ibnorm = ibnorm.encode("utf8")
-    print "* tof2E=%s" % tof2e
+
+    if sys.version_info < (3,0):
+        nxs = nxs.encode("utf8"); out = out.encode("utf8")
+        ibnorm = ibnorm.encode("utf8")
+    print("* tof2E=%s" % tof2e)
     d = dict(
         nxsfile = nxs,
         use_ei_guess = use_ei_guess,

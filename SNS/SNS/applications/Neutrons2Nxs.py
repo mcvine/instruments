@@ -78,12 +78,12 @@ def event2nxs(eventdat, nxs, type, workdir, instrument, tofbinsize):
 # utils
 import os, subprocess as sp, shlex
 def execute(cmd, workdir):
-    print '* executing %s... at %s' % (cmd, workdir)
+    print(('* executing %s... at %s' % (cmd, workdir)))
     args = shlex.split(cmd)
     p = sp.Popen(args, cwd=workdir)
     p.communicate()
     if p.wait():
-        raise RuntimeError, "%r failed" % cmd
+        raise RuntimeError("%r failed" % cmd)
     return
 
 

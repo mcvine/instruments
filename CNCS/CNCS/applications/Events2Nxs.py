@@ -28,7 +28,7 @@ def run(eventfile, nxsfile, tofbinsize=0.1, type=None, Ei=None):
     """tofbinsize: in microsecond
     """
     assert type=='processed', "Unsupported type %r" % type
-    print (eventfile, nxsfile)
+    print((eventfile, nxsfile))
     # read events
     from mccomponents.detector.event_utils import readEvents
     events = readEvents(eventfile)

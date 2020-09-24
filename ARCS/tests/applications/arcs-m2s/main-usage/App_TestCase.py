@@ -6,8 +6,8 @@ def execute(cmd):
     p = sp.Popen(cmd, shell=True, stdout=sp.PIPE, stderr=sp.PIPE)
     out, err = p.communicate()
     if p.wait():
-        raise RuntimeError, "%s failed.\nOUT:%s\nERR:%s\n" % (
-            cmd, out, err)
+        raise RuntimeError("%s failed.\nOUT:%s\nERR:%s\n" % (
+            cmd, out, err))
     return out, err
 
 

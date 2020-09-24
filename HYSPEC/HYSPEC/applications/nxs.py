@@ -3,8 +3,10 @@
 # Jiao Lin <jiao.lin@gmail.com>
 #
 
+import sys
+
 def populate_metadata(sim_out, nxs, sample, detector):
-    if isinstance(nxs, unicode):
+    if sys.version_info<(3,0) and isinstance(nxs, unicode):
         nxs = nxs.encode('utf-8')
     import h5py
     f = h5py.File(nxs, 'a')

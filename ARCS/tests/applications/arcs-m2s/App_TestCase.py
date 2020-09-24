@@ -12,7 +12,8 @@
 #
 
 
-import os
+import os, operator
+from functools import reduce
 os.environ['MCVINE_MPI_LAUNCHER'] = 'serial'
 
 
@@ -21,8 +22,8 @@ def execute(cmd):
     p = sp.Popen(cmd, shell=True, stdout=sp.PIPE, stderr=sp.PIPE)
     out, err = p.communicate()
     if p.wait():
-        raise RuntimeError, "%s failed.\nOUT:%s\nERR:%s\n" % (
-            cmd, out, err)
+        raise RuntimeError("%s failed.\nOUT:%s\nERR:%s\n" % (
+            cmd, out, err))
     return out, err
 
 
@@ -33,12 +34,12 @@ class TestCase(unittest.TestCase):
         cmd = 'mcvine instruments arcs m2s --dry_run'
         out, err = execute(cmd)
         argv = eval(out.splitlines()[-1])
-        print argv
-        self.assert_('-fermichopper=fermichopper-100-1.5-SMI' in argv)
-        self.assert_('-fermichopper.nu=600.0' in argv)
-        self.assert_('-fermichopper.tc=0.00318066285058' in argv)
+        print(argv)
+        self.assertTrue('-fermichopper=fermichopper-100-1.5-SMI' in argv)
+        self.assertTrue('-fermichopper.nu=600.0' in argv)
+        self.assertTrue(reduce(operator.or_, [a.startswith('-fermichopper.tc=0.00318066285058') for a in argv]))
         for arg in argv:
-            self.assert_(not arg.startswith('-fermichopper.blader'))
+            self.assertTrue(not arg.startswith('-fermichopper.blader'))
         return
 
 
@@ -47,10 +48,10 @@ class TestCase(unittest.TestCase):
         out, err = execute(cmd)
         argv = eval(out.splitlines()[-1])
         # print argv
-        self.assert_('-fermichopper=fermichopper-100-1.5-SMI' in argv)
-        self.assert_('-fermichopper.nu=600.0' in argv)
-        self.assert_('-fermichopper.tc=0.00318066285058' in argv)
-        self.assert_('-fermichopper.blader=3.0' in argv)
+        self.assertTrue('-fermichopper=fermichopper-100-1.5-SMI' in argv)
+        self.assertTrue('-fermichopper.nu=600.0' in argv)
+        self.assertTrue(reduce(operator.or_, [a.startswith('-fermichopper.tc=0.00318066285058') for a in argv]))
+        self.assertTrue('-fermichopper.blader=3.0' in argv)
         return
 
 
@@ -59,11 +60,11 @@ class TestCase(unittest.TestCase):
         out, err = execute(cmd)
         argv = eval(out.splitlines()[-1])
         # print argv
-        self.assert_('-fermichopper=fermichopper-700-0.5-AST' in argv)
-        self.assert_('-fermichopper.nu=600.0' in argv)
-        self.assert_('-fermichopper.tc=0.00318066285058' in argv)
+        self.assertTrue('-fermichopper=fermichopper-700-0.5-AST' in argv)
+        self.assertTrue('-fermichopper.nu=600.0' in argv)
+        self.assertTrue(reduce(operator.or_, [a.startswith('-fermichopper.tc=0.00318066285058') for a in argv]))
         for arg in argv:
-            self.assert_(not arg.startswith('-fermichopper.blader'))
+            self.assertTrue(not arg.startswith('-fermichopper.blader'))
         return
 
 
@@ -72,10 +73,10 @@ class TestCase(unittest.TestCase):
         out, err = execute(cmd)
         argv = eval(out.splitlines()[-1])
         # print argv
-        self.assert_('-fermichopper=fermichopper-700-0.5-AST' in argv)
-        self.assert_('-fermichopper.nu=600.0' in argv)
-        self.assert_('-fermichopper.tc=0.00318066285058' in argv)
-        self.assert_('-fermichopper.blader=3.0' in argv)
+        self.assertTrue('-fermichopper=fermichopper-700-0.5-AST' in argv)
+        self.assertTrue('-fermichopper.nu=600.0' in argv)
+        self.assertTrue(reduce(operator.or_, [a.startswith('-fermichopper.tc=0.00318066285058') for a in argv]))
+        self.assertTrue('-fermichopper.blader=3.0' in argv)
         return
 
 

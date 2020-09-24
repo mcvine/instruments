@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
+import sys
+
 cmd_help = """
 <cmd> --Ei=5 --dE=0.1 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0
 """
@@ -244,7 +247,10 @@ def config(Ei=5, dE=0., f1=60., f2=60., f3=60., f41=300., f42=300., fluxmode=9.0
   components = [arm1, moderator, Guide1, FChopper, tof1b, Guide4, Chopper2, Guide5, Guide6, Guide7, Guide8, Chopper3, Guide9, Chopper41, Chopper42, tof3a, Guide10, Guide11, save_neutrons, Div_monh()]
   from mcvine.pyre_support.pml import set_instrument_parameters, PmlRenderer
   class instrument: pass
-  instrument.name=u'cncs_moderator2sample'
+  if sys.version_info < (3,0):
+    instrument.name=u'cncs_moderator2sample'
+  else:
+    instrument.name='cncs_moderator2sample'
   instrument.components=components
   set_instrument_parameters(instrument, locals())
   from mcvine.pyre_support.pml import PmlRenderer
@@ -282,8 +288,8 @@ class App(base):
   def help(self):
     import sys, os
     h = os.path.basename(sys.argv[0]) + "  "
-    print h,
-    print "--Ei=5 --dE=0.1 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0"
+    print(h, end=' ')
+    print("--Ei=5 --dE=0.1 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0")
 
 name = 'cncs_config_mod2sample'
 

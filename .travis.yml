@@ -5,12 +5,14 @@ language: python
 
 python:
   - 2.7
+  - 3.6
 
 branches:
   only:
     - master
 
 before_install:
+  - sudo apt-get install -y freeglut3-dev libglu1-mesa
   - if [[ ${TRAVIS_PYTHON_VERSION:0:1} == "2" ]]; then wget http://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh; else wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh; fi
   - chmod +x miniconda.sh
   - ./miniconda.sh -b -p /home/travis/mc
@@ -20,30 +22,12 @@ before_install:
 install:
   - export GIT_FULL_HASH=`git rev-parse HEAD`
   - export GIT_VER=`git describe --tags`
-  - export VERSION=`python -c "print '$GIT_VER'.split('-')[0][1:]"`
   - echo ${TRAVIS_PYTHON_VERSION}
-  - conda config --set always_yes true
-  - conda update conda
-  - conda config --add channels conda-forge
-  - conda config --add channels diffpy
-  - conda config --add channels mantid
-  - conda config --add channels mcvine
-  - conda install -n root conda-build
-  - conda create -n testenv python=$TRAVIS_PYTHON_VERSION
-  - conda install -n testenv anaconda-client
-  - source activate testenv
-  - conda config --set anaconda_upload no
-  - conda install numpy
-  - conda install -c mcvine/label/unstable mcvine-core mantid2mcvine
-  - export SRC=$PWD
-  - export EXPORT_ROOT=$CONDA_PREFIX
-  - export MCVINE_WORKFLOW_BLD_ROOT=$SRC/build
-  - mkdir -p $MCVINE_WORKFLOW_BLD_ROOT && cd $MCVINE_WORKFLOW_BLD_ROOT 
-  - cmake $SRC -DCMAKE_INSTALL_PREFIX=$EXPORT_ROOT -DPYTHON_LIBRARY=$CONDA_PREFIX/lib/libpython2.7.so -DPYTHON_INCLUDE_DIR=$CONDA_PREFIX/include/python2.7 
-  #  -DDEPLOYMENT_PREFIX=/home/lj7/miniconda2/envs/dev-mcvine -DCMAKE_SYSTEM_LIBRARY_PATH=/home/lj7/miniconda2/envs/dev-mcvine/lib 
-  - make install
+  - ./builders/travis/build.sh
 
 script:
+  - pwd
+  - cd build
   - CTEST_OUTPUT_ON_FAILURE=1 make test
 
 notifications:
