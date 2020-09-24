@@ -11,7 +11,7 @@ conda config --add channels mcvine
 
 conda create -n testenv python=$TRAVIS_PYTHON_VERSION
 source activate testenv
-conda install -c mcvine/label/unstable mcvine-core=1.3.5 mantid-framework=4.0.0 mantid2mcvine
+conda install -c mcvine/label/unstable mcvine-core mantid-framework=4.0.0 mantid2mcvine=0.1.1
 export SRC=$PWD
 export PYVER=${TRAVIS_PYTHON_VERSION}
 export PREFIX=${CONDA_PREFIX}
