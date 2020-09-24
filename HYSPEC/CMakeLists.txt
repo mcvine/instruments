@@ -17,11 +17,11 @@ file(COPY etc/
   )
 
 # app
-file(COPY applications/ DESTINATION ${EXPORT_BIN}/
-  FILES_MATCHING 
-  PATTERN "hyspec*"
-  PATTERN "config*"
-  )
+# file(COPY applications/ DESTINATION ${EXPORT_BIN}/
+#   FILES_MATCHING 
+#   PATTERN "hyspec*"
+#   PATTERN "config*"
+#   )
 
 # tests
 set(BUILD_TESTS_PATH ${TESTS_DIR}/mcvine.instruments/${PACKAGE_NAME})
