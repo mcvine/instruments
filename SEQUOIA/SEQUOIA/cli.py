@@ -3,6 +3,7 @@
 # Jiao Lin <jiao.lin@gmail.com>
 #
 
+import sys
 import click
 from ..cli import instruments
 from mcvine.cli import pyre_app, alias
@@ -70,7 +71,8 @@ def neutrons2nxs(ctx, neutrons, nxs, workdir, nodes, populate_metadata, beam):
         # populate
         from .applications import nxs as nxsmod
         beam_out = os.path.abspath(os.path.join(beam, 'out'))
-        nxs = nxs.encode()
+        if sys.version_info < (3,0):
+            nxs = nxs.encode()
         nxsmod.populate_Ei_data(beam_out, nxs)
     return
 
@@ -126,8 +128,9 @@ def reduce(nxs, out, use_ei_guess, ei_guess, qaxis, eaxis, tof2e, ibnorm):
         emin, emax, de = eaxis
         eaxis = emin, de, emax
     
-    nxs = nxs.encode("utf8"); out = out.encode("utf8")
-    ibnorm = ibnorm.encode("utf8")
+    if sys.version_info < (3,0):
+        nxs = nxs.encode("utf8"); out = out.encode("utf8")
+        ibnorm = ibnorm.encode("utf8")
     print(("* tof2E=%s" % tof2e))
     d = dict(
         nxsfile = nxs,
