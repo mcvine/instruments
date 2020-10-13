@@ -1,0 +1,3 @@
+#!/bin/bash
+mcvine instruments arcs beam --keep-in-cache --use-cache -E=70 --ncount=1e7 --nodes=10
+
