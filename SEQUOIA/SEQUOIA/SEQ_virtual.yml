@@ -1,10 +1,8 @@
 beamline: 777001700012292017
 instrument_name: SEQ_virtual
-mantid_idf: SEQ_virtual_Definition_12292017.xml
-mcvine_idf: SEQ_virtual_12292017_mcvine.xml
-nbanks: 113
+mantid_idf: /home/97n/dv/mcvine/instruments/SEQUOIA/mantid2mcvine/SEQ_virtual_Definition_12292017.xml
+mcvine_idf: /home/97n/dv/mcvine/instruments/SEQUOIA/mantid2mcvine/SEQ_virtual_12292017_mcvine.xml
 nmonitors: 2
-npixelspertube: 128
-ntubesperpack: 8
-template_nxs: SEQ_virtual_template_12292017.nxs
+ntotpixels: 115712
+template_nxs: /home/97n/dv/mcvine/instruments/SEQUOIA/mantid2mcvine/SEQ_virtual_template_12292017.nxs
 tofbinsize: 0.1

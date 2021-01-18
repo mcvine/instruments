@@ -13,13 +13,13 @@
 <!DOCTYPE instrument>
 
 
-<Instrument guid="-1" name="SEQ_virtual" id="-1">
+<Instrument name="SEQ_virtual" guid="-1" id="-1">
 
-    <Sample guid="1" name="sample" id="0">
+    <Sample name="sample" guid="1" id="0">
     </Sample>
 
 
-    <DetectorSystem guid="2" name="detSystem" id="1">
+    <DetectorSystem name="detSystem" guid="2" id="1">
         <Shape>
         <!--
         HollowCylinder
@@ -37,7 +37,7 @@
         <hollowCylinder in_radius="4.0" out_radius="8.0" height="4.0"/>
         </Shape>
 
-        <DetectorPack guid="3" name="pack0" id="0">
+        <DetectorPack name="pack0-eightpack" guid="3" id="0">
             <Shape>
             <!--
             Block
@@ -50,10 +50,10 @@
   Its width is the 3rd dimension.
   
             -->
-            <block width="0.219532*m" height="1.206*m" thickness="0.0265481*m"/>
+            <block thickness="0.028743*m" width="0.221727*m" height="1.206*m" />
             </Shape>
 
-            <Detector name="det0" pressure="1.01325e+06*m**-1*kg*s**-2" holdOff="1e-06*s" deadTime="1e-05*s" guid="4" type="He3 LPSD" id="0">
+            <Detector name="det0" guid="4" id="0" pressure="1.01325e+06*m**-1*kg*s**-2" type="He3 LPSD" deadTime="1e-05*s" holdOff="1e-06*s">
                 <Shape>
                 <!--
                 Cylinder
@@ -68,7 +68,7 @@
                 <cylinder height="1.2*m" radius="0.0127*m"/>
                 </Shape>
 
-                <Pixel solidAngle="1.0" guid="5" name="pixel0" id="0">
+                <Pixel name="pixel0" guid="5" id="0" solidAngle="1.0">
                     <Shape>
                     <!--
                     Cylinder
@@ -84,133 +84,133 @@
                     </Shape>
                 </Pixel>
 
-                <Copy guid="6" name="pixel1" reference="5" id="1" />
-                <Copy guid="7" name="pixel2" reference="5" id="2" />
-                <Copy guid="8" name="pixel3" reference="5" id="3" />
-                <Copy guid="9" name="pixel4" reference="5" id="4" />
-                <Copy guid="10" name="pixel5" reference="5" id="5" />
-                <Copy guid="11" name="pixel6" reference="5" id="6" />
-                <Copy guid="12" name="pixel7" reference="5" id="7" />
-                <Copy guid="13" name="pixel8" reference="5" id="8" />
-                <Copy guid="14" name="pixel9" reference="5" id="9" />
-                <Copy guid="15" name="pixel10" reference="5" id="10" />
-                <Copy guid="16" name="pixel11" reference="5" id="11" />
-                <Copy guid="17" name="pixel12" reference="5" id="12" />
-                <Copy guid="18" name="pixel13" reference="5" id="13" />
-                <Copy guid="19" name="pixel14" reference="5" id="14" />
-                <Copy guid="20" name="pixel15" reference="5" id="15" />
-                <Copy guid="21" name="pixel16" reference="5" id="16" />
-                <Copy guid="22" name="pixel17" reference="5" id="17" />
-                <Copy guid="23" name="pixel18" reference="5" id="18" />
-                <Copy guid="24" name="pixel19" reference="5" id="19" />
-                <Copy guid="25" name="pixel20" reference="5" id="20" />
-                <Copy guid="26" name="pixel21" reference="5" id="21" />
-                <Copy guid="27" name="pixel22" reference="5" id="22" />
-                <Copy guid="28" name="pixel23" reference="5" id="23" />
-                <Copy guid="29" name="pixel24" reference="5" id="24" />
-                <Copy guid="30" name="pixel25" reference="5" id="25" />
-                <Copy guid="31" name="pixel26" reference="5" id="26" />
-                <Copy guid="32" name="pixel27" reference="5" id="27" />
-                <Copy guid="33" name="pixel28" reference="5" id="28" />
-                <Copy guid="34" name="pixel29" reference="5" id="29" />
-                <Copy guid="35" name="pixel30" reference="5" id="30" />
-                <Copy guid="36" name="pixel31" reference="5" id="31" />
-                <Copy guid="37" name="pixel32" reference="5" id="32" />
-                <Copy guid="38" name="pixel33" reference="5" id="33" />
-                <Copy guid="39" name="pixel34" reference="5" id="34" />
-                <Copy guid="40" name="pixel35" reference="5" id="35" />
-                <Copy guid="41" name="pixel36" reference="5" id="36" />
-                <Copy guid="42" name="pixel37" reference="5" id="37" />
-                <Copy guid="43" name="pixel38" reference="5" id="38" />
-                <Copy guid="44" name="pixel39" reference="5" id="39" />
-                <Copy guid="45" name="pixel40" reference="5" id="40" />
-                <Copy guid="46" name="pixel41" reference="5" id="41" />
-                <Copy guid="47" name="pixel42" reference="5" id="42" />
-                <Copy guid="48" name="pixel43" reference="5" id="43" />
-                <Copy guid="49" name="pixel44" reference="5" id="44" />
-                <Copy guid="50" name="pixel45" reference="5" id="45" />
-                <Copy guid="51" name="pixel46" reference="5" id="46" />
-                <Copy guid="52" name="pixel47" reference="5" id="47" />
-                <Copy guid="53" name="pixel48" reference="5" id="48" />
-                <Copy guid="54" name="pixel49" reference="5" id="49" />
-                <Copy guid="55" name="pixel50" reference="5" id="50" />
-                <Copy guid="56" name="pixel51" reference="5" id="51" />
-                <Copy guid="57" name="pixel52" reference="5" id="52" />
-                <Copy guid="58" name="pixel53" reference="5" id="53" />
-                <Copy guid="59" name="pixel54" reference="5" id="54" />
-                <Copy guid="60" name="pixel55" reference="5" id="55" />
-                <Copy guid="61" name="pixel56" reference="5" id="56" />
-                <Copy guid="62" name="pixel57" reference="5" id="57" />
-                <Copy guid="63" name="pixel58" reference="5" id="58" />
-                <Copy guid="64" name="pixel59" reference="5" id="59" />
-                <Copy guid="65" name="pixel60" reference="5" id="60" />
-                <Copy guid="66" name="pixel61" reference="5" id="61" />
-                <Copy guid="67" name="pixel62" reference="5" id="62" />
-                <Copy guid="68" name="pixel63" reference="5" id="63" />
-                <Copy guid="69" name="pixel64" reference="5" id="64" />
-                <Copy guid="70" name="pixel65" reference="5" id="65" />
-                <Copy guid="71" name="pixel66" reference="5" id="66" />
-                <Copy guid="72" name="pixel67" reference="5" id="67" />
-                <Copy guid="73" name="pixel68" reference="5" id="68" />
-                <Copy guid="74" name="pixel69" reference="5" id="69" />
-                <Copy guid="75" name="pixel70" reference="5" id="70" />
-                <Copy guid="76" name="pixel71" reference="5" id="71" />
-                <Copy guid="77" name="pixel72" reference="5" id="72" />
-                <Copy guid="78" name="pixel73" reference="5" id="73" />
-                <Copy guid="79" name="pixel74" reference="5" id="74" />
-                <Copy guid="80" name="pixel75" reference="5" id="75" />
-                <Copy guid="81" name="pixel76" reference="5" id="76" />
-                <Copy guid="82" name="pixel77" reference="5" id="77" />
-                <Copy guid="83" name="pixel78" reference="5" id="78" />
-                <Copy guid="84" name="pixel79" reference="5" id="79" />
-                <Copy guid="85" name="pixel80" reference="5" id="80" />
-                <Copy guid="86" name="pixel81" reference="5" id="81" />
-                <Copy guid="87" name="pixel82" reference="5" id="82" />
-                <Copy guid="88" name="pixel83" reference="5" id="83" />
-                <Copy guid="89" name="pixel84" reference="5" id="84" />
-                <Copy guid="90" name="pixel85" reference="5" id="85" />
-                <Copy guid="91" name="pixel86" reference="5" id="86" />
-                <Copy guid="92" name="pixel87" reference="5" id="87" />
-                <Copy guid="93" name="pixel88" reference="5" id="88" />
-                <Copy guid="94" name="pixel89" reference="5" id="89" />
-                <Copy guid="95" name="pixel90" reference="5" id="90" />
-                <Copy guid="96" name="pixel91" reference="5" id="91" />
-                <Copy guid="97" name="pixel92" reference="5" id="92" />
-                <Copy guid="98" name="pixel93" reference="5" id="93" />
-                <Copy guid="99" name="pixel94" reference="5" id="94" />
-                <Copy guid="100" name="pixel95" reference="5" id="95" />
-                <Copy guid="101" name="pixel96" reference="5" id="96" />
-                <Copy guid="102" name="pixel97" reference="5" id="97" />
-                <Copy guid="103" name="pixel98" reference="5" id="98" />
-                <Copy guid="104" name="pixel99" reference="5" id="99" />
-                <Copy guid="105" name="pixel100" reference="5" id="100" />
-                <Copy guid="106" name="pixel101" reference="5" id="101" />
-                <Copy guid="107" name="pixel102" reference="5" id="102" />
-                <Copy guid="108" name="pixel103" reference="5" id="103" />
-                <Copy guid="109" name="pixel104" reference="5" id="104" />
-                <Copy guid="110" name="pixel105" reference="5" id="105" />
-                <Copy guid="111" name="pixel106" reference="5" id="106" />
-                <Copy guid="112" name="pixel107" reference="5" id="107" />
-                <Copy guid="113" name="pixel108" reference="5" id="108" />
-                <Copy guid="114" name="pixel109" reference="5" id="109" />
-                <Copy guid="115" name="pixel110" reference="5" id="110" />
-                <Copy guid="116" name="pixel111" reference="5" id="111" />
-                <Copy guid="117" name="pixel112" reference="5" id="112" />
-                <Copy guid="118" name="pixel113" reference="5" id="113" />
-                <Copy guid="119" name="pixel114" reference="5" id="114" />
-                <Copy guid="120" name="pixel115" reference="5" id="115" />
-                <Copy guid="121" name="pixel116" reference="5" id="116" />
-                <Copy guid="122" name="pixel117" reference="5" id="117" />
-                <Copy guid="123" name="pixel118" reference="5" id="118" />
-                <Copy guid="124" name="pixel119" reference="5" id="119" />
-                <Copy guid="125" name="pixel120" reference="5" id="120" />
-                <Copy guid="126" name="pixel121" reference="5" id="121" />
-                <Copy guid="127" name="pixel122" reference="5" id="122" />
-                <Copy guid="128" name="pixel123" reference="5" id="123" />
-                <Copy guid="129" name="pixel124" reference="5" id="124" />
-                <Copy guid="130" name="pixel125" reference="5" id="125" />
-                <Copy guid="131" name="pixel126" reference="5" id="126" />
-                <Copy guid="132" name="pixel127" reference="5" id="127" />
+                <Copy name="pixel1" guid="6" id="1" reference="5" />
+                <Copy name="pixel2" guid="7" id="2" reference="5" />
+                <Copy name="pixel3" guid="8" id="3" reference="5" />
+                <Copy name="pixel4" guid="9" id="4" reference="5" />
+                <Copy name="pixel5" guid="10" id="5" reference="5" />
+                <Copy name="pixel6" guid="11" id="6" reference="5" />
+                <Copy name="pixel7" guid="12" id="7" reference="5" />
+                <Copy name="pixel8" guid="13" id="8" reference="5" />
+                <Copy name="pixel9" guid="14" id="9" reference="5" />
+                <Copy name="pixel10" guid="15" id="10" reference="5" />
+                <Copy name="pixel11" guid="16" id="11" reference="5" />
+                <Copy name="pixel12" guid="17" id="12" reference="5" />
+                <Copy name="pixel13" guid="18" id="13" reference="5" />
+                <Copy name="pixel14" guid="19" id="14" reference="5" />
+                <Copy name="pixel15" guid="20" id="15" reference="5" />
+                <Copy name="pixel16" guid="21" id="16" reference="5" />
+                <Copy name="pixel17" guid="22" id="17" reference="5" />
+                <Copy name="pixel18" guid="23" id="18" reference="5" />
+                <Copy name="pixel19" guid="24" id="19" reference="5" />
+                <Copy name="pixel20" guid="25" id="20" reference="5" />
+                <Copy name="pixel21" guid="26" id="21" reference="5" />
+                <Copy name="pixel22" guid="27" id="22" reference="5" />
+                <Copy name="pixel23" guid="28" id="23" reference="5" />
+                <Copy name="pixel24" guid="29" id="24" reference="5" />
+                <Copy name="pixel25" guid="30" id="25" reference="5" />
+                <Copy name="pixel26" guid="31" id="26" reference="5" />
+                <Copy name="pixel27" guid="32" id="27" reference="5" />
+                <Copy name="pixel28" guid="33" id="28" reference="5" />
+                <Copy name="pixel29" guid="34" id="29" reference="5" />
+                <Copy name="pixel30" guid="35" id="30" reference="5" />
+                <Copy name="pixel31" guid="36" id="31" reference="5" />
+                <Copy name="pixel32" guid="37" id="32" reference="5" />
+                <Copy name="pixel33" guid="38" id="33" reference="5" />
+                <Copy name="pixel34" guid="39" id="34" reference="5" />
+                <Copy name="pixel35" guid="40" id="35" reference="5" />
+                <Copy name="pixel36" guid="41" id="36" reference="5" />
+                <Copy name="pixel37" guid="42" id="37" reference="5" />
+                <Copy name="pixel38" guid="43" id="38" reference="5" />
+                <Copy name="pixel39" guid="44" id="39" reference="5" />
+                <Copy name="pixel40" guid="45" id="40" reference="5" />
+                <Copy name="pixel41" guid="46" id="41" reference="5" />
+                <Copy name="pixel42" guid="47" id="42" reference="5" />
+                <Copy name="pixel43" guid="48" id="43" reference="5" />
+                <Copy name="pixel44" guid="49" id="44" reference="5" />
+                <Copy name="pixel45" guid="50" id="45" reference="5" />
+                <Copy name="pixel46" guid="51" id="46" reference="5" />
+                <Copy name="pixel47" guid="52" id="47" reference="5" />
+                <Copy name="pixel48" guid="53" id="48" reference="5" />
+                <Copy name="pixel49" guid="54" id="49" reference="5" />
+                <Copy name="pixel50" guid="55" id="50" reference="5" />
+                <Copy name="pixel51" guid="56" id="51" reference="5" />
+                <Copy name="pixel52" guid="57" id="52" reference="5" />
+                <Copy name="pixel53" guid="58" id="53" reference="5" />
+                <Copy name="pixel54" guid="59" id="54" reference="5" />
+                <Copy name="pixel55" guid="60" id="55" reference="5" />
+                <Copy name="pixel56" guid="61" id="56" reference="5" />
+                <Copy name="pixel57" guid="62" id="57" reference="5" />
+                <Copy name="pixel58" guid="63" id="58" reference="5" />
+                <Copy name="pixel59" guid="64" id="59" reference="5" />
+                <Copy name="pixel60" guid="65" id="60" reference="5" />
+                <Copy name="pixel61" guid="66" id="61" reference="5" />
+                <Copy name="pixel62" guid="67" id="62" reference="5" />
+                <Copy name="pixel63" guid="68" id="63" reference="5" />
+                <Copy name="pixel64" guid="69" id="64" reference="5" />
+                <Copy name="pixel65" guid="70" id="65" reference="5" />
+                <Copy name="pixel66" guid="71" id="66" reference="5" />
+                <Copy name="pixel67" guid="72" id="67" reference="5" />
+                <Copy name="pixel68" guid="73" id="68" reference="5" />
+                <Copy name="pixel69" guid="74" id="69" reference="5" />
+                <Copy name="pixel70" guid="75" id="70" reference="5" />
+                <Copy name="pixel71" guid="76" id="71" reference="5" />
+                <Copy name="pixel72" guid="77" id="72" reference="5" />
+                <Copy name="pixel73" guid="78" id="73" reference="5" />
+                <Copy name="pixel74" guid="79" id="74" reference="5" />
+                <Copy name="pixel75" guid="80" id="75" reference="5" />
+                <Copy name="pixel76" guid="81" id="76" reference="5" />
+                <Copy name="pixel77" guid="82" id="77" reference="5" />
+                <Copy name="pixel78" guid="83" id="78" reference="5" />
+                <Copy name="pixel79" guid="84" id="79" reference="5" />
+                <Copy name="pixel80" guid="85" id="80" reference="5" />
+                <Copy name="pixel81" guid="86" id="81" reference="5" />
+                <Copy name="pixel82" guid="87" id="82" reference="5" />
+                <Copy name="pixel83" guid="88" id="83" reference="5" />
+                <Copy name="pixel84" guid="89" id="84" reference="5" />
+                <Copy name="pixel85" guid="90" id="85" reference="5" />
+                <Copy name="pixel86" guid="91" id="86" reference="5" />
+                <Copy name="pixel87" guid="92" id="87" reference="5" />
+                <Copy name="pixel88" guid="93" id="88" reference="5" />
+                <Copy name="pixel89" guid="94" id="89" reference="5" />
+                <Copy name="pixel90" guid="95" id="90" reference="5" />
+                <Copy name="pixel91" guid="96" id="91" reference="5" />
+                <Copy name="pixel92" guid="97" id="92" reference="5" />
+                <Copy name="pixel93" guid="98" id="93" reference="5" />
+                <Copy name="pixel94" guid="99" id="94" reference="5" />
+                <Copy name="pixel95" guid="100" id="95" reference="5" />
+                <Copy name="pixel96" guid="101" id="96" reference="5" />
+                <Copy name="pixel97" guid="102" id="97" reference="5" />
+                <Copy name="pixel98" guid="103" id="98" reference="5" />
+                <Copy name="pixel99" guid="104" id="99" reference="5" />
+                <Copy name="pixel100" guid="105" id="100" reference="5" />
+                <Copy name="pixel101" guid="106" id="101" reference="5" />
+                <Copy name="pixel102" guid="107" id="102" reference="5" />
+                <Copy name="pixel103" guid="108" id="103" reference="5" />
+                <Copy name="pixel104" guid="109" id="104" reference="5" />
+                <Copy name="pixel105" guid="110" id="105" reference="5" />
+                <Copy name="pixel106" guid="111" id="106" reference="5" />
+                <Copy name="pixel107" guid="112" id="107" reference="5" />
+                <Copy name="pixel108" guid="113" id="108" reference="5" />
+                <Copy name="pixel109" guid="114" id="109" reference="5" />
+                <Copy name="pixel110" guid="115" id="110" reference="5" />
+                <Copy name="pixel111" guid="116" id="111" reference="5" />
+                <Copy name="pixel112" guid="117" id="112" reference="5" />
+                <Copy name="pixel113" guid="118" id="113" reference="5" />
+                <Copy name="pixel114" guid="119" id="114" reference="5" />
+                <Copy name="pixel115" guid="120" id="115" reference="5" />
+                <Copy name="pixel116" guid="121" id="116" reference="5" />
+                <Copy name="pixel117" guid="122" id="117" reference="5" />
+                <Copy name="pixel118" guid="123" id="118" reference="5" />
+                <Copy name="pixel119" guid="124" id="119" reference="5" />
+                <Copy name="pixel120" guid="125" id="120" reference="5" />
+                <Copy name="pixel121" guid="126" id="121" reference="5" />
+                <Copy name="pixel122" guid="127" id="122" reference="5" />
+                <Copy name="pixel123" guid="128" id="123" reference="5" />
+                <Copy name="pixel124" guid="129" id="124" reference="5" />
+                <Copy name="pixel125" guid="130" id="125" reference="5" />
+                <Copy name="pixel126" guid="131" id="126" reference="5" />
+                <Copy name="pixel127" guid="132" id="127" reference="5" />
                 <LocalGeometer registry-coordinate-system="McStas">
                     <Register name="pixel0" position="(0*m, -0.595313*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
                     <Register name="pixel1" position="(0*m, -0.585938*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
@@ -343,13 +343,13 @@
                 </LocalGeometer>
             </Detector>
 
-            <Copy guid="133" name="det1" reference="4" id="1" />
-            <Copy guid="134" name="det2" reference="4" id="2" />
-            <Copy guid="135" name="det3" reference="4" id="3" />
-            <Copy guid="136" name="det4" reference="4" id="4" />
-            <Copy guid="137" name="det5" reference="4" id="5" />
-            <Copy guid="138" name="det6" reference="4" id="6" />
-            <Copy guid="139" name="det7" reference="4" id="7" />
+            <Copy name="det1" guid="133" id="1" reference="4" />
+            <Copy name="det2" guid="134" id="2" reference="4" />
+            <Copy name="det3" guid="135" id="3" reference="4" />
+            <Copy name="det4" guid="136" id="4" reference="4" />
+            <Copy name="det5" guid="137" id="5" reference="4" />
+            <Copy name="det6" guid="138" id="6" reference="4" />
+            <Copy name="det7" guid="139" id="7" reference="4" />
             <LocalGeometer registry-coordinate-system="McStas">
                 <Register name="det0" position="(-0.096012*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
                 <Register name="det1" position="(-0.06858*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
@@ -362,68 +362,68 @@
             </LocalGeometer>
         </DetectorPack>
 
-        <Copy guid="140" name="pack1" reference="3" id="1" />
-        <Copy guid="141" name="pack2" reference="3" id="2" />
-        <Copy guid="142" name="pack3" reference="3" id="3" />
-        <Copy guid="143" name="pack4" reference="3" id="4" />
-        <Copy guid="144" name="pack5" reference="3" id="5" />
-        <Copy guid="145" name="pack6" reference="3" id="6" />
-        <Copy guid="146" name="pack7" reference="3" id="7" />
-        <Copy guid="147" name="pack8" reference="3" id="8" />
-        <Copy guid="148" name="pack9" reference="3" id="9" />
-        <Copy guid="149" name="pack10" reference="3" id="10" />
-        <Copy guid="150" name="pack11" reference="3" id="11" />
-        <Copy guid="151" name="pack12" reference="3" id="12" />
-        <Copy guid="152" name="pack13" reference="3" id="13" />
-        <Copy guid="153" name="pack14" reference="3" id="14" />
-        <Copy guid="154" name="pack15" reference="3" id="15" />
-        <Copy guid="155" name="pack16" reference="3" id="16" />
-        <Copy guid="156" name="pack17" reference="3" id="17" />
-        <Copy guid="157" name="pack18" reference="3" id="18" />
-        <Copy guid="158" name="pack19" reference="3" id="19" />
-        <Copy guid="159" name="pack20" reference="3" id="20" />
-        <Copy guid="160" name="pack21" reference="3" id="21" />
-        <Copy guid="161" name="pack22" reference="3" id="22" />
-        <Copy guid="162" name="pack23" reference="3" id="23" />
-        <Copy guid="163" name="pack24" reference="3" id="24" />
-        <Copy guid="164" name="pack25" reference="3" id="25" />
-        <Copy guid="165" name="pack26" reference="3" id="26" />
-        <Copy guid="166" name="pack27" reference="3" id="27" />
-        <Copy guid="167" name="pack28" reference="3" id="28" />
-        <Copy guid="168" name="pack29" reference="3" id="29" />
-        <Copy guid="169" name="pack30" reference="3" id="30" />
-        <Copy guid="170" name="pack31" reference="3" id="31" />
-        <Copy guid="171" name="pack32" reference="3" id="32" />
-        <Copy guid="172" name="pack33" reference="3" id="33" />
-        <Copy guid="173" name="pack34" reference="3" id="34" />
-        <Copy guid="174" name="pack35" reference="3" id="35" />
-        <Copy guid="175" name="pack36" reference="3" id="36" />
-        <Copy guid="176" name="pack37" reference="3" id="37" />
-        <Copy guid="177" name="pack38" reference="3" id="38" />
-        <Copy guid="178" name="pack39" reference="3" id="39" />
-        <Copy guid="179" name="pack40" reference="3" id="40" />
-        <Copy guid="180" name="pack41" reference="3" id="41" />
-        <Copy guid="181" name="pack42" reference="3" id="42" />
-        <Copy guid="182" name="pack43" reference="3" id="43" />
-        <Copy guid="183" name="pack44" reference="3" id="44" />
-        <Copy guid="184" name="pack45" reference="3" id="45" />
-        <Copy guid="185" name="pack46" reference="3" id="46" />
-        <Copy guid="186" name="pack47" reference="3" id="47" />
-        <Copy guid="187" name="pack48" reference="3" id="48" />
-        <Copy guid="188" name="pack49" reference="3" id="49" />
-        <Copy guid="189" name="pack50" reference="3" id="50" />
-        <Copy guid="190" name="pack51" reference="3" id="51" />
-        <Copy guid="191" name="pack52" reference="3" id="52" />
-        <Copy guid="192" name="pack53" reference="3" id="53" />
-        <Copy guid="193" name="pack54" reference="3" id="54" />
-        <Copy guid="194" name="pack55" reference="3" id="55" />
-        <Copy guid="195" name="pack56" reference="3" id="56" />
-        <Copy guid="196" name="pack57" reference="3" id="57" />
-        <Copy guid="197" name="pack58" reference="3" id="58" />
-        <Copy guid="198" name="pack59" reference="3" id="59" />
-        <Copy guid="199" name="pack60" reference="3" id="60" />
+        <Copy name="pack1" guid="140" id="1" reference="3" />
+        <Copy name="pack2" guid="141" id="2" reference="3" />
+        <Copy name="pack3" guid="142" id="3" reference="3" />
+        <Copy name="pack4" guid="143" id="4" reference="3" />
+        <Copy name="pack5" guid="144" id="5" reference="3" />
+        <Copy name="pack6" guid="145" id="6" reference="3" />
+        <Copy name="pack7" guid="146" id="7" reference="3" />
+        <Copy name="pack8" guid="147" id="8" reference="3" />
+        <Copy name="pack9" guid="148" id="9" reference="3" />
+        <Copy name="pack10" guid="149" id="10" reference="3" />
+        <Copy name="pack11" guid="150" id="11" reference="3" />
+        <Copy name="pack12" guid="151" id="12" reference="3" />
+        <Copy name="pack13" guid="152" id="13" reference="3" />
+        <Copy name="pack14" guid="153" id="14" reference="3" />
+        <Copy name="pack15" guid="154" id="15" reference="3" />
+        <Copy name="pack16" guid="155" id="16" reference="3" />
+        <Copy name="pack17" guid="156" id="17" reference="3" />
+        <Copy name="pack18" guid="157" id="18" reference="3" />
+        <Copy name="pack19" guid="158" id="19" reference="3" />
+        <Copy name="pack20" guid="159" id="20" reference="3" />
+        <Copy name="pack21" guid="160" id="21" reference="3" />
+        <Copy name="pack22" guid="161" id="22" reference="3" />
+        <Copy name="pack23" guid="162" id="23" reference="3" />
+        <Copy name="pack24" guid="163" id="24" reference="3" />
+        <Copy name="pack25" guid="164" id="25" reference="3" />
+        <Copy name="pack26" guid="165" id="26" reference="3" />
+        <Copy name="pack27" guid="166" id="27" reference="3" />
+        <Copy name="pack28" guid="167" id="28" reference="3" />
+        <Copy name="pack29" guid="168" id="29" reference="3" />
+        <Copy name="pack30" guid="169" id="30" reference="3" />
+        <Copy name="pack31" guid="170" id="31" reference="3" />
+        <Copy name="pack32" guid="171" id="32" reference="3" />
+        <Copy name="pack33" guid="172" id="33" reference="3" />
+        <Copy name="pack34" guid="173" id="34" reference="3" />
+        <Copy name="pack35" guid="174" id="35" reference="3" />
+        <Copy name="pack36" guid="175" id="36" reference="3" />
+        <Copy name="pack37" guid="176" id="37" reference="3" />
+        <Copy name="pack38" guid="177" id="38" reference="3" />
+        <Copy name="pack39" guid="178" id="39" reference="3" />
+        <Copy name="pack40" guid="179" id="40" reference="3" />
+        <Copy name="pack41" guid="180" id="41" reference="3" />
+        <Copy name="pack42" guid="181" id="42" reference="3" />
+        <Copy name="pack43" guid="182" id="43" reference="3" />
+        <Copy name="pack44" guid="183" id="44" reference="3" />
+        <Copy name="pack45" guid="184" id="45" reference="3" />
+        <Copy name="pack46" guid="185" id="46" reference="3" />
+        <Copy name="pack47" guid="186" id="47" reference="3" />
+        <Copy name="pack48" guid="187" id="48" reference="3" />
+        <Copy name="pack49" guid="188" id="49" reference="3" />
+        <Copy name="pack50" guid="189" id="50" reference="3" />
+        <Copy name="pack51" guid="190" id="51" reference="3" />
+        <Copy name="pack52" guid="191" id="52" reference="3" />
+        <Copy name="pack53" guid="192" id="53" reference="3" />
+        <Copy name="pack54" guid="193" id="54" reference="3" />
+        <Copy name="pack55" guid="194" id="55" reference="3" />
+        <Copy name="pack56" guid="195" id="56" reference="3" />
+        <Copy name="pack57" guid="196" id="57" reference="3" />
+        <Copy name="pack58" guid="197" id="58" reference="3" />
+        <Copy name="pack59" guid="198" id="59" reference="3" />
+        <Copy name="pack60" guid="199" id="60" reference="3" />
 
-        <DetectorPack guid="200" name="pack61" id="61">
+        <DetectorPack name="pack61-eightpack-top" guid="200" id="61">
             <Shape>
             <!--
             Block
@@ -436,10 +436,10 @@
   Its width is the 3rd dimension.
   
             -->
-            <block width="0.219532*m" height="0.260375*m" thickness="0.0265481*m"/>
+            <block thickness="0.028743*m" width="0.221727*m" height="0.260375*m" />
             </Shape>
 
-            <Detector name="det0" pressure="1.01325e+06*m**-1*kg*s**-2" holdOff="1e-06*s" deadTime="1e-05*s" guid="201" type="He3 LPSD" id="0">
+            <Detector name="det0" guid="201" id="0" pressure="1.01325e+06*m**-1*kg*s**-2" type="He3 LPSD" deadTime="1e-05*s" holdOff="1e-06*s">
                 <Shape>
                 <!--
                 Cylinder
@@ -454,7 +454,7 @@
                 <cylinder height="0.25908*m" radius="0.0127*m"/>
                 </Shape>
 
-                <Pixel solidAngle="1.0" guid="202" name="pixel0" id="0">
+                <Pixel name="pixel0" guid="202" id="0" solidAngle="1.0">
                     <Shape>
                     <!--
                     Cylinder
@@ -470,133 +470,133 @@
                     </Shape>
                 </Pixel>
 
-                <Copy guid="203" name="pixel1" reference="202" id="1" />
-                <Copy guid="204" name="pixel2" reference="202" id="2" />
-                <Copy guid="205" name="pixel3" reference="202" id="3" />
-                <Copy guid="206" name="pixel4" reference="202" id="4" />
-                <Copy guid="207" name="pixel5" reference="202" id="5" />
-                <Copy guid="208" name="pixel6" reference="202" id="6" />
-                <Copy guid="209" name="pixel7" reference="202" id="7" />
-                <Copy guid="210" name="pixel8" reference="202" id="8" />
-                <Copy guid="211" name="pixel9" reference="202" id="9" />
-                <Copy guid="212" name="pixel10" reference="202" id="10" />
-                <Copy guid="213" name="pixel11" reference="202" id="11" />
-                <Copy guid="214" name="pixel12" reference="202" id="12" />
-                <Copy guid="215" name="pixel13" reference="202" id="13" />
-                <Copy guid="216" name="pixel14" reference="202" id="14" />
-                <Copy guid="217" name="pixel15" reference="202" id="15" />
-                <Copy guid="218" name="pixel16" reference="202" id="16" />
-                <Copy guid="219" name="pixel17" reference="202" id="17" />
-                <Copy guid="220" name="pixel18" reference="202" id="18" />
-                <Copy guid="221" name="pixel19" reference="202" id="19" />
-                <Copy guid="222" name="pixel20" reference="202" id="20" />
-                <Copy guid="223" name="pixel21" reference="202" id="21" />
-                <Copy guid="224" name="pixel22" reference="202" id="22" />
-                <Copy guid="225" name="pixel23" reference="202" id="23" />
-                <Copy guid="226" name="pixel24" reference="202" id="24" />
-                <Copy guid="227" name="pixel25" reference="202" id="25" />
-                <Copy guid="228" name="pixel26" reference="202" id="26" />
-                <Copy guid="229" name="pixel27" reference="202" id="27" />
-                <Copy guid="230" name="pixel28" reference="202" id="28" />
-                <Copy guid="231" name="pixel29" reference="202" id="29" />
-                <Copy guid="232" name="pixel30" reference="202" id="30" />
-                <Copy guid="233" name="pixel31" reference="202" id="31" />
-                <Copy guid="234" name="pixel32" reference="202" id="32" />
-                <Copy guid="235" name="pixel33" reference="202" id="33" />
-                <Copy guid="236" name="pixel34" reference="202" id="34" />
-                <Copy guid="237" name="pixel35" reference="202" id="35" />
-                <Copy guid="238" name="pixel36" reference="202" id="36" />
-                <Copy guid="239" name="pixel37" reference="202" id="37" />
-                <Copy guid="240" name="pixel38" reference="202" id="38" />
-                <Copy guid="241" name="pixel39" reference="202" id="39" />
-                <Copy guid="242" name="pixel40" reference="202" id="40" />
-                <Copy guid="243" name="pixel41" reference="202" id="41" />
-                <Copy guid="244" name="pixel42" reference="202" id="42" />
-                <Copy guid="245" name="pixel43" reference="202" id="43" />
-                <Copy guid="246" name="pixel44" reference="202" id="44" />
-                <Copy guid="247" name="pixel45" reference="202" id="45" />
-                <Copy guid="248" name="pixel46" reference="202" id="46" />
-                <Copy guid="249" name="pixel47" reference="202" id="47" />
-                <Copy guid="250" name="pixel48" reference="202" id="48" />
-                <Copy guid="251" name="pixel49" reference="202" id="49" />
-                <Copy guid="252" name="pixel50" reference="202" id="50" />
-                <Copy guid="253" name="pixel51" reference="202" id="51" />
-                <Copy guid="254" name="pixel52" reference="202" id="52" />
-                <Copy guid="255" name="pixel53" reference="202" id="53" />
-                <Copy guid="256" name="pixel54" reference="202" id="54" />
-                <Copy guid="257" name="pixel55" reference="202" id="55" />
-                <Copy guid="258" name="pixel56" reference="202" id="56" />
-                <Copy guid="259" name="pixel57" reference="202" id="57" />
-                <Copy guid="260" name="pixel58" reference="202" id="58" />
-                <Copy guid="261" name="pixel59" reference="202" id="59" />
-                <Copy guid="262" name="pixel60" reference="202" id="60" />
-                <Copy guid="263" name="pixel61" reference="202" id="61" />
-                <Copy guid="264" name="pixel62" reference="202" id="62" />
-                <Copy guid="265" name="pixel63" reference="202" id="63" />
-                <Copy guid="266" name="pixel64" reference="202" id="64" />
-                <Copy guid="267" name="pixel65" reference="202" id="65" />
-                <Copy guid="268" name="pixel66" reference="202" id="66" />
-                <Copy guid="269" name="pixel67" reference="202" id="67" />
-                <Copy guid="270" name="pixel68" reference="202" id="68" />
-                <Copy guid="271" name="pixel69" reference="202" id="69" />
-                <Copy guid="272" name="pixel70" reference="202" id="70" />
-                <Copy guid="273" name="pixel71" reference="202" id="71" />
-                <Copy guid="274" name="pixel72" reference="202" id="72" />
-                <Copy guid="275" name="pixel73" reference="202" id="73" />
-                <Copy guid="276" name="pixel74" reference="202" id="74" />
-                <Copy guid="277" name="pixel75" reference="202" id="75" />
-                <Copy guid="278" name="pixel76" reference="202" id="76" />
-                <Copy guid="279" name="pixel77" reference="202" id="77" />
-                <Copy guid="280" name="pixel78" reference="202" id="78" />
-                <Copy guid="281" name="pixel79" reference="202" id="79" />
-                <Copy guid="282" name="pixel80" reference="202" id="80" />
-                <Copy guid="283" name="pixel81" reference="202" id="81" />
-                <Copy guid="284" name="pixel82" reference="202" id="82" />
-                <Copy guid="285" name="pixel83" reference="202" id="83" />
-                <Copy guid="286" name="pixel84" reference="202" id="84" />
-                <Copy guid="287" name="pixel85" reference="202" id="85" />
-                <Copy guid="288" name="pixel86" reference="202" id="86" />
-                <Copy guid="289" name="pixel87" reference="202" id="87" />
-                <Copy guid="290" name="pixel88" reference="202" id="88" />
-                <Copy guid="291" name="pixel89" reference="202" id="89" />
-                <Copy guid="292" name="pixel90" reference="202" id="90" />
-                <Copy guid="293" name="pixel91" reference="202" id="91" />
-                <Copy guid="294" name="pixel92" reference="202" id="92" />
-                <Copy guid="295" name="pixel93" reference="202" id="93" />
-                <Copy guid="296" name="pixel94" reference="202" id="94" />
-                <Copy guid="297" name="pixel95" reference="202" id="95" />
-                <Copy guid="298" name="pixel96" reference="202" id="96" />
-                <Copy guid="299" name="pixel97" reference="202" id="97" />
-                <Copy guid="300" name="pixel98" reference="202" id="98" />
-                <Copy guid="301" name="pixel99" reference="202" id="99" />
-                <Copy guid="302" name="pixel100" reference="202" id="100" />
-                <Copy guid="303" name="pixel101" reference="202" id="101" />
-                <Copy guid="304" name="pixel102" reference="202" id="102" />
-                <Copy guid="305" name="pixel103" reference="202" id="103" />
-                <Copy guid="306" name="pixel104" reference="202" id="104" />
-                <Copy guid="307" name="pixel105" reference="202" id="105" />
-                <Copy guid="308" name="pixel106" reference="202" id="106" />
-                <Copy guid="309" name="pixel107" reference="202" id="107" />
-                <Copy guid="310" name="pixel108" reference="202" id="108" />
-                <Copy guid="311" name="pixel109" reference="202" id="109" />
-                <Copy guid="312" name="pixel110" reference="202" id="110" />
-                <Copy guid="313" name="pixel111" reference="202" id="111" />
-                <Copy guid="314" name="pixel112" reference="202" id="112" />
-                <Copy guid="315" name="pixel113" reference="202" id="113" />
-                <Copy guid="316" name="pixel114" reference="202" id="114" />
-                <Copy guid="317" name="pixel115" reference="202" id="115" />
-                <Copy guid="318" name="pixel116" reference="202" id="116" />
-                <Copy guid="319" name="pixel117" reference="202" id="117" />
-                <Copy guid="320" name="pixel118" reference="202" id="118" />
-                <Copy guid="321" name="pixel119" reference="202" id="119" />
-                <Copy guid="322" name="pixel120" reference="202" id="120" />
-                <Copy guid="323" name="pixel121" reference="202" id="121" />
-                <Copy guid="324" name="pixel122" reference="202" id="122" />
-                <Copy guid="325" name="pixel123" reference="202" id="123" />
-                <Copy guid="326" name="pixel124" reference="202" id="124" />
-                <Copy guid="327" name="pixel125" reference="202" id="125" />
-                <Copy guid="328" name="pixel126" reference="202" id="126" />
-                <Copy guid="329" name="pixel127" reference="202" id="127" />
+                <Copy name="pixel1" guid="203" id="1" reference="202" />
+                <Copy name="pixel2" guid="204" id="2" reference="202" />
+                <Copy name="pixel3" guid="205" id="3" reference="202" />
+                <Copy name="pixel4" guid="206" id="4" reference="202" />
+                <Copy name="pixel5" guid="207" id="5" reference="202" />
+                <Copy name="pixel6" guid="208" id="6" reference="202" />
+                <Copy name="pixel7" guid="209" id="7" reference="202" />
+                <Copy name="pixel8" guid="210" id="8" reference="202" />
+                <Copy name="pixel9" guid="211" id="9" reference="202" />
+                <Copy name="pixel10" guid="212" id="10" reference="202" />
+                <Copy name="pixel11" guid="213" id="11" reference="202" />
+                <Copy name="pixel12" guid="214" id="12" reference="202" />
+                <Copy name="pixel13" guid="215" id="13" reference="202" />
+                <Copy name="pixel14" guid="216" id="14" reference="202" />
+                <Copy name="pixel15" guid="217" id="15" reference="202" />
+                <Copy name="pixel16" guid="218" id="16" reference="202" />
+                <Copy name="pixel17" guid="219" id="17" reference="202" />
+                <Copy name="pixel18" guid="220" id="18" reference="202" />
+                <Copy name="pixel19" guid="221" id="19" reference="202" />
+                <Copy name="pixel20" guid="222" id="20" reference="202" />
+                <Copy name="pixel21" guid="223" id="21" reference="202" />
+                <Copy name="pixel22" guid="224" id="22" reference="202" />
+                <Copy name="pixel23" guid="225" id="23" reference="202" />
+                <Copy name="pixel24" guid="226" id="24" reference="202" />
+                <Copy name="pixel25" guid="227" id="25" reference="202" />
+                <Copy name="pixel26" guid="228" id="26" reference="202" />
+                <Copy name="pixel27" guid="229" id="27" reference="202" />
+                <Copy name="pixel28" guid="230" id="28" reference="202" />
+                <Copy name="pixel29" guid="231" id="29" reference="202" />
+                <Copy name="pixel30" guid="232" id="30" reference="202" />
+                <Copy name="pixel31" guid="233" id="31" reference="202" />
+                <Copy name="pixel32" guid="234" id="32" reference="202" />
+                <Copy name="pixel33" guid="235" id="33" reference="202" />
+                <Copy name="pixel34" guid="236" id="34" reference="202" />
+                <Copy name="pixel35" guid="237" id="35" reference="202" />
+                <Copy name="pixel36" guid="238" id="36" reference="202" />
+                <Copy name="pixel37" guid="239" id="37" reference="202" />
+                <Copy name="pixel38" guid="240" id="38" reference="202" />
+                <Copy name="pixel39" guid="241" id="39" reference="202" />
+                <Copy name="pixel40" guid="242" id="40" reference="202" />
+                <Copy name="pixel41" guid="243" id="41" reference="202" />
+                <Copy name="pixel42" guid="244" id="42" reference="202" />
+                <Copy name="pixel43" guid="245" id="43" reference="202" />
+                <Copy name="pixel44" guid="246" id="44" reference="202" />
+                <Copy name="pixel45" guid="247" id="45" reference="202" />
+                <Copy name="pixel46" guid="248" id="46" reference="202" />
+                <Copy name="pixel47" guid="249" id="47" reference="202" />
+                <Copy name="pixel48" guid="250" id="48" reference="202" />
+                <Copy name="pixel49" guid="251" id="49" reference="202" />
+                <Copy name="pixel50" guid="252" id="50" reference="202" />
+                <Copy name="pixel51" guid="253" id="51" reference="202" />
+                <Copy name="pixel52" guid="254" id="52" reference="202" />
+                <Copy name="pixel53" guid="255" id="53" reference="202" />
+                <Copy name="pixel54" guid="256" id="54" reference="202" />
+                <Copy name="pixel55" guid="257" id="55" reference="202" />
+                <Copy name="pixel56" guid="258" id="56" reference="202" />
+                <Copy name="pixel57" guid="259" id="57" reference="202" />
+                <Copy name="pixel58" guid="260" id="58" reference="202" />
+                <Copy name="pixel59" guid="261" id="59" reference="202" />
+                <Copy name="pixel60" guid="262" id="60" reference="202" />
+                <Copy name="pixel61" guid="263" id="61" reference="202" />
+                <Copy name="pixel62" guid="264" id="62" reference="202" />
+                <Copy name="pixel63" guid="265" id="63" reference="202" />
+                <Copy name="pixel64" guid="266" id="64" reference="202" />
+                <Copy name="pixel65" guid="267" id="65" reference="202" />
+                <Copy name="pixel66" guid="268" id="66" reference="202" />
+                <Copy name="pixel67" guid="269" id="67" reference="202" />
+                <Copy name="pixel68" guid="270" id="68" reference="202" />
+                <Copy name="pixel69" guid="271" id="69" reference="202" />
+                <Copy name="pixel70" guid="272" id="70" reference="202" />
+                <Copy name="pixel71" guid="273" id="71" reference="202" />
+                <Copy name="pixel72" guid="274" id="72" reference="202" />
+                <Copy name="pixel73" guid="275" id="73" reference="202" />
+                <Copy name="pixel74" guid="276" id="74" reference="202" />
+                <Copy name="pixel75" guid="277" id="75" reference="202" />
+                <Copy name="pixel76" guid="278" id="76" reference="202" />
+                <Copy name="pixel77" guid="279" id="77" reference="202" />
+                <Copy name="pixel78" guid="280" id="78" reference="202" />
+                <Copy name="pixel79" guid="281" id="79" reference="202" />
+                <Copy name="pixel80" guid="282" id="80" reference="202" />
+                <Copy name="pixel81" guid="283" id="81" reference="202" />
+                <Copy name="pixel82" guid="284" id="82" reference="202" />
+                <Copy name="pixel83" guid="285" id="83" reference="202" />
+                <Copy name="pixel84" guid="286" id="84" reference="202" />
+                <Copy name="pixel85" guid="287" id="85" reference="202" />
+                <Copy name="pixel86" guid="288" id="86" reference="202" />
+                <Copy name="pixel87" guid="289" id="87" reference="202" />
+                <Copy name="pixel88" guid="290" id="88" reference="202" />
+                <Copy name="pixel89" guid="291" id="89" reference="202" />
+                <Copy name="pixel90" guid="292" id="90" reference="202" />
+                <Copy name="pixel91" guid="293" id="91" reference="202" />
+                <Copy name="pixel92" guid="294" id="92" reference="202" />
+                <Copy name="pixel93" guid="295" id="93" reference="202" />
+                <Copy name="pixel94" guid="296" id="94" reference="202" />
+                <Copy name="pixel95" guid="297" id="95" reference="202" />
+                <Copy name="pixel96" guid="298" id="96" reference="202" />
+                <Copy name="pixel97" guid="299" id="97" reference="202" />
+                <Copy name="pixel98" guid="300" id="98" reference="202" />
+                <Copy name="pixel99" guid="301" id="99" reference="202" />
+                <Copy name="pixel100" guid="302" id="100" reference="202" />
+                <Copy name="pixel101" guid="303" id="101" reference="202" />
+                <Copy name="pixel102" guid="304" id="102" reference="202" />
+                <Copy name="pixel103" guid="305" id="103" reference="202" />
+                <Copy name="pixel104" guid="306" id="104" reference="202" />
+                <Copy name="pixel105" guid="307" id="105" reference="202" />
+                <Copy name="pixel106" guid="308" id="106" reference="202" />
+                <Copy name="pixel107" guid="309" id="107" reference="202" />
+                <Copy name="pixel108" guid="310" id="108" reference="202" />
+                <Copy name="pixel109" guid="311" id="109" reference="202" />
+                <Copy name="pixel110" guid="312" id="110" reference="202" />
+                <Copy name="pixel111" guid="313" id="111" reference="202" />
+                <Copy name="pixel112" guid="314" id="112" reference="202" />
+                <Copy name="pixel113" guid="315" id="113" reference="202" />
+                <Copy name="pixel114" guid="316" id="114" reference="202" />
+                <Copy name="pixel115" guid="317" id="115" reference="202" />
+                <Copy name="pixel116" guid="318" id="116" reference="202" />
+                <Copy name="pixel117" guid="319" id="117" reference="202" />
+                <Copy name="pixel118" guid="320" id="118" reference="202" />
+                <Copy name="pixel119" guid="321" id="119" reference="202" />
+                <Copy name="pixel120" guid="322" id="120" reference="202" />
+                <Copy name="pixel121" guid="323" id="121" reference="202" />
+                <Copy name="pixel122" guid="324" id="122" reference="202" />
+                <Copy name="pixel123" guid="325" id="123" reference="202" />
+                <Copy name="pixel124" guid="326" id="124" reference="202" />
+                <Copy name="pixel125" guid="327" id="125" reference="202" />
+                <Copy name="pixel126" guid="328" id="126" reference="202" />
+                <Copy name="pixel127" guid="329" id="127" reference="202" />
                 <LocalGeometer registry-coordinate-system="McStas">
                     <Register name="pixel0" position="(0*m, -0.128528*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
                     <Register name="pixel1" position="(0*m, -0.126504*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
@@ -729,13 +729,13 @@
                 </LocalGeometer>
             </Detector>
 
-            <Copy guid="330" name="det1" reference="201" id="1" />
-            <Copy guid="331" name="det2" reference="201" id="2" />
-            <Copy guid="332" name="det3" reference="201" id="3" />
-            <Copy guid="333" name="det4" reference="201" id="4" />
-            <Copy guid="334" name="det5" reference="201" id="5" />
-            <Copy guid="335" name="det6" reference="201" id="6" />
-            <Copy guid="336" name="det7" reference="201" id="7" />
+            <Copy name="det1" guid="330" id="1" reference="201" />
+            <Copy name="det2" guid="331" id="2" reference="201" />
+            <Copy name="det3" guid="332" id="3" reference="201" />
+            <Copy name="det4" guid="333" id="4" reference="201" />
+            <Copy name="det5" guid="334" id="5" reference="201" />
+            <Copy name="det6" guid="335" id="6" reference="201" />
+            <Copy name="det7" guid="336" id="7" reference="201" />
             <LocalGeometer registry-coordinate-system="McStas">
                 <Register name="det0" position="(-0.096012*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
                 <Register name="det1" position="(-0.06858*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
@@ -748,9 +748,9 @@
             </LocalGeometer>
         </DetectorPack>
 
-        <Copy guid="337" name="pack62" reference="200" id="62" />
+        <Copy name="pack62" guid="337" id="62" reference="200" />
 
-        <DetectorPack guid="338" name="pack63" id="63">
+        <DetectorPack name="pack63-eightpack-bottom" guid="338" id="63">
             <Shape>
             <!--
             Block
@@ -763,10 +763,10 @@
   Its width is the 3rd dimension.
   
             -->
-            <block width="0.219532*m" height="0.33517*m" thickness="0.0265481*m"/>
+            <block thickness="0.028743*m" width="0.221727*m" height="0.33517*m" />
             </Shape>
 
-            <Detector name="det0" pressure="1.01325e+06*m**-1*kg*s**-2" holdOff="1e-06*s" deadTime="1e-05*s" guid="339" type="He3 LPSD" id="0">
+            <Detector name="det0" guid="339" id="0" pressure="1.01325e+06*m**-1*kg*s**-2" type="He3 LPSD" deadTime="1e-05*s" holdOff="1e-06*s">
                 <Shape>
                 <!--
                 Cylinder
@@ -781,7 +781,7 @@
                 <cylinder height="0.333502*m" radius="0.0127*m"/>
                 </Shape>
 
-                <Pixel solidAngle="1.0" guid="340" name="pixel0" id="0">
+                <Pixel name="pixel0" guid="340" id="0" solidAngle="1.0">
                     <Shape>
                     <!--
                     Cylinder
@@ -797,133 +797,133 @@
                     </Shape>
                 </Pixel>
 
-                <Copy guid="341" name="pixel1" reference="340" id="1" />
-                <Copy guid="342" name="pixel2" reference="340" id="2" />
-                <Copy guid="343" name="pixel3" reference="340" id="3" />
-                <Copy guid="344" name="pixel4" reference="340" id="4" />
-                <Copy guid="345" name="pixel5" reference="340" id="5" />
-                <Copy guid="346" name="pixel6" reference="340" id="6" />
-                <Copy guid="347" name="pixel7" reference="340" id="7" />
-                <Copy guid="348" name="pixel8" reference="340" id="8" />
-                <Copy guid="349" name="pixel9" reference="340" id="9" />
-                <Copy guid="350" name="pixel10" reference="340" id="10" />
-                <Copy guid="351" name="pixel11" reference="340" id="11" />
-                <Copy guid="352" name="pixel12" reference="340" id="12" />
-                <Copy guid="353" name="pixel13" reference="340" id="13" />
-                <Copy guid="354" name="pixel14" reference="340" id="14" />
-                <Copy guid="355" name="pixel15" reference="340" id="15" />
-                <Copy guid="356" name="pixel16" reference="340" id="16" />
-                <Copy guid="357" name="pixel17" reference="340" id="17" />
-                <Copy guid="358" name="pixel18" reference="340" id="18" />
-                <Copy guid="359" name="pixel19" reference="340" id="19" />
-                <Copy guid="360" name="pixel20" reference="340" id="20" />
-                <Copy guid="361" name="pixel21" reference="340" id="21" />
-                <Copy guid="362" name="pixel22" reference="340" id="22" />
-                <Copy guid="363" name="pixel23" reference="340" id="23" />
-                <Copy guid="364" name="pixel24" reference="340" id="24" />
-                <Copy guid="365" name="pixel25" reference="340" id="25" />
-                <Copy guid="366" name="pixel26" reference="340" id="26" />
-                <Copy guid="367" name="pixel27" reference="340" id="27" />
-                <Copy guid="368" name="pixel28" reference="340" id="28" />
-                <Copy guid="369" name="pixel29" reference="340" id="29" />
-                <Copy guid="370" name="pixel30" reference="340" id="30" />
-                <Copy guid="371" name="pixel31" reference="340" id="31" />
-                <Copy guid="372" name="pixel32" reference="340" id="32" />
-                <Copy guid="373" name="pixel33" reference="340" id="33" />
-                <Copy guid="374" name="pixel34" reference="340" id="34" />
-                <Copy guid="375" name="pixel35" reference="340" id="35" />
-                <Copy guid="376" name="pixel36" reference="340" id="36" />
-                <Copy guid="377" name="pixel37" reference="340" id="37" />
-                <Copy guid="378" name="pixel38" reference="340" id="38" />
-                <Copy guid="379" name="pixel39" reference="340" id="39" />
-                <Copy guid="380" name="pixel40" reference="340" id="40" />
-                <Copy guid="381" name="pixel41" reference="340" id="41" />
-                <Copy guid="382" name="pixel42" reference="340" id="42" />
-                <Copy guid="383" name="pixel43" reference="340" id="43" />
-                <Copy guid="384" name="pixel44" reference="340" id="44" />
-                <Copy guid="385" name="pixel45" reference="340" id="45" />
-                <Copy guid="386" name="pixel46" reference="340" id="46" />
-                <Copy guid="387" name="pixel47" reference="340" id="47" />
-                <Copy guid="388" name="pixel48" reference="340" id="48" />
-                <Copy guid="389" name="pixel49" reference="340" id="49" />
-                <Copy guid="390" name="pixel50" reference="340" id="50" />
-                <Copy guid="391" name="pixel51" reference="340" id="51" />
-                <Copy guid="392" name="pixel52" reference="340" id="52" />
-                <Copy guid="393" name="pixel53" reference="340" id="53" />
-                <Copy guid="394" name="pixel54" reference="340" id="54" />
-                <Copy guid="395" name="pixel55" reference="340" id="55" />
-                <Copy guid="396" name="pixel56" reference="340" id="56" />
-                <Copy guid="397" name="pixel57" reference="340" id="57" />
-                <Copy guid="398" name="pixel58" reference="340" id="58" />
-                <Copy guid="399" name="pixel59" reference="340" id="59" />
-                <Copy guid="400" name="pixel60" reference="340" id="60" />
-                <Copy guid="401" name="pixel61" reference="340" id="61" />
-                <Copy guid="402" name="pixel62" reference="340" id="62" />
-                <Copy guid="403" name="pixel63" reference="340" id="63" />
-                <Copy guid="404" name="pixel64" reference="340" id="64" />
-                <Copy guid="405" name="pixel65" reference="340" id="65" />
-                <Copy guid="406" name="pixel66" reference="340" id="66" />
-                <Copy guid="407" name="pixel67" reference="340" id="67" />
-                <Copy guid="408" name="pixel68" reference="340" id="68" />
-                <Copy guid="409" name="pixel69" reference="340" id="69" />
-                <Copy guid="410" name="pixel70" reference="340" id="70" />
-                <Copy guid="411" name="pixel71" reference="340" id="71" />
-                <Copy guid="412" name="pixel72" reference="340" id="72" />
-                <Copy guid="413" name="pixel73" reference="340" id="73" />
-                <Copy guid="414" name="pixel74" reference="340" id="74" />
-                <Copy guid="415" name="pixel75" reference="340" id="75" />
-                <Copy guid="416" name="pixel76" reference="340" id="76" />
-                <Copy guid="417" name="pixel77" reference="340" id="77" />
-                <Copy guid="418" name="pixel78" reference="340" id="78" />
-                <Copy guid="419" name="pixel79" reference="340" id="79" />
-                <Copy guid="420" name="pixel80" reference="340" id="80" />
-                <Copy guid="421" name="pixel81" reference="340" id="81" />
-                <Copy guid="422" name="pixel82" reference="340" id="82" />
-                <Copy guid="423" name="pixel83" reference="340" id="83" />
-                <Copy guid="424" name="pixel84" reference="340" id="84" />
-                <Copy guid="425" name="pixel85" reference="340" id="85" />
-                <Copy guid="426" name="pixel86" reference="340" id="86" />
-                <Copy guid="427" name="pixel87" reference="340" id="87" />
-                <Copy guid="428" name="pixel88" reference="340" id="88" />
-                <Copy guid="429" name="pixel89" reference="340" id="89" />
-                <Copy guid="430" name="pixel90" reference="340" id="90" />
-                <Copy guid="431" name="pixel91" reference="340" id="91" />
-                <Copy guid="432" name="pixel92" reference="340" id="92" />
-                <Copy guid="433" name="pixel93" reference="340" id="93" />
-                <Copy guid="434" name="pixel94" reference="340" id="94" />
-                <Copy guid="435" name="pixel95" reference="340" id="95" />
-                <Copy guid="436" name="pixel96" reference="340" id="96" />
-                <Copy guid="437" name="pixel97" reference="340" id="97" />
-                <Copy guid="438" name="pixel98" reference="340" id="98" />
-                <Copy guid="439" name="pixel99" reference="340" id="99" />
-                <Copy guid="440" name="pixel100" reference="340" id="100" />
-                <Copy guid="441" name="pixel101" reference="340" id="101" />
-                <Copy guid="442" name="pixel102" reference="340" id="102" />
-                <Copy guid="443" name="pixel103" reference="340" id="103" />
-                <Copy guid="444" name="pixel104" reference="340" id="104" />
-                <Copy guid="445" name="pixel105" reference="340" id="105" />
-                <Copy guid="446" name="pixel106" reference="340" id="106" />
-                <Copy guid="447" name="pixel107" reference="340" id="107" />
-                <Copy guid="448" name="pixel108" reference="340" id="108" />
-                <Copy guid="449" name="pixel109" reference="340" id="109" />
-                <Copy guid="450" name="pixel110" reference="340" id="110" />
-                <Copy guid="451" name="pixel111" reference="340" id="111" />
-                <Copy guid="452" name="pixel112" reference="340" id="112" />
-                <Copy guid="453" name="pixel113" reference="340" id="113" />
-                <Copy guid="454" name="pixel114" reference="340" id="114" />
-                <Copy guid="455" name="pixel115" reference="340" id="115" />
-                <Copy guid="456" name="pixel116" reference="340" id="116" />
-                <Copy guid="457" name="pixel117" reference="340" id="117" />
-                <Copy guid="458" name="pixel118" reference="340" id="118" />
-                <Copy guid="459" name="pixel119" reference="340" id="119" />
-                <Copy guid="460" name="pixel120" reference="340" id="120" />
-                <Copy guid="461" name="pixel121" reference="340" id="121" />
-                <Copy guid="462" name="pixel122" reference="340" id="122" />
-                <Copy guid="463" name="pixel123" reference="340" id="123" />
-                <Copy guid="464" name="pixel124" reference="340" id="124" />
-                <Copy guid="465" name="pixel125" reference="340" id="125" />
-                <Copy guid="466" name="pixel126" reference="340" id="126" />
-                <Copy guid="467" name="pixel127" reference="340" id="127" />
+                <Copy name="pixel1" guid="341" id="1" reference="340" />
+                <Copy name="pixel2" guid="342" id="2" reference="340" />
+                <Copy name="pixel3" guid="343" id="3" reference="340" />
+                <Copy name="pixel4" guid="344" id="4" reference="340" />
+                <Copy name="pixel5" guid="345" id="5" reference="340" />
+                <Copy name="pixel6" guid="346" id="6" reference="340" />
+                <Copy name="pixel7" guid="347" id="7" reference="340" />
+                <Copy name="pixel8" guid="348" id="8" reference="340" />
+                <Copy name="pixel9" guid="349" id="9" reference="340" />
+                <Copy name="pixel10" guid="350" id="10" reference="340" />
+                <Copy name="pixel11" guid="351" id="11" reference="340" />
+                <Copy name="pixel12" guid="352" id="12" reference="340" />
+                <Copy name="pixel13" guid="353" id="13" reference="340" />
+                <Copy name="pixel14" guid="354" id="14" reference="340" />
+                <Copy name="pixel15" guid="355" id="15" reference="340" />
+                <Copy name="pixel16" guid="356" id="16" reference="340" />
+                <Copy name="pixel17" guid="357" id="17" reference="340" />
+                <Copy name="pixel18" guid="358" id="18" reference="340" />
+                <Copy name="pixel19" guid="359" id="19" reference="340" />
+                <Copy name="pixel20" guid="360" id="20" reference="340" />
+                <Copy name="pixel21" guid="361" id="21" reference="340" />
+                <Copy name="pixel22" guid="362" id="22" reference="340" />
+                <Copy name="pixel23" guid="363" id="23" reference="340" />
+                <Copy name="pixel24" guid="364" id="24" reference="340" />
+                <Copy name="pixel25" guid="365" id="25" reference="340" />
+                <Copy name="pixel26" guid="366" id="26" reference="340" />
+                <Copy name="pixel27" guid="367" id="27" reference="340" />
+                <Copy name="pixel28" guid="368" id="28" reference="340" />
+                <Copy name="pixel29" guid="369" id="29" reference="340" />
+                <Copy name="pixel30" guid="370" id="30" reference="340" />
+                <Copy name="pixel31" guid="371" id="31" reference="340" />
+                <Copy name="pixel32" guid="372" id="32" reference="340" />
+                <Copy name="pixel33" guid="373" id="33" reference="340" />
+                <Copy name="pixel34" guid="374" id="34" reference="340" />
+                <Copy name="pixel35" guid="375" id="35" reference="340" />
+                <Copy name="pixel36" guid="376" id="36" reference="340" />
+                <Copy name="pixel37" guid="377" id="37" reference="340" />
+                <Copy name="pixel38" guid="378" id="38" reference="340" />
+                <Copy name="pixel39" guid="379" id="39" reference="340" />
+                <Copy name="pixel40" guid="380" id="40" reference="340" />
+                <Copy name="pixel41" guid="381" id="41" reference="340" />
+                <Copy name="pixel42" guid="382" id="42" reference="340" />
+                <Copy name="pixel43" guid="383" id="43" reference="340" />
+                <Copy name="pixel44" guid="384" id="44" reference="340" />
+                <Copy name="pixel45" guid="385" id="45" reference="340" />
+                <Copy name="pixel46" guid="386" id="46" reference="340" />
+                <Copy name="pixel47" guid="387" id="47" reference="340" />
+                <Copy name="pixel48" guid="388" id="48" reference="340" />
+                <Copy name="pixel49" guid="389" id="49" reference="340" />
+                <Copy name="pixel50" guid="390" id="50" reference="340" />
+                <Copy name="pixel51" guid="391" id="51" reference="340" />
+                <Copy name="pixel52" guid="392" id="52" reference="340" />
+                <Copy name="pixel53" guid="393" id="53" reference="340" />
+                <Copy name="pixel54" guid="394" id="54" reference="340" />
+                <Copy name="pixel55" guid="395" id="55" reference="340" />
+                <Copy name="pixel56" guid="396" id="56" reference="340" />
+                <Copy name="pixel57" guid="397" id="57" reference="340" />
+                <Copy name="pixel58" guid="398" id="58" reference="340" />
+                <Copy name="pixel59" guid="399" id="59" reference="340" />
+                <Copy name="pixel60" guid="400" id="60" reference="340" />
+                <Copy name="pixel61" guid="401" id="61" reference="340" />
+                <Copy name="pixel62" guid="402" id="62" reference="340" />
+                <Copy name="pixel63" guid="403" id="63" reference="340" />
+                <Copy name="pixel64" guid="404" id="64" reference="340" />
+                <Copy name="pixel65" guid="405" id="65" reference="340" />
+                <Copy name="pixel66" guid="406" id="66" reference="340" />
+                <Copy name="pixel67" guid="407" id="67" reference="340" />
+                <Copy name="pixel68" guid="408" id="68" reference="340" />
+                <Copy name="pixel69" guid="409" id="69" reference="340" />
+                <Copy name="pixel70" guid="410" id="70" reference="340" />
+                <Copy name="pixel71" guid="411" id="71" reference="340" />
+                <Copy name="pixel72" guid="412" id="72" reference="340" />
+                <Copy name="pixel73" guid="413" id="73" reference="340" />
+                <Copy name="pixel74" guid="414" id="74" reference="340" />
+                <Copy name="pixel75" guid="415" id="75" reference="340" />
+                <Copy name="pixel76" guid="416" id="76" reference="340" />
+                <Copy name="pixel77" guid="417" id="77" reference="340" />
+                <Copy name="pixel78" guid="418" id="78" reference="340" />
+                <Copy name="pixel79" guid="419" id="79" reference="340" />
+                <Copy name="pixel80" guid="420" id="80" reference="340" />
+                <Copy name="pixel81" guid="421" id="81" reference="340" />
+                <Copy name="pixel82" guid="422" id="82" reference="340" />
+                <Copy name="pixel83" guid="423" id="83" reference="340" />
+                <Copy name="pixel84" guid="424" id="84" reference="340" />
+                <Copy name="pixel85" guid="425" id="85" reference="340" />
+                <Copy name="pixel86" guid="426" id="86" reference="340" />
+                <Copy name="pixel87" guid="427" id="87" reference="340" />
+                <Copy name="pixel88" guid="428" id="88" reference="340" />
+                <Copy name="pixel89" guid="429" id="89" reference="340" />
+                <Copy name="pixel90" guid="430" id="90" reference="340" />
+                <Copy name="pixel91" guid="431" id="91" reference="340" />
+                <Copy name="pixel92" guid="432" id="92" reference="340" />
+                <Copy name="pixel93" guid="433" id="93" reference="340" />
+                <Copy name="pixel94" guid="434" id="94" reference="340" />
+                <Copy name="pixel95" guid="435" id="95" reference="340" />
+                <Copy name="pixel96" guid="436" id="96" reference="340" />
+                <Copy name="pixel97" guid="437" id="97" reference="340" />
+                <Copy name="pixel98" guid="438" id="98" reference="340" />
+                <Copy name="pixel99" guid="439" id="99" reference="340" />
+                <Copy name="pixel100" guid="440" id="100" reference="340" />
+                <Copy name="pixel101" guid="441" id="101" reference="340" />
+                <Copy name="pixel102" guid="442" id="102" reference="340" />
+                <Copy name="pixel103" guid="443" id="103" reference="340" />
+                <Copy name="pixel104" guid="444" id="104" reference="340" />
+                <Copy name="pixel105" guid="445" id="105" reference="340" />
+                <Copy name="pixel106" guid="446" id="106" reference="340" />
+                <Copy name="pixel107" guid="447" id="107" reference="340" />
+                <Copy name="pixel108" guid="448" id="108" reference="340" />
+                <Copy name="pixel109" guid="449" id="109" reference="340" />
+                <Copy name="pixel110" guid="450" id="110" reference="340" />
+                <Copy name="pixel111" guid="451" id="111" reference="340" />
+                <Copy name="pixel112" guid="452" id="112" reference="340" />
+                <Copy name="pixel113" guid="453" id="113" reference="340" />
+                <Copy name="pixel114" guid="454" id="114" reference="340" />
+                <Copy name="pixel115" guid="455" id="115" reference="340" />
+                <Copy name="pixel116" guid="456" id="116" reference="340" />
+                <Copy name="pixel117" guid="457" id="117" reference="340" />
+                <Copy name="pixel118" guid="458" id="118" reference="340" />
+                <Copy name="pixel119" guid="459" id="119" reference="340" />
+                <Copy name="pixel120" guid="460" id="120" reference="340" />
+                <Copy name="pixel121" guid="461" id="121" reference="340" />
+                <Copy name="pixel122" guid="462" id="122" reference="340" />
+                <Copy name="pixel123" guid="463" id="123" reference="340" />
+                <Copy name="pixel124" guid="464" id="124" reference="340" />
+                <Copy name="pixel125" guid="465" id="125" reference="340" />
+                <Copy name="pixel126" guid="466" id="126" reference="340" />
+                <Copy name="pixel127" guid="467" id="127" reference="340" />
                 <LocalGeometer registry-coordinate-system="McStas">
                     <Register name="pixel0" position="(0*m, -0.165448*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
                     <Register name="pixel1" position="(0*m, -0.162843*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
@@ -1056,13 +1056,13 @@
                 </LocalGeometer>
             </Detector>
 
-            <Copy guid="468" name="det1" reference="339" id="1" />
-            <Copy guid="469" name="det2" reference="339" id="2" />
-            <Copy guid="470" name="det3" reference="339" id="3" />
-            <Copy guid="471" name="det4" reference="339" id="4" />
-            <Copy guid="472" name="det5" reference="339" id="5" />
-            <Copy guid="473" name="det6" reference="339" id="6" />
-            <Copy guid="474" name="det7" reference="339" id="7" />
+            <Copy name="det1" guid="468" id="1" reference="339" />
+            <Copy name="det2" guid="469" id="2" reference="339" />
+            <Copy name="det3" guid="470" id="3" reference="339" />
+            <Copy name="det4" guid="471" id="4" reference="339" />
+            <Copy name="det5" guid="472" id="5" reference="339" />
+            <Copy name="det6" guid="473" id="6" reference="339" />
+            <Copy name="det7" guid="474" id="7" reference="339" />
             <LocalGeometer registry-coordinate-system="McStas">
                 <Register name="det0" position="(-0.096012*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
                 <Register name="det1" position="(-0.06858*m, 0*m, 0*m)" orientation="(0.0, 0.0, 0.0)"/>
@@ -1075,57 +1075,57 @@
             </LocalGeometer>
         </DetectorPack>
 
-        <Copy guid="475" name="pack64" reference="338" id="64" />
-        <Copy guid="476" name="pack65" reference="3" id="65" />
-        <Copy guid="477" name="pack66" reference="3" id="66" />
-        <Copy guid="478" name="pack67" reference="3" id="67" />
-        <Copy guid="479" name="pack68" reference="3" id="68" />
-        <Copy guid="480" name="pack69" reference="3" id="69" />
-        <Copy guid="481" name="pack70" reference="3" id="70" />
-        <Copy guid="482" name="pack71" reference="3" id="71" />
-        <Copy guid="483" name="pack72" reference="3" id="72" />
-        <Copy guid="484" name="pack73" reference="3" id="73" />
-        <Copy guid="485" name="pack74" reference="3" id="74" />
-        <Copy guid="486" name="pack75" reference="3" id="75" />
-        <Copy guid="487" name="pack76" reference="3" id="76" />
-        <Copy guid="488" name="pack77" reference="3" id="77" />
-        <Copy guid="489" name="pack78" reference="3" id="78" />
-        <Copy guid="490" name="pack79" reference="3" id="79" />
-        <Copy guid="491" name="pack80" reference="3" id="80" />
-        <Copy guid="492" name="pack81" reference="3" id="81" />
-        <Copy guid="493" name="pack82" reference="3" id="82" />
-        <Copy guid="494" name="pack83" reference="3" id="83" />
-        <Copy guid="495" name="pack84" reference="3" id="84" />
-        <Copy guid="496" name="pack85" reference="3" id="85" />
-        <Copy guid="497" name="pack86" reference="3" id="86" />
-        <Copy guid="498" name="pack87" reference="3" id="87" />
-        <Copy guid="499" name="pack88" reference="3" id="88" />
-        <Copy guid="500" name="pack89" reference="3" id="89" />
-        <Copy guid="501" name="pack90" reference="3" id="90" />
-        <Copy guid="502" name="pack91" reference="3" id="91" />
-        <Copy guid="503" name="pack92" reference="3" id="92" />
-        <Copy guid="504" name="pack93" reference="3" id="93" />
-        <Copy guid="505" name="pack94" reference="3" id="94" />
-        <Copy guid="506" name="pack95" reference="3" id="95" />
-        <Copy guid="507" name="pack96" reference="3" id="96" />
-        <Copy guid="508" name="pack97" reference="3" id="97" />
-        <Copy guid="509" name="pack98" reference="3" id="98" />
-        <Copy guid="510" name="pack99" reference="3" id="99" />
-        <Copy guid="511" name="pack100" reference="3" id="100" />
-        <Copy guid="512" name="pack101" reference="3" id="101" />
-        <Copy guid="513" name="pack102" reference="3" id="102" />
-        <Copy guid="514" name="pack103" reference="3" id="103" />
-        <Copy guid="515" name="pack104" reference="3" id="104" />
-        <Copy guid="516" name="pack105" reference="3" id="105" />
-        <Copy guid="517" name="pack106" reference="3" id="106" />
-        <Copy guid="518" name="pack107" reference="3" id="107" />
-        <Copy guid="519" name="pack108" reference="3" id="108" />
-        <Copy guid="520" name="pack109" reference="3" id="109" />
-        <Copy guid="521" name="pack110" reference="3" id="110" />
-        <Copy guid="522" name="pack111" reference="3" id="111" />
-        <Copy guid="523" name="pack112" reference="3" id="112" />
+        <Copy name="pack64" guid="475" id="64" reference="338" />
+        <Copy name="pack65" guid="476" id="65" reference="3" />
+        <Copy name="pack66" guid="477" id="66" reference="3" />
+        <Copy name="pack67" guid="478" id="67" reference="3" />
+        <Copy name="pack68" guid="479" id="68" reference="3" />
+        <Copy name="pack69" guid="480" id="69" reference="3" />
+        <Copy name="pack70" guid="481" id="70" reference="3" />
+        <Copy name="pack71" guid="482" id="71" reference="3" />
+        <Copy name="pack72" guid="483" id="72" reference="3" />
+        <Copy name="pack73" guid="484" id="73" reference="3" />
+        <Copy name="pack74" guid="485" id="74" reference="3" />
+        <Copy name="pack75" guid="486" id="75" reference="3" />
+        <Copy name="pack76" guid="487" id="76" reference="3" />
+        <Copy name="pack77" guid="488" id="77" reference="3" />
+        <Copy name="pack78" guid="489" id="78" reference="3" />
+        <Copy name="pack79" guid="490" id="79" reference="3" />
+        <Copy name="pack80" guid="491" id="80" reference="3" />
+        <Copy name="pack81" guid="492" id="81" reference="3" />
+        <Copy name="pack82" guid="493" id="82" reference="3" />
+        <Copy name="pack83" guid="494" id="83" reference="3" />
+        <Copy name="pack84" guid="495" id="84" reference="3" />
+        <Copy name="pack85" guid="496" id="85" reference="3" />
+        <Copy name="pack86" guid="497" id="86" reference="3" />
+        <Copy name="pack87" guid="498" id="87" reference="3" />
+        <Copy name="pack88" guid="499" id="88" reference="3" />
+        <Copy name="pack89" guid="500" id="89" reference="3" />
+        <Copy name="pack90" guid="501" id="90" reference="3" />
+        <Copy name="pack91" guid="502" id="91" reference="3" />
+        <Copy name="pack92" guid="503" id="92" reference="3" />
+        <Copy name="pack93" guid="504" id="93" reference="3" />
+        <Copy name="pack94" guid="505" id="94" reference="3" />
+        <Copy name="pack95" guid="506" id="95" reference="3" />
+        <Copy name="pack96" guid="507" id="96" reference="3" />
+        <Copy name="pack97" guid="508" id="97" reference="3" />
+        <Copy name="pack98" guid="509" id="98" reference="3" />
+        <Copy name="pack99" guid="510" id="99" reference="3" />
+        <Copy name="pack100" guid="511" id="100" reference="3" />
+        <Copy name="pack101" guid="512" id="101" reference="3" />
+        <Copy name="pack102" guid="513" id="102" reference="3" />
+        <Copy name="pack103" guid="514" id="103" reference="3" />
+        <Copy name="pack104" guid="515" id="104" reference="3" />
+        <Copy name="pack105" guid="516" id="105" reference="3" />
+        <Copy name="pack106" guid="517" id="106" reference="3" />
+        <Copy name="pack107" guid="518" id="107" reference="3" />
+        <Copy name="pack108" guid="519" id="108" reference="3" />
+        <Copy name="pack109" guid="520" id="109" reference="3" />
+        <Copy name="pack110" guid="521" id="110" reference="3" />
+        <Copy name="pack111" guid="522" id="111" reference="3" />
+        <Copy name="pack112" guid="523" id="112" reference="3" />
         <LocalGeometer registry-coordinate-system="McStas">
-            <Register name="pack0" position="(4.60563*m, -1.30354*m, 2.76378*m)" orientation="(-180.0, -59.032627, -180.0)"/>
+            <Register name="pack0-eightpack" position="(4.60563*m, -1.30354*m, 2.76378*m)" orientation="(-180.0, -59.032627, -180.0)"/>
             <Register name="pack1" position="(4.53673*m, -1.30353*m, 2.87548*m)" orientation="(-180.0, -56.732627, -180.0)"/>
             <Register name="pack2" position="(4.32536*m, -1.2948*m, 3.19569*m)" orientation="(-180.0, -53.524070930000015, -180.0)"/>
             <Register name="pack3" position="(4.18486*m, -1.2948*m, 3.37549*m)" orientation="(-180.0, -51.141005530000015, -180.0)"/>
@@ -1186,9 +1186,9 @@
             <Register name="pack58" position="(0.735148*m, -0.0389*m, 5.45998*m)" orientation="(-180.0, -7.655361730000011, -180.0)"/>
             <Register name="pack59" position="(0.506464*m, -0.0389*m, 5.48793*m)" orientation="(-180.0, -5.325365350000018, -180.0)"/>
             <Register name="pack60" position="(0.290153*m, -0.0389*m, 5.49609*m)" orientation="(-180.0, -2.9953676900000152, -180.0)"/>
-            <Register name="pack61" position="(0.0617*m, 0.44*m, 5.47092*m)" orientation="(-180.0, -1.8302563600000021, -180.0)"/>
+            <Register name="pack61-eightpack-top" position="(0.0617*m, 0.44*m, 5.47092*m)" orientation="(-180.0, -1.8302563600000021, -180.0)"/>
             <Register name="pack62" position="(-0.184923*m, 0.431673*m, 5.50032*m)" orientation="(-180.0, 0.4996225800000057, -180.0)"/>
-            <Register name="pack63" position="(0.0428114*m, -0.468884*m, 5.5065*m)" orientation="(-180.0, -1.8303699000000098, -180.0)"/>
+            <Register name="pack63-eightpack-bottom" position="(0.0428114*m, -0.468884*m, 5.5065*m)" orientation="(-180.0, -1.8303699000000098, -180.0)"/>
             <Register name="pack64" position="(-0.166845*m, -0.468884*m, 5.49953*m)" orientation="(-180.0, 0.4996669800000184, -180.0)"/>
             <Register name="pack65" position="(-0.432615*m, -0.0389*m, 5.49298*m)" orientation="(-180.0, 4.400179380000011, -180.0)"/>
             <Register name="pack66" position="(-0.649436*m, -0.0389*m, 5.47316*m)" orientation="(-180.0, 6.859700650000034, -180.0)"/>
@@ -1252,6 +1252,6 @@
 <!-- version-->
 <!-- $Id$-->
 
-<!-- Generated automatically by Renderer on Thu Feb  8 16:38:00 2018-->
+<!-- Generated automatically by %s on %s-->
 
 <!-- End of file -->

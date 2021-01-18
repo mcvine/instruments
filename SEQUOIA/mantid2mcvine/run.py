@@ -23,11 +23,9 @@ tube_info = m2m.TubeInfo(
 tofbinsize = 0.1 # mus
 
 im = m2m.InstrumentModel(
-    instrument_name, beamline, mantid_idf, mcvine_idf, template_nxs,
-    detsys_shape, tube_info,
-    nbanks = nbanks,
-    ntubesperpack = ntubesperpack,
-    npixelspertube = npixelspertube,
+    instrument_name, beamline,
+    mantid_idf, mcvine_idf, template_nxs,
+    detsys_shape,
     tofbinsize = tofbinsize,
     mantid_idf_row_typename_postfix = 'row'
 )
