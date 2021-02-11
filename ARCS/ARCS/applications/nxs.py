@@ -54,8 +54,8 @@ def populate_monitor_data(sim_out, nxs):
     return
 
 
-def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=None, tof2E=True, ibnorm='ByCurrent', t0_guess=None, use_monitors=False):
-    from mantid.simpleapi import DgsReduction, LoadInstrument, Load, MoveInstrumentComponent, GetEiT0atSNS, GetEi
+def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=None, tof2E=True, ibnorm='ByCurrent', t0_guess=None, use_monitors=False, n_monitors_to_remove_from_workspace=None):
+    from mantid.simpleapi import DgsReduction, LoadInstrument, Load, MoveInstrumentComponent, GetEiT0atSNS, GetEi, CropWorkspace
     from mantid import mtd
     if sys.version_info < (3,0) and isinstance(nxsfile, unicode):
         nxsfile = nxsfile.encode('utf-8')
@@ -89,6 +89,8 @@ def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=Non
                 # use Ei guess from function parameters
                 Efixed, T0 = ei_guess, t0_guess or 0.
         # van = SolidAngle(ws) # for solid angle normalization
+        if n_monitors_to_remove_from_workspace:
+            ws = CropWorkspace(ws, StartWorkspaceIndex=n_monitors_to_remove_from_workspace)
         DgsReduction(
             SampleInputWorkspace=ws,
             IncidentEnergyGuess=Efixed,
