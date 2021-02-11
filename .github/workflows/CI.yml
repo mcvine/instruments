@@ -44,7 +44,7 @@ jobs:
       - name: install / build / test
         shell: pwsh
         run: |
-          conda install -c mcvine-core mantid2mcvine mantid-framework=5
+          conda install mcvine-core mantid2mcvine mantid-framework=5
           mcvine
           ./builders/github-actions/build_and_test.sh
         env:
