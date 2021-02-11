@@ -19,7 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         os: ["ubuntu-latest"]
-        python-version: ["3.6"]   
+        python-version: ["3.7"]
     steps:
       - name: install glut
         run: sudo apt-get update && sudo apt-get install -y freeglut3-dev libglu1-mesa
@@ -38,13 +38,13 @@ jobs:
           auto-update-conda: true
           activate-environment: test
           python-version: ${{ matrix.python-version }}
-          channels: mcvine,mantid,diffpy,conda-forge
+          channels: mcvine/label/unstable,mcvine,mantid/label/nightly,mantid,diffpy,conda-forge
       
       # install deps and build
       - name: install / build / test
         shell: pwsh
         run: |
-          conda install -c mcvine/label/unstable mcvine-core mantid2mcvine=0.1.1 mantid-framework=4.0.0
+          conda install -c mcvine-core mantid2mcvine mantid-framework=5
           mcvine
           ./builders/github-actions/build_and_test.sh
         env:
