@@ -48,7 +48,9 @@ def reduce(nxsfile, qaxis, outfile, use_ei_guess=False, ei_guess=None, eaxis=Non
         nxsfile, qaxis, outfile,
         use_ei_guess=use_ei_guess, ei_guess=ei_guess,
         eaxis=eaxis, tof2E=tof2E, ibnorm=ibnorm,
-        t0_guess=t0_guess, use_monitors=False)
+        t0_guess=t0_guess, use_monitors=False,
+        n_monitors_to_remove_from_workspace=3,
+    )
 
 
 # End of file 
