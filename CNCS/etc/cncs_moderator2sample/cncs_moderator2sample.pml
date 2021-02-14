@@ -247,7 +247,8 @@
       <property name="l">0.875</property>
       <property name="w1">0.0211</property>
     </component>
-    
+
+    <!-- 
     <component name="Guide11">
       <property name="Qc">0.02</property>
       <property name="R0">0.99</property>
@@ -260,6 +261,7 @@
       <property name="l">0.22</property>
       <property name="w1">0.015</property>
     </component>
+    -->
     
     <component name="save_neutrons">
       <property name="path">neutrons</property>
