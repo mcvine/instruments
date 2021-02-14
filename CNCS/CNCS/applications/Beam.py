@@ -5,7 +5,7 @@ Simulate CNCS beam and analyze the beam.
 
 Example:
 
- $ cncs_beam --E=5 --dE=0.5 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0 --ncount=1e8 --nodes=10
+ $ cncs_beam --E=5 --dE=0.5 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0 --last_guide=focusing --ncount=1e8 --nodes=10
 
 Notes:
 
@@ -43,47 +43,51 @@ class App(base):
 
         E = pyre.inventory.float('E', default=20)
         E.meta['tip'] = 'desired incident beam energy. unit: meV'
-        
+
         dE = pyre.inventory.float('dE', default=0.)
         dE.meta['tip'] = 'energy range. unit: meV'
-        
+
         f1 = pyre.inventory.float('f1', default=60)
         f1.meta['tip'] = 'Chopper freq 1. unit: Hz'
-        
+
         f2 = pyre.inventory.float('f2', default=60)
         f2.meta['tip'] = 'Chopper freq 2. unit: Hz'
-        
+
         f3 = pyre.inventory.float('f3', default=60)
         f3.meta['tip'] = 'Chopper freq 3. unit: Hz'
-        
+
         f41 = pyre.inventory.float('f41', default=300)
         f41.meta['tip'] = 'Chopper freq 41. unit: Hz'
-        
+
         f42 = pyre.inventory.float('f42', default=300)
         f42.meta['tip'] = 'Chopper freq 42. unit: Hz'
-        
+
         fluxmode = pyre.inventory.float('fluxmode', default=9.)
         fluxmode.meta['tip'] = 'flux mode'
-        
+
+        last_guide = pyre.inventory.str('last_guide', default='focusing')
+        last_guide.meta['tip'] = 'type of last guide, default: focusing'
+        last_guide.validator = pyre.inventory.choice(
+            ['focusing', 'straight', 'none', '']
+        )
+
         ncount = pyre.inventory.float('ncount', default=1000000)
         ncount.meta['tip'] = 'neutron count'
-        
+
         nodes = pyre.inventory.int('nodes', default=1)
         nodes.meta['tip'] = '# of mpi nodes'
-        
-        
+
     m2sout = '_m2sout'
     out = 'out'
-    
-    
+
     def help(self):
         print(cmd_help)
-    
+
 
     def main(self):
         if not os.path.exists(self.out):
             os.makedirs(self.out)
-            
+
         # create configuration for cncs moderator to sample simulation
         self._configure_cncs()
         # run the simulation from mod to sample
@@ -95,6 +99,8 @@ class App(base):
 
     def _configure_cncs(self):
         cmd = ['mcvine instruments cncs config_mod2sample']
+        last_guide = self.inventory.last_guide
+        if last_guide in ['none']: last_guide = ''
         data = dict(
             Ei = self.inventory.E,
             dE = self.inventory.dE,
@@ -104,6 +110,7 @@ class App(base):
             f41 = self.inventory.f41,
             f42 = self.inventory.f42,
             fluxmode = self.inventory.fluxmode,
+            last_guide = last_guide
             )
         cmd += self._buildCmdOptions(data)
         cmd = ' '.join(cmd)
@@ -116,8 +123,12 @@ class App(base):
     def _run_beam(self):
         from mcvine import resources as res
         moddat = os.path.join(
-            res.instrument('CNCS'), 
+            res.instrument('CNCS'),
             'mcstas', 'source_sct21a_td_05_1.dat',
+            )
+        guide11dat = os.path.join(
+            res.instrument('CNCS'),
+            'mcstas', 'guide11-focus.txt',
             )
         cmd = ['mcvine instruments cncs mod2sample']
         from mcni.pyre_support.MpiApplication \
@@ -128,6 +139,7 @@ class App(base):
             ("%s.nodes" % launcher): self.inventory.nodes,
             "output-dir": self.m2sout,
             'moderator.S_filename': moddat,
+            'Guide11.option': 'file={}'.format(guide11dat),
             }
         cmd += self._buildCmdOptions(data)
         cmd = ' '.join(cmd)
