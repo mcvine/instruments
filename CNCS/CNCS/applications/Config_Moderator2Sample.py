@@ -4,7 +4,7 @@ from __future__ import print_function
 import sys
 
 cmd_help = """
-<cmd> --Ei=5 --dE=0.1 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0
+<cmd> --Ei=5 --dE=0.1 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0 --last_guide=focusing
 """
 
 # CNCS_Dec_2016_py
@@ -19,7 +19,7 @@ class arm1(object):
 
 class moderator(object):
   name='moderator'
-  parameters={'yh': '0.14', 'dist': '1.000', 'Emin': 'emin', 'Emax': 'emax', 'height': '0.12', 'width': '0.1', 'S_filename': '"source_sct21a_td_05_1.dat"', 'xw': '0.06'}
+  parameters={'yh': '0.10', 'dist': '1.000', 'Emin': 'emin', 'Emax': 'emax', 'height': '0.12', 'width': '0.1', 'S_filename': '"source_sct21a_td_05_1.dat"', 'xw': '0.05'}
   extra='\nAT (0,0,0) RELATIVE arm1\nROTATED (0,0,0) RELATIVE arm1\n\n\n\n\n\n\n\n\n\n\n\n\n\n'
   position=((0.0, 0.0, 0.0), 'relative', 'arm1')
   type='SNS_source'
@@ -33,6 +33,17 @@ class Guide1(object):
   type='Guide'
   orientation=((0.0, 0.0, 0.0), 'relative', 'arm1')
 
+'''
+New parameters from CNCS-2020.instr
+COMPONENT fermichopper = FermiChopper(
+    phase=-f1_tof_deg, 
+    radius=0.04,
+    nu=f1, 
+    nslit=9, 
+    length=0.017, 
+    eff=0.9, 
+    xwidth=0.05)
+'''
 class FChopper(object):
   name='FChopper'
   parameters={'Nslit': '9', 'zero_time': '0', 'height': '0.102', 'width': '0.053', 'length': '0.017', 'time': 'f1_tof', 'nu': 'f1'}
@@ -140,17 +151,36 @@ class tof3a(object):
 class Guide10(object):
   name='Guide10'
   parameters={'R0': 'Gu_R', 'W': 'Gu_W', 'h2': '0.0503', 'h1': '0.0587', 'm': '3.5', 'l': '0.875', 'Qc': 'Gu_Qc', 'w2': '0.0152', 'w1': '0.0211', 'alpha': 'Gu_alpha'}
-  extra='\nAT (0,0,34.863) RELATIVE arm1\n\n\n'
+  extra='\nAT (0,0,34.853) RELATIVE arm1\n\n\n'
   position=((0.0, 0.0, 34.863), 'relative', 'arm1')
   type='Guide'
   orientation=((0, 0, 0), 'relative', 'arm1')
 
-class Guide11(object):
+class Guide11_straight(object):
   name='Guide11'
   parameters={'R0': 'Gu_R', 'W': 'Gu_W', 'h2': '0.05', 'h1': '0.05', 'm': '4.0', 'l': '0.220', 'Qc': 'Gu_Qc', 'w2': '0.015', 'w1': '0.015', 'alpha': 'Gu_alpha'}
   extra='\nAT (0,0,35.762) RELATIVE arm1\n\n'
-  position=((0.0, 0.0, 35.762), 'relative', 'arm1')
+  position=((0.0, 0.0, 35.733), 'relative', 'arm1')
   type='Guide'
+  orientation=((0, 0, 0), 'relative', 'arm1')
+
+class Guide11_focusing(object):
+  name='Guide11'
+  parameters=dict(
+    l=0.342,
+    option="file=guide11-focus.txt",
+	R0='Gu_R',
+    Qcx=0.0219,
+    Qcy=0.0219,
+    alphax=6.07,
+    alphay=6.07,
+    mx=6.0,
+    my=6.0,
+    W=0.003
+  )
+  extra='\nAT (0,0,35.733) RELATIVE arm1\n\n'
+  position=((0.0, 0.0, 35.733), 'relative', 'arm1')
+  type='Guide_tapering'
   orientation=((0, 0, 0), 'relative', 'arm1')
 
 class save_neutrons(object):
@@ -169,31 +199,17 @@ class Div_monh(object):
   type='DivPos_monitor'
   orientation=((0.0, 0.0, 0.0), 'relative', 'arm1')
 
-def config(Ei=5, dE=0., f1=60., f2=60., f3=60., f41=300., f42=300., fluxmode=9.0):
-  
-  from numpy import sqrt, pi
+def config(Ei=5, dE=0., f1=60., f2=60., f3=60., f41=300., f42=300., fluxmode=9.0, last_guide='focusing'):
+  from numpy import log, sqrt, pi
   twopi = 2*pi
-  
-  
-  
-  
-  
   f2w = f2*twopi
   f3w = f3*twopi
   f41w = f41*twopi
   f42w = f42*twopi
-  
-  
-  
-  
-  
   Gu_alpha = 5.0;
   Gu_R = 0.99;
   Gu_W = 0.002;
   Gu_Qc = 0.02;
-  
-  
-  
   d_mod_mon1=6.313    ;
   L1=6.413            ; 
   L2=7.515            ;
@@ -203,23 +219,16 @@ def config(Ei=5, dE=0., f1=60., f2=60., f3=60., f41=300., f42=300., fluxmode=9.0
   d_mod_mon3=34.836   ;
   d_mod_sample=36.262 ;
   d_mod_det=39.762    ;
-  
-  
   if dE==0:
     dE = 0.2*Ei
   emin=Ei-dE;
   emax=Ei+dE;
-  
-  
-  
-  T0=(1.0+Ei);
-  T0=198.2*pow(T0,-0.84098)/1.e6;
+  # 2017
+  # T0=(1.0+Ei);
+  # T0=198.2*pow(T0,-0.84098)/1.e6;
+  # 2020
+  T0=(156.58-66.66*log(Ei)+6.38*log(Ei)*log(Ei)+0.56*log(Ei)*log(Ei)*log(Ei))/1.e6;
   Toff=0.0;
-  
-  
-  
-  
-  
   f1_tof=T0+(2286.3*L1)/sqrt(Ei)/1.e6;
   f1_tof_deg=360.0 *f1*f1_tof;
   
@@ -231,11 +240,11 @@ def config(Ei=5, dE=0., f1=60., f2=60., f3=60., f41=300., f42=300., fluxmode=9.0
   
   f41_tof=T0+(2286.3*L4)/sqrt(Ei)/1.e6;
   
-  f41omega=f41;
+  # f41omega=f41;
   
   f42_tof=T0+(2286.3*L4)/sqrt(Ei)/1.e6;
   
-  f42omega=f42;
+  # f42omega=f42;
   
   sample_tof=T0+(2286.3*d_mod_sample)/sqrt(Ei);
   sample_tof_start=sample_tof-150;
@@ -244,7 +253,13 @@ def config(Ei=5, dE=0., f1=60., f2=60., f3=60., f41=300., f42=300., fluxmode=9.0
   mon3_tof=T0+(2286.3*d_mod_mon3)/sqrt(Ei);
   mon3_tof_start=mon3_tof-150;
   mon3_tof_stop=mon3_tof+150;
-  components = [arm1, moderator, Guide1, FChopper, tof1b, Guide4, Chopper2, Guide5, Guide6, Guide7, Guide8, Chopper3, Guide9, Chopper41, Chopper42, tof3a, Guide10, Guide11, save_neutrons, Div_monh()]
+  before_last_guide = [arm1, moderator, Guide1, FChopper, tof1b, Guide4, Chopper2, Guide5, Guide6, Guide7, Guide8, Chopper3, Guide9, Chopper41, Chopper42, tof3a, Guide10]
+  if last_guide:
+    guide11 = [eval('Guide11_{}'.format(last_guide))]
+  else:
+    guide11 = []
+  after_last_guide = [save_neutrons, Div_monh()]
+  components = before_last_guide + guide11 + after_last_guide
   from mcvine.pyre_support.pml import set_instrument_parameters, PmlRenderer
   class instrument: pass
   if sys.version_info < (3,0):
@@ -272,6 +287,7 @@ class App(base):
     f41 = pyre.inventory.float("f41", default="300.")
     f42 = pyre.inventory.float("f42", default="300.")
     fluxmode = pyre.inventory.float("fluxmode", default="9.0")
+    last_guide = pyre.inventory.str("last_guide", default="focusing")
     pass # Inventory
   def main(self, *args, **kwds):
     d={}
@@ -283,13 +299,14 @@ class App(base):
     d["f41"] = self.inventory.f41
     d["f42"] = self.inventory.f42
     d["fluxmode"] = self.inventory.fluxmode
+    d["last_guide"] = self.inventory.last_guide
     config(**d)
     return
   def help(self):
     import sys, os
     h = os.path.basename(sys.argv[0]) + "  "
     print(h, end=' ')
-    print("--Ei=5 --dE=0.1 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0")
+    print("--Ei=5 --dE=0.1 --f1=60. --f2=60. --f3=60. --f41=300. --f42=300. --fluxmode=9.0 --last_guide=focusing")
 
 name = 'cncs_config_mod2sample'
 
