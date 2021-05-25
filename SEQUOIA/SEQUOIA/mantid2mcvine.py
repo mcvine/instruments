@@ -10,7 +10,7 @@ import mantid2mcvine as m2m
 here = os.path.dirname(__file__)
 
 def loadInstrumentModel():
-    d = yaml.load(open(os.path.join(here, "SEQ_virtual.yml")))
+    d = yaml.safe_load(open(os.path.join(here, "SEQ_virtual.yml")))
     # update paths
     d.update(
         mcvine_idf=os.path.join(here, 'SEQ_virtual_12292017_mcvine.xml'),
