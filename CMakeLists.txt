@@ -59,7 +59,9 @@ enable_testing()
 file(
   COPY instruments
   DESTINATION ${EXPORT_PYTHON}/mcvine/
-  FILES_MATCHING PATTERN "*.py"
+  FILES_MATCHING
+  PATTERN "*.py"
+  PATTERN "*.pml" PATTERN "*.odb"
   )
 
 
@@ -76,7 +78,9 @@ add_subdirectory(CNCS)
 # install python modules 
 install(DIRECTORY ${EXPORT_PYTHON}/
   DESTINATION ${INSTALL_PY_PATH}
-  FILES_MATCHING PATTERN "*.py" PATTERN "*.so" PATTERN "*.xml" PATTERN "*.nxs" PATTERN "*.yml"
+  FILES_MATCHING
+  PATTERN "*.py" PATTERN "*.so" PATTERN "*.xml"
+  PATTERN "*.nxs" PATTERN "*.yml" PATTERN "*.pml" PATTERN "*.odb"
   )
 # install exes
 install(DIRECTORY ${EXPORT_BIN}/ DESTINATION bin 
