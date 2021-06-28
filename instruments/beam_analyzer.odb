@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+#
+#
+
+def beam_analyzer():
+    from mcni.pyre_components.beam_analyzer import beam_analyzer
+    name = 'beam_analyzer'
+    monitors = [
+        ('tof',),
+        ('energy',),
+        ('x', 'y'),
+        ('x', 'divx'),
+        ('x', 'divy'),
+        ('y', 'divx'),
+        ('y', 'divy'),
+        ]
+    return beam_analyzer(name, monitors)
+monitor = beam_analyzer
+
+if __name__ == '__main__': beam_analyzer()
+
+# End of file
