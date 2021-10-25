@@ -1,0 +1,1297 @@
+<?xml version='1.0' encoding='ASCII'?>
+<instrument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mantidproject.org/IDF/1.0" last-modified="2021-02-18 17:45:43.011103" name="CHESS" valid-from="2016-10-07 00:00:00" valid-to="2100-07-13 23:59:59" xsi:schemaLocation="http://www.mantidproject.org/IDF/1.0 http://schema.mantidproject.org/IDF/1.0/IDFSchema.xsd">
+
+  <!--Created by Gabriele Sala-->
+  <defaults>
+    <length unit="metre"/>
+    <angle unit="degree"/>
+    <reference-frame>
+      <along-beam axis="z"/>
+      <pointing-up axis="y"/>
+      <handedness val="right"/>
+    </reference-frame>
+  </defaults>
+
+  <!--SOURCE AND SAMPLE POSITION-->
+  <component type="moderator">
+    <location z="-31.5"/>
+  </component>
+  <type is="Source" name="moderator"/>
+  <component type="sample-position">
+    <location x="0.0" y="0.0" z="0.0"/>
+  </component>
+  <type is="SamplePos" name="sample-position"/>
+
+  <!--MONITORS-->
+  <component idlist="monitors" type="monitors">
+    <location/>
+  </component>
+  <type name="monitors">
+    <component type="monitor">
+      <location name="monitor1" z="-9.255"/>
+      <location name="monitor2" z="-1.333"/>
+      <location name="monitor3" z="-1.088"/>
+    </component>
+  </type>
+
+<!--BANK Detectors-->
+  <component idlist="detectors" type="detectors">
+    <location/>
+  </component>
+  <type name="detectors">
+    <component type="bank1">
+      <location/>
+    </component>
+    <component type="bank2">
+      <location/>
+    </component>
+    <component type="bank3">
+      <location/>
+    </component>
+    <component type="bank4">
+      <location/>
+    </component>
+    <component type="bank5">
+      <location/>
+    </component>
+    <component type="bank6">
+      <location/>
+    </component>
+    <component type="bank7">
+      <location/>
+    </component>
+    <component type="bank8">
+      <location/>
+    </component>
+    <component type="bank9">
+      <location/>
+    </component>
+    <component type="bank10">
+      <location/>
+    </component>
+    <component type="bank11">
+      <location/>
+    </component>
+    <component type="bank12">
+      <location/>
+    </component>
+  </type>
+
+  <!--Positions of the Detectors and Rotation angles towards the sample-->
+<type name="bank12">
+  <component type="eightpack">
+    <location x="-1.8805" y="0.0" z="2.9519">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="-32.49906526">
+      </rot>
+    </location>
+  </component>
+</type>
+<type name="bank11">
+  <component type="eightpack">
+    <location x="-1.0525" y="0.0" z="3.3380">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="-17.50050964">
+      </rot>
+    </location>
+  </component>
+</type>
+<type name="bank10">
+  <component type="eightpack">
+    <location x="-0.15267" y="0.0" z="3.4967">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="-2.50001277">
+      </rot>
+    </location>
+  </component>
+</type>
+<type name="bank9">
+  <component type="eightpack">
+    <location x="0.75754" y="0.0" z="3.4170">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="12.50014924">
+      </rot>
+    </location>
+  </component>
+</type>
+<type name="bank8">
+  <component type="eightpack">
+    <location x="1.6161" y="0.0" z="3.1045">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="27.49999407">
+      </rot>
+    </location>
+  </component>
+</type>
+<type name="bank7">
+  <component type="eightpack">
+    <location x="2.3646" y="0.0" z="2.5805">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="42.50008938">
+      </rot>
+    </location>
+  </component>
+</type>
+<type name="bank6">
+  <component type="eightpack">
+    <location x="2.9519" y="0.0" z="1.8805">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="57.50093474">
+      </rot>
+    </location>
+  </component>
+</type>
+<type name="bank5">
+  <component type="eightpack">
+    <location x="3.3380" y="0.0" z="1.0525">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="72.49949036">
+      </rot>
+    </location>
+  </component>
+</type>
+<type name="bank4">
+  <component type="eightpack">
+    <location x="3.4967" y="0.0" z="0.15267">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="87.49998723">
+      </rot>
+    </location>
+  </component>
+</type>
+<type name="bank3">
+  <component type="eightpack">
+    <location x="3.4170" y="0.0" z="-0.75754">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="102.50014924">
+      </rot>
+    </location>
+  </component>
+</type>
+<type name="bank2">
+  <component type="eightpack">
+    <location x="3.1045" y="0.0" z="-1.6161">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="117.49999407">
+      </rot>
+    </location>
+  </component>
+</type>
+<type name="bank1">
+  <component type="eightpack">
+    <location x="2.5805" y="0.0" z="-2.3646">
+      <rot axis-x="0" axis-y="1" axis-z="0" val="132.50008938">
+      </rot>
+    </location>
+  </component>
+</type>
+
+  
+  <!--STANDARD 32-PACK-->
+  <type name="eightpack">
+    <properties/>
+    <component type="tube">
+      <location  x=" -0.393024    " z="  -0.221369E-01" name="tube32" />
+      <location  x=" -0.367765    " z="  -0.193752E-01" name="tube31" />
+      <location  x=" -0.342486    " z="  -0.167970E-01" name="tube30" />
+      <location  x=" -0.317189    " z="  -0.144023E-01" name="tube29" />
+      <location  x=" -0.291876    " z="  -0.121914E-01" name="tube28" />
+      <location  x=" -0.266547    " z="  -0.101643E-01" name="tube27" />
+      <location  x=" -0.241204    " z="  -0.832121E-02" name="tube26" />
+      <location  x=" -0.215848    " z="  -0.666210E-02" name="tube25" />
+      <location  x=" -0.190481    " z="  -0.518712E-02" name="tube24" />
+      <location  x=" -0.165104    " z="  -0.389635E-02" name="tube23" />
+      <location  x=" -0.139718    " z="  -0.278984E-02" name="tube22" />
+      <location  x=" -0.114325    " z="  -0.186766E-02" name="tube21" />
+      <location  x=" -0.889254E-01" z="  -0.112986E-02" name="tube20" />
+      <location  x=" -0.635215E-01" z="  -0.576474E-03" name="tube19" />
+      <location  x=" -0.381142E-01" z="  -0.207534E-03" name="tube18" />
+      <location  x=" -0.127050E-01" z="  -0.230596E-04" name="tube17" />
+      <location  x="  0.127050E-01" z="  -0.230596E-04" name="tube16" />
+      <location  x="  0.381142E-01" z="  -0.207534E-03" name="tube15" />
+      <location  x="  0.635215E-01" z="  -0.576474E-03" name="tube14" />
+      <location  x="  0.889254E-01" z="  -0.112986E-02" name="tube13" />
+      <location  x="  0.114325    " z="  -0.186766E-02" name="tube12" />
+      <location  x="  0.139718    " z="  -0.278984E-02" name="tube11" />
+      <location  x="  0.165104    " z="  -0.389635E-02" name="tube10" />
+      <location  x="  0.190481    " z="  -0.518712E-02" name="tube9" />
+      <location  x="  0.215848    " z="  -0.666210E-02" name="tube8" />
+      <location  x="  0.241204    " z="  -0.832121E-02" name="tube7" />
+      <location  x="  0.266547    " z="  -0.101643E-01" name="tube6" />
+      <location  x="  0.291876    " z="  -0.121914E-01" name="tube5" />
+      <location  x="  0.317189    " z="  -0.144023E-01" name="tube4" />
+      <location  x="  0.342486    " z="  -0.167970E-01" name="tube3" />
+      <location  x="  0.367765    " z="  -0.193752E-01" name="tube2" />
+      <location  x="  0.393024    " z="  -0.221369E-01" name="tube1" />
+    </component>
+  </type>
+  
+  <!--STANDARD 4.0m 1024 PIXEL TUBE-->
+  <type name="tube" outline="yes">
+    <properties/>
+    <component type="pixel">
+        <location name="pixel1" y="-2.003040000"/>
+        <location name="pixel2" y="-1.999123988"/>
+        <location name="pixel3" y="-1.995207977"/>
+        <location name="pixel4" y="-1.991291965"/>
+        <location name="pixel5" y="-1.987375953"/>
+        <location name="pixel6" y="-1.983459941"/>
+        <location name="pixel7" y="-1.979543930"/>
+        <location name="pixel8" y="-1.975627918"/>
+        <location name="pixel9" y="-1.971711906"/>
+        <location name="pixel10" y="-1.967795894"/>
+        <location name="pixel11" y="-1.963879883"/>
+        <location name="pixel12" y="-1.959963871"/>
+        <location name="pixel13" y="-1.956047859"/>
+        <location name="pixel14" y="-1.952131848"/>
+        <location name="pixel15" y="-1.948215836"/>
+        <location name="pixel16" y="-1.944299824"/>
+        <location name="pixel17" y="-1.940383812"/>
+        <location name="pixel18" y="-1.936467801"/>
+        <location name="pixel19" y="-1.932551789"/>
+        <location name="pixel20" y="-1.928635777"/>
+        <location name="pixel21" y="-1.924719765"/>
+        <location name="pixel22" y="-1.920803754"/>
+        <location name="pixel23" y="-1.916887742"/>
+        <location name="pixel24" y="-1.912971730"/>
+        <location name="pixel25" y="-1.909055718"/>
+        <location name="pixel26" y="-1.905139707"/>
+        <location name="pixel27" y="-1.901223695"/>
+        <location name="pixel28" y="-1.897307683"/>
+        <location name="pixel29" y="-1.893391672"/>
+        <location name="pixel30" y="-1.889475660"/>
+        <location name="pixel31" y="-1.885559648"/>
+        <location name="pixel32" y="-1.881643636"/>
+        <location name="pixel33" y="-1.877727625"/>
+        <location name="pixel34" y="-1.873811613"/>
+        <location name="pixel35" y="-1.869895601"/>
+        <location name="pixel36" y="-1.865979589"/>
+        <location name="pixel37" y="-1.862063578"/>
+        <location name="pixel38" y="-1.858147566"/>
+        <location name="pixel39" y="-1.854231554"/>
+        <location name="pixel40" y="-1.850315543"/>
+        <location name="pixel41" y="-1.846399531"/>
+        <location name="pixel42" y="-1.842483519"/>
+        <location name="pixel43" y="-1.838567507"/>
+        <location name="pixel44" y="-1.834651496"/>
+        <location name="pixel45" y="-1.830735484"/>
+        <location name="pixel46" y="-1.826819472"/>
+        <location name="pixel47" y="-1.822903460"/>
+        <location name="pixel48" y="-1.818987449"/>
+        <location name="pixel49" y="-1.815071437"/>
+        <location name="pixel50" y="-1.811155425"/>
+        <location name="pixel51" y="-1.807239413"/>
+        <location name="pixel52" y="-1.803323402"/>
+        <location name="pixel53" y="-1.799407390"/>
+        <location name="pixel54" y="-1.795491378"/>
+        <location name="pixel55" y="-1.791575367"/>
+        <location name="pixel56" y="-1.787659355"/>
+        <location name="pixel57" y="-1.783743343"/>
+        <location name="pixel58" y="-1.779827331"/>
+        <location name="pixel59" y="-1.775911320"/>
+        <location name="pixel60" y="-1.771995308"/>
+        <location name="pixel61" y="-1.768079296"/>
+        <location name="pixel62" y="-1.764163284"/>
+        <location name="pixel63" y="-1.760247273"/>
+        <location name="pixel64" y="-1.756331261"/>
+        <location name="pixel65" y="-1.752415249"/>
+        <location name="pixel66" y="-1.748499238"/>
+        <location name="pixel67" y="-1.744583226"/>
+        <location name="pixel68" y="-1.740667214"/>
+        <location name="pixel69" y="-1.736751202"/>
+        <location name="pixel70" y="-1.732835191"/>
+        <location name="pixel71" y="-1.728919179"/>
+        <location name="pixel72" y="-1.725003167"/>
+        <location name="pixel73" y="-1.721087155"/>
+        <location name="pixel74" y="-1.717171144"/>
+        <location name="pixel75" y="-1.713255132"/>
+        <location name="pixel76" y="-1.709339120"/>
+        <location name="pixel77" y="-1.705423109"/>
+        <location name="pixel78" y="-1.701507097"/>
+        <location name="pixel79" y="-1.697591085"/>
+        <location name="pixel80" y="-1.693675073"/>
+        <location name="pixel81" y="-1.689759062"/>
+        <location name="pixel82" y="-1.685843050"/>
+        <location name="pixel83" y="-1.681927038"/>
+        <location name="pixel84" y="-1.678011026"/>
+        <location name="pixel85" y="-1.674095015"/>
+        <location name="pixel86" y="-1.670179003"/>
+        <location name="pixel87" y="-1.666262991"/>
+        <location name="pixel88" y="-1.662346979"/>
+        <location name="pixel89" y="-1.658430968"/>
+        <location name="pixel90" y="-1.654514956"/>
+        <location name="pixel91" y="-1.650598944"/>
+        <location name="pixel92" y="-1.646682933"/>
+        <location name="pixel93" y="-1.642766921"/>
+        <location name="pixel94" y="-1.638850909"/>
+        <location name="pixel95" y="-1.634934897"/>
+        <location name="pixel96" y="-1.631018886"/>
+        <location name="pixel97" y="-1.627102874"/>
+        <location name="pixel98" y="-1.623186862"/>
+        <location name="pixel99" y="-1.619270850"/>
+        <location name="pixel100" y="-1.615354839"/>
+        <location name="pixel101" y="-1.611438827"/>
+        <location name="pixel102" y="-1.607522815"/>
+        <location name="pixel103" y="-1.603606804"/>
+        <location name="pixel104" y="-1.599690792"/>
+        <location name="pixel105" y="-1.595774780"/>
+        <location name="pixel106" y="-1.591858768"/>
+        <location name="pixel107" y="-1.587942757"/>
+        <location name="pixel108" y="-1.584026745"/>
+        <location name="pixel109" y="-1.580110733"/>
+        <location name="pixel110" y="-1.576194721"/>
+        <location name="pixel111" y="-1.572278710"/>
+        <location name="pixel112" y="-1.568362698"/>
+        <location name="pixel113" y="-1.564446686"/>
+        <location name="pixel114" y="-1.560530674"/>
+        <location name="pixel115" y="-1.556614663"/>
+        <location name="pixel116" y="-1.552698651"/>
+        <location name="pixel117" y="-1.548782639"/>
+        <location name="pixel118" y="-1.544866628"/>
+        <location name="pixel119" y="-1.540950616"/>
+        <location name="pixel120" y="-1.537034604"/>
+        <location name="pixel121" y="-1.533118592"/>
+        <location name="pixel122" y="-1.529202581"/>
+        <location name="pixel123" y="-1.525286569"/>
+        <location name="pixel124" y="-1.521370557"/>
+        <location name="pixel125" y="-1.517454545"/>
+        <location name="pixel126" y="-1.513538534"/>
+        <location name="pixel127" y="-1.509622522"/>
+        <location name="pixel128" y="-1.505706510"/>
+        <location name="pixel129" y="-1.501790499"/>
+        <location name="pixel130" y="-1.497874487"/>
+        <location name="pixel131" y="-1.493958475"/>
+        <location name="pixel132" y="-1.490042463"/>
+        <location name="pixel133" y="-1.486126452"/>
+        <location name="pixel134" y="-1.482210440"/>
+        <location name="pixel135" y="-1.478294428"/>
+        <location name="pixel136" y="-1.474378416"/>
+        <location name="pixel137" y="-1.470462405"/>
+        <location name="pixel138" y="-1.466546393"/>
+        <location name="pixel139" y="-1.462630381"/>
+        <location name="pixel140" y="-1.458714370"/>
+        <location name="pixel141" y="-1.454798358"/>
+        <location name="pixel142" y="-1.450882346"/>
+        <location name="pixel143" y="-1.446966334"/>
+        <location name="pixel144" y="-1.443050323"/>
+        <location name="pixel145" y="-1.439134311"/>
+        <location name="pixel146" y="-1.435218299"/>
+        <location name="pixel147" y="-1.431302287"/>
+        <location name="pixel148" y="-1.427386276"/>
+        <location name="pixel149" y="-1.423470264"/>
+        <location name="pixel150" y="-1.419554252"/>
+        <location name="pixel151" y="-1.415638240"/>
+        <location name="pixel152" y="-1.411722229"/>
+        <location name="pixel153" y="-1.407806217"/>
+        <location name="pixel154" y="-1.403890205"/>
+        <location name="pixel155" y="-1.399974194"/>
+        <location name="pixel156" y="-1.396058182"/>
+        <location name="pixel157" y="-1.392142170"/>
+        <location name="pixel158" y="-1.388226158"/>
+        <location name="pixel159" y="-1.384310147"/>
+        <location name="pixel160" y="-1.380394135"/>
+        <location name="pixel161" y="-1.376478123"/>
+        <location name="pixel162" y="-1.372562111"/>
+        <location name="pixel163" y="-1.368646100"/>
+        <location name="pixel164" y="-1.364730088"/>
+        <location name="pixel165" y="-1.360814076"/>
+        <location name="pixel166" y="-1.356898065"/>
+        <location name="pixel167" y="-1.352982053"/>
+        <location name="pixel168" y="-1.349066041"/>
+        <location name="pixel169" y="-1.345150029"/>
+        <location name="pixel170" y="-1.341234018"/>
+        <location name="pixel171" y="-1.337318006"/>
+        <location name="pixel172" y="-1.333401994"/>
+        <location name="pixel173" y="-1.329485982"/>
+        <location name="pixel174" y="-1.325569971"/>
+        <location name="pixel175" y="-1.321653959"/>
+        <location name="pixel176" y="-1.317737947"/>
+        <location name="pixel177" y="-1.313821935"/>
+        <location name="pixel178" y="-1.309905924"/>
+        <location name="pixel179" y="-1.305989912"/>
+        <location name="pixel180" y="-1.302073900"/>
+        <location name="pixel181" y="-1.298157889"/>
+        <location name="pixel182" y="-1.294241877"/>
+        <location name="pixel183" y="-1.290325865"/>
+        <location name="pixel184" y="-1.286409853"/>
+        <location name="pixel185" y="-1.282493842"/>
+        <location name="pixel186" y="-1.278577830"/>
+        <location name="pixel187" y="-1.274661818"/>
+        <location name="pixel188" y="-1.270745806"/>
+        <location name="pixel189" y="-1.266829795"/>
+        <location name="pixel190" y="-1.262913783"/>
+        <location name="pixel191" y="-1.258997771"/>
+        <location name="pixel192" y="-1.255081760"/>
+        <location name="pixel193" y="-1.251165748"/>
+        <location name="pixel194" y="-1.247249736"/>
+        <location name="pixel195" y="-1.243333724"/>
+        <location name="pixel196" y="-1.239417713"/>
+        <location name="pixel197" y="-1.235501701"/>
+        <location name="pixel198" y="-1.231585689"/>
+        <location name="pixel199" y="-1.227669677"/>
+        <location name="pixel200" y="-1.223753666"/>
+        <location name="pixel201" y="-1.219837654"/>
+        <location name="pixel202" y="-1.215921642"/>
+        <location name="pixel203" y="-1.212005630"/>
+        <location name="pixel204" y="-1.208089619"/>
+        <location name="pixel205" y="-1.204173607"/>
+        <location name="pixel206" y="-1.200257595"/>
+        <location name="pixel207" y="-1.196341584"/>
+        <location name="pixel208" y="-1.192425572"/>
+        <location name="pixel209" y="-1.188509560"/>
+        <location name="pixel210" y="-1.184593548"/>
+        <location name="pixel211" y="-1.180677537"/>
+        <location name="pixel212" y="-1.176761525"/>
+        <location name="pixel213" y="-1.172845513"/>
+        <location name="pixel214" y="-1.168929501"/>
+        <location name="pixel215" y="-1.165013490"/>
+        <location name="pixel216" y="-1.161097478"/>
+        <location name="pixel217" y="-1.157181466"/>
+        <location name="pixel218" y="-1.153265455"/>
+        <location name="pixel219" y="-1.149349443"/>
+        <location name="pixel220" y="-1.145433431"/>
+        <location name="pixel221" y="-1.141517419"/>
+        <location name="pixel222" y="-1.137601408"/>
+        <location name="pixel223" y="-1.133685396"/>
+        <location name="pixel224" y="-1.129769384"/>
+        <location name="pixel225" y="-1.125853372"/>
+        <location name="pixel226" y="-1.121937361"/>
+        <location name="pixel227" y="-1.118021349"/>
+        <location name="pixel228" y="-1.114105337"/>
+        <location name="pixel229" y="-1.110189326"/>
+        <location name="pixel230" y="-1.106273314"/>
+        <location name="pixel231" y="-1.102357302"/>
+        <location name="pixel232" y="-1.098441290"/>
+        <location name="pixel233" y="-1.094525279"/>
+        <location name="pixel234" y="-1.090609267"/>
+        <location name="pixel235" y="-1.086693255"/>
+        <location name="pixel236" y="-1.082777243"/>
+        <location name="pixel237" y="-1.078861232"/>
+        <location name="pixel238" y="-1.074945220"/>
+        <location name="pixel239" y="-1.071029208"/>
+        <location name="pixel240" y="-1.067113196"/>
+        <location name="pixel241" y="-1.063197185"/>
+        <location name="pixel242" y="-1.059281173"/>
+        <location name="pixel243" y="-1.055365161"/>
+        <location name="pixel244" y="-1.051449150"/>
+        <location name="pixel245" y="-1.047533138"/>
+        <location name="pixel246" y="-1.043617126"/>
+        <location name="pixel247" y="-1.039701114"/>
+        <location name="pixel248" y="-1.035785103"/>
+        <location name="pixel249" y="-1.031869091"/>
+        <location name="pixel250" y="-1.027953079"/>
+        <location name="pixel251" y="-1.024037067"/>
+        <location name="pixel252" y="-1.020121056"/>
+        <location name="pixel253" y="-1.016205044"/>
+        <location name="pixel254" y="-1.012289032"/>
+        <location name="pixel255" y="-1.008373021"/>
+        <location name="pixel256" y="-1.004457009"/>
+        <location name="pixel257" y="-1.000540997"/>
+        <location name="pixel258" y="-0.996624985"/>
+        <location name="pixel259" y="-0.992708974"/>
+        <location name="pixel260" y="-0.988792962"/>
+        <location name="pixel261" y="-0.984876950"/>
+        <location name="pixel262" y="-0.980960938"/>
+        <location name="pixel263" y="-0.977044927"/>
+        <location name="pixel264" y="-0.973128915"/>
+        <location name="pixel265" y="-0.969212903"/>
+        <location name="pixel266" y="-0.965296891"/>
+        <location name="pixel267" y="-0.961380880"/>
+        <location name="pixel268" y="-0.957464868"/>
+        <location name="pixel269" y="-0.953548856"/>
+        <location name="pixel270" y="-0.949632845"/>
+        <location name="pixel271" y="-0.945716833"/>
+        <location name="pixel272" y="-0.941800821"/>
+        <location name="pixel273" y="-0.937884809"/>
+        <location name="pixel274" y="-0.933968798"/>
+        <location name="pixel275" y="-0.930052786"/>
+        <location name="pixel276" y="-0.926136774"/>
+        <location name="pixel277" y="-0.922220762"/>
+        <location name="pixel278" y="-0.918304751"/>
+        <location name="pixel279" y="-0.914388739"/>
+        <location name="pixel280" y="-0.910472727"/>
+        <location name="pixel281" y="-0.906556716"/>
+        <location name="pixel282" y="-0.902640704"/>
+        <location name="pixel283" y="-0.898724692"/>
+        <location name="pixel284" y="-0.894808680"/>
+        <location name="pixel285" y="-0.890892669"/>
+        <location name="pixel286" y="-0.886976657"/>
+        <location name="pixel287" y="-0.883060645"/>
+        <location name="pixel288" y="-0.879144633"/>
+        <location name="pixel289" y="-0.875228622"/>
+        <location name="pixel290" y="-0.871312610"/>
+        <location name="pixel291" y="-0.867396598"/>
+        <location name="pixel292" y="-0.863480587"/>
+        <location name="pixel293" y="-0.859564575"/>
+        <location name="pixel294" y="-0.855648563"/>
+        <location name="pixel295" y="-0.851732551"/>
+        <location name="pixel296" y="-0.847816540"/>
+        <location name="pixel297" y="-0.843900528"/>
+        <location name="pixel298" y="-0.839984516"/>
+        <location name="pixel299" y="-0.836068504"/>
+        <location name="pixel300" y="-0.832152493"/>
+        <location name="pixel301" y="-0.828236481"/>
+        <location name="pixel302" y="-0.824320469"/>
+        <location name="pixel303" y="-0.820404457"/>
+        <location name="pixel304" y="-0.816488446"/>
+        <location name="pixel305" y="-0.812572434"/>
+        <location name="pixel306" y="-0.808656422"/>
+        <location name="pixel307" y="-0.804740411"/>
+        <location name="pixel308" y="-0.800824399"/>
+        <location name="pixel309" y="-0.796908387"/>
+        <location name="pixel310" y="-0.792992375"/>
+        <location name="pixel311" y="-0.789076364"/>
+        <location name="pixel312" y="-0.785160352"/>
+        <location name="pixel313" y="-0.781244340"/>
+        <location name="pixel314" y="-0.777328328"/>
+        <location name="pixel315" y="-0.773412317"/>
+        <location name="pixel316" y="-0.769496305"/>
+        <location name="pixel317" y="-0.765580293"/>
+        <location name="pixel318" y="-0.761664282"/>
+        <location name="pixel319" y="-0.757748270"/>
+        <location name="pixel320" y="-0.753832258"/>
+        <location name="pixel321" y="-0.749916246"/>
+        <location name="pixel322" y="-0.746000235"/>
+        <location name="pixel323" y="-0.742084223"/>
+        <location name="pixel324" y="-0.738168211"/>
+        <location name="pixel325" y="-0.734252199"/>
+        <location name="pixel326" y="-0.730336188"/>
+        <location name="pixel327" y="-0.726420176"/>
+        <location name="pixel328" y="-0.722504164"/>
+        <location name="pixel329" y="-0.718588152"/>
+        <location name="pixel330" y="-0.714672141"/>
+        <location name="pixel331" y="-0.710756129"/>
+        <location name="pixel332" y="-0.706840117"/>
+        <location name="pixel333" y="-0.702924106"/>
+        <location name="pixel334" y="-0.699008094"/>
+        <location name="pixel335" y="-0.695092082"/>
+        <location name="pixel336" y="-0.691176070"/>
+        <location name="pixel337" y="-0.687260059"/>
+        <location name="pixel338" y="-0.683344047"/>
+        <location name="pixel339" y="-0.679428035"/>
+        <location name="pixel340" y="-0.675512023"/>
+        <location name="pixel341" y="-0.671596012"/>
+        <location name="pixel342" y="-0.667680000"/>
+        <location name="pixel343" y="-0.663763988"/>
+        <location name="pixel344" y="-0.659847977"/>
+        <location name="pixel345" y="-0.655931965"/>
+        <location name="pixel346" y="-0.652015953"/>
+        <location name="pixel347" y="-0.648099941"/>
+        <location name="pixel348" y="-0.644183930"/>
+        <location name="pixel349" y="-0.640267918"/>
+        <location name="pixel350" y="-0.636351906"/>
+        <location name="pixel351" y="-0.632435894"/>
+        <location name="pixel352" y="-0.628519883"/>
+        <location name="pixel353" y="-0.624603871"/>
+        <location name="pixel354" y="-0.620687859"/>
+        <location name="pixel355" y="-0.616771848"/>
+        <location name="pixel356" y="-0.612855836"/>
+        <location name="pixel357" y="-0.608939824"/>
+        <location name="pixel358" y="-0.605023812"/>
+        <location name="pixel359" y="-0.601107801"/>
+        <location name="pixel360" y="-0.597191789"/>
+        <location name="pixel361" y="-0.593275777"/>
+        <location name="pixel362" y="-0.589359765"/>
+        <location name="pixel363" y="-0.585443754"/>
+        <location name="pixel364" y="-0.581527742"/>
+        <location name="pixel365" y="-0.577611730"/>
+        <location name="pixel366" y="-0.573695718"/>
+        <location name="pixel367" y="-0.569779707"/>
+        <location name="pixel368" y="-0.565863695"/>
+        <location name="pixel369" y="-0.561947683"/>
+        <location name="pixel370" y="-0.558031672"/>
+        <location name="pixel371" y="-0.554115660"/>
+        <location name="pixel372" y="-0.550199648"/>
+        <location name="pixel373" y="-0.546283636"/>
+        <location name="pixel374" y="-0.542367625"/>
+        <location name="pixel375" y="-0.538451613"/>
+        <location name="pixel376" y="-0.534535601"/>
+        <location name="pixel377" y="-0.530619589"/>
+        <location name="pixel378" y="-0.526703578"/>
+        <location name="pixel379" y="-0.522787566"/>
+        <location name="pixel380" y="-0.518871554"/>
+        <location name="pixel381" y="-0.514955543"/>
+        <location name="pixel382" y="-0.511039531"/>
+        <location name="pixel383" y="-0.507123519"/>
+        <location name="pixel384" y="-0.503207507"/>
+        <location name="pixel385" y="-0.499291496"/>
+        <location name="pixel386" y="-0.495375484"/>
+        <location name="pixel387" y="-0.491459472"/>
+        <location name="pixel388" y="-0.487543460"/>
+        <location name="pixel389" y="-0.483627449"/>
+        <location name="pixel390" y="-0.479711437"/>
+        <location name="pixel391" y="-0.475795425"/>
+        <location name="pixel392" y="-0.471879413"/>
+        <location name="pixel393" y="-0.467963402"/>
+        <location name="pixel394" y="-0.464047390"/>
+        <location name="pixel395" y="-0.460131378"/>
+        <location name="pixel396" y="-0.456215367"/>
+        <location name="pixel397" y="-0.452299355"/>
+        <location name="pixel398" y="-0.448383343"/>
+        <location name="pixel399" y="-0.444467331"/>
+        <location name="pixel400" y="-0.440551320"/>
+        <location name="pixel401" y="-0.436635308"/>
+        <location name="pixel402" y="-0.432719296"/>
+        <location name="pixel403" y="-0.428803284"/>
+        <location name="pixel404" y="-0.424887273"/>
+        <location name="pixel405" y="-0.420971261"/>
+        <location name="pixel406" y="-0.417055249"/>
+        <location name="pixel407" y="-0.413139238"/>
+        <location name="pixel408" y="-0.409223226"/>
+        <location name="pixel409" y="-0.405307214"/>
+        <location name="pixel410" y="-0.401391202"/>
+        <location name="pixel411" y="-0.397475191"/>
+        <location name="pixel412" y="-0.393559179"/>
+        <location name="pixel413" y="-0.389643167"/>
+        <location name="pixel414" y="-0.385727155"/>
+        <location name="pixel415" y="-0.381811144"/>
+        <location name="pixel416" y="-0.377895132"/>
+        <location name="pixel417" y="-0.373979120"/>
+        <location name="pixel418" y="-0.370063109"/>
+        <location name="pixel419" y="-0.366147097"/>
+        <location name="pixel420" y="-0.362231085"/>
+        <location name="pixel421" y="-0.358315073"/>
+        <location name="pixel422" y="-0.354399062"/>
+        <location name="pixel423" y="-0.350483050"/>
+        <location name="pixel424" y="-0.346567038"/>
+        <location name="pixel425" y="-0.342651026"/>
+        <location name="pixel426" y="-0.338735015"/>
+        <location name="pixel427" y="-0.334819003"/>
+        <location name="pixel428" y="-0.330902991"/>
+        <location name="pixel429" y="-0.326986979"/>
+        <location name="pixel430" y="-0.323070968"/>
+        <location name="pixel431" y="-0.319154956"/>
+        <location name="pixel432" y="-0.315238944"/>
+        <location name="pixel433" y="-0.311322933"/>
+        <location name="pixel434" y="-0.307406921"/>
+        <location name="pixel435" y="-0.303490909"/>
+        <location name="pixel436" y="-0.299574897"/>
+        <location name="pixel437" y="-0.295658886"/>
+        <location name="pixel438" y="-0.291742874"/>
+        <location name="pixel439" y="-0.287826862"/>
+        <location name="pixel440" y="-0.283910850"/>
+        <location name="pixel441" y="-0.279994839"/>
+        <location name="pixel442" y="-0.276078827"/>
+        <location name="pixel443" y="-0.272162815"/>
+        <location name="pixel444" y="-0.268246804"/>
+        <location name="pixel445" y="-0.264330792"/>
+        <location name="pixel446" y="-0.260414780"/>
+        <location name="pixel447" y="-0.256498768"/>
+        <location name="pixel448" y="-0.252582757"/>
+        <location name="pixel449" y="-0.248666745"/>
+        <location name="pixel450" y="-0.244750733"/>
+        <location name="pixel451" y="-0.240834721"/>
+        <location name="pixel452" y="-0.236918710"/>
+        <location name="pixel453" y="-0.233002698"/>
+        <location name="pixel454" y="-0.229086686"/>
+        <location name="pixel455" y="-0.225170674"/>
+        <location name="pixel456" y="-0.221254663"/>
+        <location name="pixel457" y="-0.217338651"/>
+        <location name="pixel458" y="-0.213422639"/>
+        <location name="pixel459" y="-0.209506628"/>
+        <location name="pixel460" y="-0.205590616"/>
+        <location name="pixel461" y="-0.201674604"/>
+        <location name="pixel462" y="-0.197758592"/>
+        <location name="pixel463" y="-0.193842581"/>
+        <location name="pixel464" y="-0.189926569"/>
+        <location name="pixel465" y="-0.186010557"/>
+        <location name="pixel466" y="-0.182094545"/>
+        <location name="pixel467" y="-0.178178534"/>
+        <location name="pixel468" y="-0.174262522"/>
+        <location name="pixel469" y="-0.170346510"/>
+        <location name="pixel470" y="-0.166430499"/>
+        <location name="pixel471" y="-0.162514487"/>
+        <location name="pixel472" y="-0.158598475"/>
+        <location name="pixel473" y="-0.154682463"/>
+        <location name="pixel474" y="-0.150766452"/>
+        <location name="pixel475" y="-0.146850440"/>
+        <location name="pixel476" y="-0.142934428"/>
+        <location name="pixel477" y="-0.139018416"/>
+        <location name="pixel478" y="-0.135102405"/>
+        <location name="pixel479" y="-0.131186393"/>
+        <location name="pixel480" y="-0.127270381"/>
+        <location name="pixel481" y="-0.123354370"/>
+        <location name="pixel482" y="-0.119438358"/>
+        <location name="pixel483" y="-0.115522346"/>
+        <location name="pixel484" y="-0.111606334"/>
+        <location name="pixel485" y="-0.107690323"/>
+        <location name="pixel486" y="-0.103774311"/>
+        <location name="pixel487" y="-0.099858299"/>
+        <location name="pixel488" y="-0.095942287"/>
+        <location name="pixel489" y="-0.092026276"/>
+        <location name="pixel490" y="-0.088110264"/>
+        <location name="pixel491" y="-0.084194252"/>
+        <location name="pixel492" y="-0.080278240"/>
+        <location name="pixel493" y="-0.076362229"/>
+        <location name="pixel494" y="-0.072446217"/>
+        <location name="pixel495" y="-0.068530205"/>
+        <location name="pixel496" y="-0.064614194"/>
+        <location name="pixel497" y="-0.060698182"/>
+        <location name="pixel498" y="-0.056782170"/>
+        <location name="pixel499" y="-0.052866158"/>
+        <location name="pixel500" y="-0.048950147"/>
+        <location name="pixel501" y="-0.045034135"/>
+        <location name="pixel502" y="-0.041118123"/>
+        <location name="pixel503" y="-0.037202111"/>
+        <location name="pixel504" y="-0.033286100"/>
+        <location name="pixel505" y="-0.029370088"/>
+        <location name="pixel506" y="-0.025454076"/>
+        <location name="pixel507" y="-0.021538065"/>
+        <location name="pixel508" y="-0.017622053"/>
+        <location name="pixel509" y="-0.013706041"/>
+        <location name="pixel510" y="-0.009790029"/>
+        <location name="pixel511" y="-0.005874018"/>
+        <location name="pixel512" y="-0.001958006"/>
+        <location name="pixel513" y="0.001958006"/>
+        <location name="pixel514" y="0.005874018"/>
+        <location name="pixel515" y="0.009790029"/>
+        <location name="pixel516" y="0.013706041"/>
+        <location name="pixel517" y="0.017622053"/>
+        <location name="pixel518" y="0.021538065"/>
+        <location name="pixel519" y="0.025454076"/>
+        <location name="pixel520" y="0.029370088"/>
+        <location name="pixel521" y="0.033286100"/>
+        <location name="pixel522" y="0.037202111"/>
+        <location name="pixel523" y="0.041118123"/>
+        <location name="pixel524" y="0.045034135"/>
+        <location name="pixel525" y="0.048950147"/>
+        <location name="pixel526" y="0.052866158"/>
+        <location name="pixel527" y="0.056782170"/>
+        <location name="pixel528" y="0.060698182"/>
+        <location name="pixel529" y="0.064614194"/>
+        <location name="pixel530" y="0.068530205"/>
+        <location name="pixel531" y="0.072446217"/>
+        <location name="pixel532" y="0.076362229"/>
+        <location name="pixel533" y="0.080278240"/>
+        <location name="pixel534" y="0.084194252"/>
+        <location name="pixel535" y="0.088110264"/>
+        <location name="pixel536" y="0.092026276"/>
+        <location name="pixel537" y="0.095942287"/>
+        <location name="pixel538" y="0.099858299"/>
+        <location name="pixel539" y="0.103774311"/>
+        <location name="pixel540" y="0.107690323"/>
+        <location name="pixel541" y="0.111606334"/>
+        <location name="pixel542" y="0.115522346"/>
+        <location name="pixel543" y="0.119438358"/>
+        <location name="pixel544" y="0.123354370"/>
+        <location name="pixel545" y="0.127270381"/>
+        <location name="pixel546" y="0.131186393"/>
+        <location name="pixel547" y="0.135102405"/>
+        <location name="pixel548" y="0.139018416"/>
+        <location name="pixel549" y="0.142934428"/>
+        <location name="pixel550" y="0.146850440"/>
+        <location name="pixel551" y="0.150766452"/>
+        <location name="pixel552" y="0.154682463"/>
+        <location name="pixel553" y="0.158598475"/>
+        <location name="pixel554" y="0.162514487"/>
+        <location name="pixel555" y="0.166430499"/>
+        <location name="pixel556" y="0.170346510"/>
+        <location name="pixel557" y="0.174262522"/>
+        <location name="pixel558" y="0.178178534"/>
+        <location name="pixel559" y="0.182094545"/>
+        <location name="pixel560" y="0.186010557"/>
+        <location name="pixel561" y="0.189926569"/>
+        <location name="pixel562" y="0.193842581"/>
+        <location name="pixel563" y="0.197758592"/>
+        <location name="pixel564" y="0.201674604"/>
+        <location name="pixel565" y="0.205590616"/>
+        <location name="pixel566" y="0.209506628"/>
+        <location name="pixel567" y="0.213422639"/>
+        <location name="pixel568" y="0.217338651"/>
+        <location name="pixel569" y="0.221254663"/>
+        <location name="pixel570" y="0.225170674"/>
+        <location name="pixel571" y="0.229086686"/>
+        <location name="pixel572" y="0.233002698"/>
+        <location name="pixel573" y="0.236918710"/>
+        <location name="pixel574" y="0.240834721"/>
+        <location name="pixel575" y="0.244750733"/>
+        <location name="pixel576" y="0.248666745"/>
+        <location name="pixel577" y="0.252582757"/>
+        <location name="pixel578" y="0.256498768"/>
+        <location name="pixel579" y="0.260414780"/>
+        <location name="pixel580" y="0.264330792"/>
+        <location name="pixel581" y="0.268246804"/>
+        <location name="pixel582" y="0.272162815"/>
+        <location name="pixel583" y="0.276078827"/>
+        <location name="pixel584" y="0.279994839"/>
+        <location name="pixel585" y="0.283910850"/>
+        <location name="pixel586" y="0.287826862"/>
+        <location name="pixel587" y="0.291742874"/>
+        <location name="pixel588" y="0.295658886"/>
+        <location name="pixel589" y="0.299574897"/>
+        <location name="pixel590" y="0.303490909"/>
+        <location name="pixel591" y="0.307406921"/>
+        <location name="pixel592" y="0.311322933"/>
+        <location name="pixel593" y="0.315238944"/>
+        <location name="pixel594" y="0.319154956"/>
+        <location name="pixel595" y="0.323070968"/>
+        <location name="pixel596" y="0.326986979"/>
+        <location name="pixel597" y="0.330902991"/>
+        <location name="pixel598" y="0.334819003"/>
+        <location name="pixel599" y="0.338735015"/>
+        <location name="pixel600" y="0.342651026"/>
+        <location name="pixel601" y="0.346567038"/>
+        <location name="pixel602" y="0.350483050"/>
+        <location name="pixel603" y="0.354399062"/>
+        <location name="pixel604" y="0.358315073"/>
+        <location name="pixel605" y="0.362231085"/>
+        <location name="pixel606" y="0.366147097"/>
+        <location name="pixel607" y="0.370063109"/>
+        <location name="pixel608" y="0.373979120"/>
+        <location name="pixel609" y="0.377895132"/>
+        <location name="pixel610" y="0.381811144"/>
+        <location name="pixel611" y="0.385727155"/>
+        <location name="pixel612" y="0.389643167"/>
+        <location name="pixel613" y="0.393559179"/>
+        <location name="pixel614" y="0.397475191"/>
+        <location name="pixel615" y="0.401391202"/>
+        <location name="pixel616" y="0.405307214"/>
+        <location name="pixel617" y="0.409223226"/>
+        <location name="pixel618" y="0.413139238"/>
+        <location name="pixel619" y="0.417055249"/>
+        <location name="pixel620" y="0.420971261"/>
+        <location name="pixel621" y="0.424887273"/>
+        <location name="pixel622" y="0.428803284"/>
+        <location name="pixel623" y="0.432719296"/>
+        <location name="pixel624" y="0.436635308"/>
+        <location name="pixel625" y="0.440551320"/>
+        <location name="pixel626" y="0.444467331"/>
+        <location name="pixel627" y="0.448383343"/>
+        <location name="pixel628" y="0.452299355"/>
+        <location name="pixel629" y="0.456215367"/>
+        <location name="pixel630" y="0.460131378"/>
+        <location name="pixel631" y="0.464047390"/>
+        <location name="pixel632" y="0.467963402"/>
+        <location name="pixel633" y="0.471879413"/>
+        <location name="pixel634" y="0.475795425"/>
+        <location name="pixel635" y="0.479711437"/>
+        <location name="pixel636" y="0.483627449"/>
+        <location name="pixel637" y="0.487543460"/>
+        <location name="pixel638" y="0.491459472"/>
+        <location name="pixel639" y="0.495375484"/>
+        <location name="pixel640" y="0.499291496"/>
+        <location name="pixel641" y="0.503207507"/>
+        <location name="pixel642" y="0.507123519"/>
+        <location name="pixel643" y="0.511039531"/>
+        <location name="pixel644" y="0.514955543"/>
+        <location name="pixel645" y="0.518871554"/>
+        <location name="pixel646" y="0.522787566"/>
+        <location name="pixel647" y="0.526703578"/>
+        <location name="pixel648" y="0.530619589"/>
+        <location name="pixel649" y="0.534535601"/>
+        <location name="pixel650" y="0.538451613"/>
+        <location name="pixel651" y="0.542367625"/>
+        <location name="pixel652" y="0.546283636"/>
+        <location name="pixel653" y="0.550199648"/>
+        <location name="pixel654" y="0.554115660"/>
+        <location name="pixel655" y="0.558031672"/>
+        <location name="pixel656" y="0.561947683"/>
+        <location name="pixel657" y="0.565863695"/>
+        <location name="pixel658" y="0.569779707"/>
+        <location name="pixel659" y="0.573695718"/>
+        <location name="pixel660" y="0.577611730"/>
+        <location name="pixel661" y="0.581527742"/>
+        <location name="pixel662" y="0.585443754"/>
+        <location name="pixel663" y="0.589359765"/>
+        <location name="pixel664" y="0.593275777"/>
+        <location name="pixel665" y="0.597191789"/>
+        <location name="pixel666" y="0.601107801"/>
+        <location name="pixel667" y="0.605023812"/>
+        <location name="pixel668" y="0.608939824"/>
+        <location name="pixel669" y="0.612855836"/>
+        <location name="pixel670" y="0.616771848"/>
+        <location name="pixel671" y="0.620687859"/>
+        <location name="pixel672" y="0.624603871"/>
+        <location name="pixel673" y="0.628519883"/>
+        <location name="pixel674" y="0.632435894"/>
+        <location name="pixel675" y="0.636351906"/>
+        <location name="pixel676" y="0.640267918"/>
+        <location name="pixel677" y="0.644183930"/>
+        <location name="pixel678" y="0.648099941"/>
+        <location name="pixel679" y="0.652015953"/>
+        <location name="pixel680" y="0.655931965"/>
+        <location name="pixel681" y="0.659847977"/>
+        <location name="pixel682" y="0.663763988"/>
+        <location name="pixel683" y="0.667680000"/>
+        <location name="pixel684" y="0.671596012"/>
+        <location name="pixel685" y="0.675512023"/>
+        <location name="pixel686" y="0.679428035"/>
+        <location name="pixel687" y="0.683344047"/>
+        <location name="pixel688" y="0.687260059"/>
+        <location name="pixel689" y="0.691176070"/>
+        <location name="pixel690" y="0.695092082"/>
+        <location name="pixel691" y="0.699008094"/>
+        <location name="pixel692" y="0.702924106"/>
+        <location name="pixel693" y="0.706840117"/>
+        <location name="pixel694" y="0.710756129"/>
+        <location name="pixel695" y="0.714672141"/>
+        <location name="pixel696" y="0.718588152"/>
+        <location name="pixel697" y="0.722504164"/>
+        <location name="pixel698" y="0.726420176"/>
+        <location name="pixel699" y="0.730336188"/>
+        <location name="pixel700" y="0.734252199"/>
+        <location name="pixel701" y="0.738168211"/>
+        <location name="pixel702" y="0.742084223"/>
+        <location name="pixel703" y="0.746000235"/>
+        <location name="pixel704" y="0.749916246"/>
+        <location name="pixel705" y="0.753832258"/>
+        <location name="pixel706" y="0.757748270"/>
+        <location name="pixel707" y="0.761664282"/>
+        <location name="pixel708" y="0.765580293"/>
+        <location name="pixel709" y="0.769496305"/>
+        <location name="pixel710" y="0.773412317"/>
+        <location name="pixel711" y="0.777328328"/>
+        <location name="pixel712" y="0.781244340"/>
+        <location name="pixel713" y="0.785160352"/>
+        <location name="pixel714" y="0.789076364"/>
+        <location name="pixel715" y="0.792992375"/>
+        <location name="pixel716" y="0.796908387"/>
+        <location name="pixel717" y="0.800824399"/>
+        <location name="pixel718" y="0.804740411"/>
+        <location name="pixel719" y="0.808656422"/>
+        <location name="pixel720" y="0.812572434"/>
+        <location name="pixel721" y="0.816488446"/>
+        <location name="pixel722" y="0.820404457"/>
+        <location name="pixel723" y="0.824320469"/>
+        <location name="pixel724" y="0.828236481"/>
+        <location name="pixel725" y="0.832152493"/>
+        <location name="pixel726" y="0.836068504"/>
+        <location name="pixel727" y="0.839984516"/>
+        <location name="pixel728" y="0.843900528"/>
+        <location name="pixel729" y="0.847816540"/>
+        <location name="pixel730" y="0.851732551"/>
+        <location name="pixel731" y="0.855648563"/>
+        <location name="pixel732" y="0.859564575"/>
+        <location name="pixel733" y="0.863480587"/>
+        <location name="pixel734" y="0.867396598"/>
+        <location name="pixel735" y="0.871312610"/>
+        <location name="pixel736" y="0.875228622"/>
+        <location name="pixel737" y="0.879144633"/>
+        <location name="pixel738" y="0.883060645"/>
+        <location name="pixel739" y="0.886976657"/>
+        <location name="pixel740" y="0.890892669"/>
+        <location name="pixel741" y="0.894808680"/>
+        <location name="pixel742" y="0.898724692"/>
+        <location name="pixel743" y="0.902640704"/>
+        <location name="pixel744" y="0.906556716"/>
+        <location name="pixel745" y="0.910472727"/>
+        <location name="pixel746" y="0.914388739"/>
+        <location name="pixel747" y="0.918304751"/>
+        <location name="pixel748" y="0.922220762"/>
+        <location name="pixel749" y="0.926136774"/>
+        <location name="pixel750" y="0.930052786"/>
+        <location name="pixel751" y="0.933968798"/>
+        <location name="pixel752" y="0.937884809"/>
+        <location name="pixel753" y="0.941800821"/>
+        <location name="pixel754" y="0.945716833"/>
+        <location name="pixel755" y="0.949632845"/>
+        <location name="pixel756" y="0.953548856"/>
+        <location name="pixel757" y="0.957464868"/>
+        <location name="pixel758" y="0.961380880"/>
+        <location name="pixel759" y="0.965296891"/>
+        <location name="pixel760" y="0.969212903"/>
+        <location name="pixel761" y="0.973128915"/>
+        <location name="pixel762" y="0.977044927"/>
+        <location name="pixel763" y="0.980960938"/>
+        <location name="pixel764" y="0.984876950"/>
+        <location name="pixel765" y="0.988792962"/>
+        <location name="pixel766" y="0.992708974"/>
+        <location name="pixel767" y="0.996624985"/>
+        <location name="pixel768" y="1.000540997"/>
+        <location name="pixel769" y="1.004457009"/>
+        <location name="pixel770" y="1.008373021"/>
+        <location name="pixel771" y="1.012289032"/>
+        <location name="pixel772" y="1.016205044"/>
+        <location name="pixel773" y="1.020121056"/>
+        <location name="pixel774" y="1.024037067"/>
+        <location name="pixel775" y="1.027953079"/>
+        <location name="pixel776" y="1.031869091"/>
+        <location name="pixel777" y="1.035785103"/>
+        <location name="pixel778" y="1.039701114"/>
+        <location name="pixel779" y="1.043617126"/>
+        <location name="pixel780" y="1.047533138"/>
+        <location name="pixel781" y="1.051449150"/>
+        <location name="pixel782" y="1.055365161"/>
+        <location name="pixel783" y="1.059281173"/>
+        <location name="pixel784" y="1.063197185"/>
+        <location name="pixel785" y="1.067113196"/>
+        <location name="pixel786" y="1.071029208"/>
+        <location name="pixel787" y="1.074945220"/>
+        <location name="pixel788" y="1.078861232"/>
+        <location name="pixel789" y="1.082777243"/>
+        <location name="pixel790" y="1.086693255"/>
+        <location name="pixel791" y="1.090609267"/>
+        <location name="pixel792" y="1.094525279"/>
+        <location name="pixel793" y="1.098441290"/>
+        <location name="pixel794" y="1.102357302"/>
+        <location name="pixel795" y="1.106273314"/>
+        <location name="pixel796" y="1.110189326"/>
+        <location name="pixel797" y="1.114105337"/>
+        <location name="pixel798" y="1.118021349"/>
+        <location name="pixel799" y="1.121937361"/>
+        <location name="pixel800" y="1.125853372"/>
+        <location name="pixel801" y="1.129769384"/>
+        <location name="pixel802" y="1.133685396"/>
+        <location name="pixel803" y="1.137601408"/>
+        <location name="pixel804" y="1.141517419"/>
+        <location name="pixel805" y="1.145433431"/>
+        <location name="pixel806" y="1.149349443"/>
+        <location name="pixel807" y="1.153265455"/>
+        <location name="pixel808" y="1.157181466"/>
+        <location name="pixel809" y="1.161097478"/>
+        <location name="pixel810" y="1.165013490"/>
+        <location name="pixel811" y="1.168929501"/>
+        <location name="pixel812" y="1.172845513"/>
+        <location name="pixel813" y="1.176761525"/>
+        <location name="pixel814" y="1.180677537"/>
+        <location name="pixel815" y="1.184593548"/>
+        <location name="pixel816" y="1.188509560"/>
+        <location name="pixel817" y="1.192425572"/>
+        <location name="pixel818" y="1.196341584"/>
+        <location name="pixel819" y="1.200257595"/>
+        <location name="pixel820" y="1.204173607"/>
+        <location name="pixel821" y="1.208089619"/>
+        <location name="pixel822" y="1.212005630"/>
+        <location name="pixel823" y="1.215921642"/>
+        <location name="pixel824" y="1.219837654"/>
+        <location name="pixel825" y="1.223753666"/>
+        <location name="pixel826" y="1.227669677"/>
+        <location name="pixel827" y="1.231585689"/>
+        <location name="pixel828" y="1.235501701"/>
+        <location name="pixel829" y="1.239417713"/>
+        <location name="pixel830" y="1.243333724"/>
+        <location name="pixel831" y="1.247249736"/>
+        <location name="pixel832" y="1.251165748"/>
+        <location name="pixel833" y="1.255081760"/>
+        <location name="pixel834" y="1.258997771"/>
+        <location name="pixel835" y="1.262913783"/>
+        <location name="pixel836" y="1.266829795"/>
+        <location name="pixel837" y="1.270745806"/>
+        <location name="pixel838" y="1.274661818"/>
+        <location name="pixel839" y="1.278577830"/>
+        <location name="pixel840" y="1.282493842"/>
+        <location name="pixel841" y="1.286409853"/>
+        <location name="pixel842" y="1.290325865"/>
+        <location name="pixel843" y="1.294241877"/>
+        <location name="pixel844" y="1.298157889"/>
+        <location name="pixel845" y="1.302073900"/>
+        <location name="pixel846" y="1.305989912"/>
+        <location name="pixel847" y="1.309905924"/>
+        <location name="pixel848" y="1.313821935"/>
+        <location name="pixel849" y="1.317737947"/>
+        <location name="pixel850" y="1.321653959"/>
+        <location name="pixel851" y="1.325569971"/>
+        <location name="pixel852" y="1.329485982"/>
+        <location name="pixel853" y="1.333401994"/>
+        <location name="pixel854" y="1.337318006"/>
+        <location name="pixel855" y="1.341234018"/>
+        <location name="pixel856" y="1.345150029"/>
+        <location name="pixel857" y="1.349066041"/>
+        <location name="pixel858" y="1.352982053"/>
+        <location name="pixel859" y="1.356898065"/>
+        <location name="pixel860" y="1.360814076"/>
+        <location name="pixel861" y="1.364730088"/>
+        <location name="pixel862" y="1.368646100"/>
+        <location name="pixel863" y="1.372562111"/>
+        <location name="pixel864" y="1.376478123"/>
+        <location name="pixel865" y="1.380394135"/>
+        <location name="pixel866" y="1.384310147"/>
+        <location name="pixel867" y="1.388226158"/>
+        <location name="pixel868" y="1.392142170"/>
+        <location name="pixel869" y="1.396058182"/>
+        <location name="pixel870" y="1.399974194"/>
+        <location name="pixel871" y="1.403890205"/>
+        <location name="pixel872" y="1.407806217"/>
+        <location name="pixel873" y="1.411722229"/>
+        <location name="pixel874" y="1.415638240"/>
+        <location name="pixel875" y="1.419554252"/>
+        <location name="pixel876" y="1.423470264"/>
+        <location name="pixel877" y="1.427386276"/>
+        <location name="pixel878" y="1.431302287"/>
+        <location name="pixel879" y="1.435218299"/>
+        <location name="pixel880" y="1.439134311"/>
+        <location name="pixel881" y="1.443050323"/>
+        <location name="pixel882" y="1.446966334"/>
+        <location name="pixel883" y="1.450882346"/>
+        <location name="pixel884" y="1.454798358"/>
+        <location name="pixel885" y="1.458714370"/>
+        <location name="pixel886" y="1.462630381"/>
+        <location name="pixel887" y="1.466546393"/>
+        <location name="pixel888" y="1.470462405"/>
+        <location name="pixel889" y="1.474378416"/>
+        <location name="pixel890" y="1.478294428"/>
+        <location name="pixel891" y="1.482210440"/>
+        <location name="pixel892" y="1.486126452"/>
+        <location name="pixel893" y="1.490042463"/>
+        <location name="pixel894" y="1.493958475"/>
+        <location name="pixel895" y="1.497874487"/>
+        <location name="pixel896" y="1.501790499"/>
+        <location name="pixel897" y="1.505706510"/>
+        <location name="pixel898" y="1.509622522"/>
+        <location name="pixel899" y="1.513538534"/>
+        <location name="pixel900" y="1.517454545"/>
+        <location name="pixel901" y="1.521370557"/>
+        <location name="pixel902" y="1.525286569"/>
+        <location name="pixel903" y="1.529202581"/>
+        <location name="pixel904" y="1.533118592"/>
+        <location name="pixel905" y="1.537034604"/>
+        <location name="pixel906" y="1.540950616"/>
+        <location name="pixel907" y="1.544866628"/>
+        <location name="pixel908" y="1.548782639"/>
+        <location name="pixel909" y="1.552698651"/>
+        <location name="pixel910" y="1.556614663"/>
+        <location name="pixel911" y="1.560530674"/>
+        <location name="pixel912" y="1.564446686"/>
+        <location name="pixel913" y="1.568362698"/>
+        <location name="pixel914" y="1.572278710"/>
+        <location name="pixel915" y="1.576194721"/>
+        <location name="pixel916" y="1.580110733"/>
+        <location name="pixel917" y="1.584026745"/>
+        <location name="pixel918" y="1.587942757"/>
+        <location name="pixel919" y="1.591858768"/>
+        <location name="pixel920" y="1.595774780"/>
+        <location name="pixel921" y="1.599690792"/>
+        <location name="pixel922" y="1.603606804"/>
+        <location name="pixel923" y="1.607522815"/>
+        <location name="pixel924" y="1.611438827"/>
+        <location name="pixel925" y="1.615354839"/>
+        <location name="pixel926" y="1.619270850"/>
+        <location name="pixel927" y="1.623186862"/>
+        <location name="pixel928" y="1.627102874"/>
+        <location name="pixel929" y="1.631018886"/>
+        <location name="pixel930" y="1.634934897"/>
+        <location name="pixel931" y="1.638850909"/>
+        <location name="pixel932" y="1.642766921"/>
+        <location name="pixel933" y="1.646682933"/>
+        <location name="pixel934" y="1.650598944"/>
+        <location name="pixel935" y="1.654514956"/>
+        <location name="pixel936" y="1.658430968"/>
+        <location name="pixel937" y="1.662346979"/>
+        <location name="pixel938" y="1.666262991"/>
+        <location name="pixel939" y="1.670179003"/>
+        <location name="pixel940" y="1.674095015"/>
+        <location name="pixel941" y="1.678011026"/>
+        <location name="pixel942" y="1.681927038"/>
+        <location name="pixel943" y="1.685843050"/>
+        <location name="pixel944" y="1.689759062"/>
+        <location name="pixel945" y="1.693675073"/>
+        <location name="pixel946" y="1.697591085"/>
+        <location name="pixel947" y="1.701507097"/>
+        <location name="pixel948" y="1.705423109"/>
+        <location name="pixel949" y="1.709339120"/>
+        <location name="pixel950" y="1.713255132"/>
+        <location name="pixel951" y="1.717171144"/>
+        <location name="pixel952" y="1.721087155"/>
+        <location name="pixel953" y="1.725003167"/>
+        <location name="pixel954" y="1.728919179"/>
+        <location name="pixel955" y="1.732835191"/>
+        <location name="pixel956" y="1.736751202"/>
+        <location name="pixel957" y="1.740667214"/>
+        <location name="pixel958" y="1.744583226"/>
+        <location name="pixel959" y="1.748499238"/>
+        <location name="pixel960" y="1.752415249"/>
+        <location name="pixel961" y="1.756331261"/>
+        <location name="pixel962" y="1.760247273"/>
+        <location name="pixel963" y="1.764163284"/>
+        <location name="pixel964" y="1.768079296"/>
+        <location name="pixel965" y="1.771995308"/>
+        <location name="pixel966" y="1.775911320"/>
+        <location name="pixel967" y="1.779827331"/>
+        <location name="pixel968" y="1.783743343"/>
+        <location name="pixel969" y="1.787659355"/>
+        <location name="pixel970" y="1.791575367"/>
+        <location name="pixel971" y="1.795491378"/>
+        <location name="pixel972" y="1.799407390"/>
+        <location name="pixel973" y="1.803323402"/>
+        <location name="pixel974" y="1.807239413"/>
+        <location name="pixel975" y="1.811155425"/>
+        <location name="pixel976" y="1.815071437"/>
+        <location name="pixel977" y="1.818987449"/>
+        <location name="pixel978" y="1.822903460"/>
+        <location name="pixel979" y="1.826819472"/>
+        <location name="pixel980" y="1.830735484"/>
+        <location name="pixel981" y="1.834651496"/>
+        <location name="pixel982" y="1.838567507"/>
+        <location name="pixel983" y="1.842483519"/>
+        <location name="pixel984" y="1.846399531"/>
+        <location name="pixel985" y="1.850315543"/>
+        <location name="pixel986" y="1.854231554"/>
+        <location name="pixel987" y="1.858147566"/>
+        <location name="pixel988" y="1.862063578"/>
+        <location name="pixel989" y="1.865979589"/>
+        <location name="pixel990" y="1.869895601"/>
+        <location name="pixel991" y="1.873811613"/>
+        <location name="pixel992" y="1.877727625"/>
+        <location name="pixel993" y="1.881643636"/>
+        <location name="pixel994" y="1.885559648"/>
+        <location name="pixel995" y="1.889475660"/>
+        <location name="pixel996" y="1.893391672"/>
+        <location name="pixel997" y="1.897307683"/>
+        <location name="pixel998" y="1.901223695"/>
+        <location name="pixel999" y="1.905139707"/>
+        <location name="pixel1000" y="1.909055718"/>
+        <location name="pixel1001" y="1.912971730"/>
+        <location name="pixel1002" y="1.916887742"/>
+        <location name="pixel1003" y="1.920803754"/>
+        <location name="pixel1004" y="1.924719765"/>
+        <location name="pixel1005" y="1.928635777"/>
+        <location name="pixel1006" y="1.932551789"/>
+        <location name="pixel1007" y="1.936467801"/>
+        <location name="pixel1008" y="1.940383812"/>
+        <location name="pixel1009" y="1.944299824"/>
+        <location name="pixel1010" y="1.948215836"/>
+        <location name="pixel1011" y="1.952131848"/>
+        <location name="pixel1012" y="1.956047859"/>
+        <location name="pixel1013" y="1.959963871"/>
+        <location name="pixel1014" y="1.963879883"/>
+        <location name="pixel1015" y="1.967795894"/>
+        <location name="pixel1016" y="1.971711906"/>
+        <location name="pixel1017" y="1.975627918"/>
+        <location name="pixel1018" y="1.979543930"/>
+        <location name="pixel1019" y="1.983459941"/>
+        <location name="pixel1020" y="1.987375953"/>
+        <location name="pixel1021" y="1.991291965"/>
+        <location name="pixel1022" y="1.995207977"/>
+        <location name="pixel1023" y="1.999123988"/>
+        <location name="pixel1024" y="2.003040000"/>
+    </component>
+  </type>
+
+  
+  <!--PIXEL FOR STANDARD 4m 1024 PIXEL TUBE-->
+  <type is="detector" name="pixel">
+    <cylinder id="cyl-approx">
+      <centre-of-bottom-base p="0.0" r="0.0" t="0.0"/>
+      <axis x="0.0" y="0.2" z="0.0"/>
+      <radius val="0.0127"/>
+      <height val="0.391602E-02"/>
+    </cylinder>
+    <algebra val="cyl-approx"/>
+  </type>
+
+  <!--MONITOR SHAPE-->
+  <!--FIXME: Do something real here.-->
+  <type is="monitor" name="monitor">
+    <cylinder id="cyl-approx">
+      <centre-of-bottom-base p="0.0" r="0.0" t="0.0"/>
+      <axis x="0.0" y="0.0" z="1.0"/>
+      <radius val="0.01"/>
+      <height val="0.03"/>
+    </cylinder>
+    <algebra val="cyl-approx"/>
+  </type>
+
+  <!--DETECTOR IDs (1024 * 32 * # of Detectors - 1)-->
+  <idlist idname="detectors">
+    <id end="393215" start="0"/>
+  </idlist>
+
+  <!--MONITOR IDs-->
+  <idlist idname="monitors">
+    <id val="-1"/>
+    <id val="-2"/>
+    <id val="-3"/>
+  </idlist>
+
+  <!--DETECTOR PARAMETERS-->
+  <component-link name="detectors">
+    <parameter name="tube_pressure">
+      <value units="atm" val="10.0"/>
+    </parameter>
+    <parameter name="tube_thickness">
+      <value units="metre" val="0.0008"/>
+    </parameter>
+    <parameter name="tube_temperature">
+      <value units="K" val="290.0"/>
+    </parameter>
+  </component-link>
+</instrument>
