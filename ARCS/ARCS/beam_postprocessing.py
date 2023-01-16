@@ -117,7 +117,7 @@ def runMonitorsAtSample(E, m2sout, out, L=LSAMPLE, instrument='arcs'):
     from mcni.neutron_storage.idf_usenumpy import count
     n = count(neutronfile)
 
-    cmd = ['mcvine instruments %s analyze-beam' % instrument]
+    cmd = ['mcvine instruments %s analyze_beam' % instrument]
     cmd += ['--output-dir=%s' % out]
     cmd += ['--ncount=%s' % n]
     cmd += ['--buffer_size=%s' % min(n, int(1e6))]
