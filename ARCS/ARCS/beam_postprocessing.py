@@ -1,14 +1,6 @@
 # -*- Python -*-
-#
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#
 #                                   Jiao Lin
-#                      California Institute of Technology
-#                      (C) 2008-2013  All Rights Reserved
-#
-# {LicenseText}
-#
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#                      (C) 2008-2023  All Rights Reserved
 #
 
 """
@@ -156,9 +148,9 @@ def computeFocusedSpectraForRealMonitors(E, m2sout, out, LM1=LM1, LM2=LM2):
     m1p = m1[(t1*0.9, t1*1.1)]
     m1pc = H.histogram('I(tof)', m1p.axes(), data=m1p.I, errors=m1p.E2)
     m1pc.setAttribute('title', 'Monitor 1 I(tof)')
-    
+
     hh.dump(m1pc, os.path.join(out, 'mon1-itof-focused.h5'), '/', 'c')
-    
+
     m2 = hh.load(os.path.join(m2sout, 'mon2-tof.h5'), 'I(tof)')
     t2 = LM2/v #* second
     m2p = m2[(t2*0.9, t2*1.1)]
@@ -184,8 +176,4 @@ def _exec(cmd):
         raise RuntimeError("%s failed" % cmd)
 
 
-
-# version
-__id__ = "$Id$"
-
-# End of file 
+# End of file
