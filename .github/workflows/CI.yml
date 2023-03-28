@@ -40,12 +40,19 @@ jobs:
           python-version: ${{ matrix.python-version }}
           channels: mcvine,conda-forge
 
+      # use mamba solver
+      - name: use mamba solver in conda
+        shell: pwsh
+        run: |
+          conda update -n base conda
+          conda install -n base conda-libmamba-solver
+          conda config --set solver libmamba
+
       # install deps and build
       - name: install / build / test
         shell: pwsh
         run: |
-          conda install mamba
-          mamba install mcvine-core mantid2mcvine mantid-framework=6
+          conda install mcvine-core mantid2mcvine mantid-framework=6
           mcvine
           ./builders/github-actions/build_and_test.sh
         env:
