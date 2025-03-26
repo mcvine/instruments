@@ -31,4 +31,4 @@ conda build --python=$PYTHON_VERSION .
 # upload
 CONDA_ROOT_PREFIX=$(realpath $(dirname `which conda`)/..)
 anaconda -t $CONDA_UPLOAD_TOKEN upload --force --label unstable \
-         $CONDA_ROOT_PREFIX/conda-bld/$_CONDA_PKG_ARCH_/$_CONDA_PKG_NAME_-$_CONDA_PKG_VER_-*.tar.bz2
+         $CONDA_ROOT_PREFIX/conda-bld/$_CONDA_PKG_ARCH_/$_CONDA_PKG_NAME_-$_CONDA_PKG_VER_-*.conda
