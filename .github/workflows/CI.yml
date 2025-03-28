@@ -19,13 +19,13 @@ jobs:
       fail-fast: false
       matrix:
         os: ["ubuntu-latest"]
-        python-version: ["3.9"]
+        python-version: ["3.10"]
     steps:
       - name: install glut
         run: sudo apt-get update && sudo apt-get install -y freeglut3-dev libglu1-mesa
 
       - name: Check out source code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -33,26 +33,18 @@ jobs:
         run: git clone https://github.com/yxqd/dotmantid ~/.mantid
 
       # setup conda
-      - uses: conda-incubator/setup-miniconda@v2
+      - uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
           activate-environment: test
           python-version: ${{ matrix.python-version }}
-          channels: mcvine,conda-forge
-
-      # use mamba solver
-      - name: use mamba solver in conda
-        shell: pwsh
-        run: |
-          # conda update -n base conda
-          conda install -n base conda-libmamba-solver
-          conda config --set solver libmamba
+          channels: mantid,mcvine,conda-forge
 
       # install deps and build
       - name: install / build / test
         shell: pwsh
         run: |
-          conda install mcvine-core mantid2mcvine mantid-framework=6
+          conda install mcvine-core mantid2mcvine mantid=6
           mcvine
           ./builders/github-actions/build_and_test.sh
         env:
